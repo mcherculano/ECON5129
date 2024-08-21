@@ -394,6 +394,12 @@ economic factors such as market size and tax rate predict.</p>
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="set-up-and-assumptions">
@@ -1006,9 +1012,9 @@ and therefore the numerator in our updating equation is becoming smaller.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.54574140e-13],
-       [-6.44040377e-13],
-       [-4.99100761e-13]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.55073740e-13],
+       [-6.47037979e-13],
+       [-5.00155473e-13]])
 </pre></div>
 </div>
 </div>
@@ -1051,7 +1057,7 @@ the maximum is found at <span class="math notranslate nohighlight">\( \beta = 10
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/36bf193ece575490f36f3abe0263a8771e4001dd5571b5254daf9421d5d2831a.png" src="../_images/36bf193ece575490f36f3abe0263a8771e4001dd5571b5254daf9421d5d2831a.png" />
+<img alt="../_images/55b694194598f468f2d3367934d3287498c258a90638e47ba46875ac5cf32191.png" src="../_images/55b694194598f468f2d3367934d3287498c258a90638e47ba46875ac5cf32191.png" />
 </div>
 </div>
 <p>Note that our implementation of the Newton-Raphson algorithm is rather
@@ -1091,8 +1097,8 @@ to confirm we obtain the same coefficients and log-likelihood value.</p>
 Dep. Variable:                      y   No. Observations:                    5
 Model:                        Poisson   Df Residuals:                        2
 Method:                           MLE   Df Model:                            2
-Date:                Sat, 18 Nov 2023   Pseudo R-squ.:                  0.2546
-Time:                        16:24:18   Log-Likelihood:                -3.3784
+Date:                Wed, 21 Aug 2024   Pseudo R-squ.:                  0.2546
+Time:                        11:21:35   Log-Likelihood:                -3.3784
 converged:                       True   LL-Null:                       -4.5325
 Covariance Type:            nonrobust   LLR p-value:                    0.3153
 ==============================================================================
@@ -1158,8 +1164,8 @@ model.</p>
 Dep. Variable:                numbil0   No. Observations:                  197
 Model:                        Poisson   Df Residuals:                      193
 Method:                           MLE   Df Model:                            3
-Date:                Sat, 18 Nov 2023   Pseudo R-squ.:                  0.8574
-Time:                        16:24:18   Log-Likelihood:                -438.54
+Date:                Wed, 21 Aug 2024   Pseudo R-squ.:                  0.8574
+Time:                        11:21:35   Log-Likelihood:                -438.54
 converged:                       True   LL-Null:                       -3074.7
 Covariance Type:                  HC0   LLR p-value:                     0.000
 ==============================================================================
@@ -1239,8 +1245,8 @@ nrrents                                -0.005
                                        (0.010)   
 roflaw                                 0.203     
                                        (0.372)   
-Pseudo R-squared 0.86       0.90       0.90      
 No. observations 197        131        131       
+Pseudo R-squared 0.86       0.90       0.90      
 =================================================
 Standard errors in parentheses.
 * p&lt;.1, ** p&lt;.05, ***p&lt;.01
@@ -1504,8 +1510,8 @@ Number of iterations: 4
 Dep. Variable:                      y   No. Observations:                    5
 Model:                         Probit   Df Residuals:                        2
 Method:                           MLE   Df Model:                            2
-Date:                Sat, 18 Nov 2023   Pseudo R-squ.:                  0.2961
-Time:                        16:24:18   Log-Likelihood:                -2.3687
+Date:                Wed, 21 Aug 2024   Pseudo R-squ.:                  0.2961
+Time:                        11:21:36   Log-Likelihood:                -2.3687
 converged:                       True   LL-Null:                       -3.3651
 Covariance Type:            nonrobust   LLR p-value:                    0.3692
 ==============================================================================

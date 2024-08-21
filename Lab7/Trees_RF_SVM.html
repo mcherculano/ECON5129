@@ -386,6 +386,10 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
+  from pandas.core import (
+</pre></div>
+</div>
 <div class="output text_html"><div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -867,7 +871,7 @@ memory usage: 1.0+ MB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x1e4fb35a390&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.JointGrid at 0x117ce1f5290&gt;
 </pre></div>
 </div>
 <img alt="../_images/61d0cb2c92d66e4d5a75e362f3933de14f2cdc06919744b7db25bc847281e901.png" src="../_images/61d0cb2c92d66e4d5a75e362f3933de14f2cdc06919744b7db25bc847281e901.png" />
@@ -880,10 +884,10 @@ memory usage: 1.0+ MB
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x1e4fb4a5e10&gt;
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&lt;seaborn.axisgrid.FacetGrid at 0x117ce080d50&gt;
 </pre></div>
 </div>
-<img alt="../_images/4c67726674feb8c4edaa759b26827e580bfe59aa13b667fceb2261c7273b517d.png" src="../_images/4c67726674feb8c4edaa759b26827e580bfe59aa13b667fceb2261c7273b517d.png" />
+<img alt="../_images/c0c0f50a96d73f13b58548dfc6277fad87b00653c6704b5eeea7c0b277b8d1f1.png" src="../_images/c0c0f50a96d73f13b58548dfc6277fad87b00653c6704b5eeea7c0b277b8d1f1.png" />
 </div>
 </div>
 <p>Given a FICO score, there seems to be greater dispersion, in terms of interest rates charges, of borrowers that haven’t paid their loan back fully and therefore may default. This is a reminder that other variables should also be taken into account when considering delinquency likelihoods. Before we start processing the data and building our ML model, let’s look at the correlation amongst the variables.</p>
@@ -967,12 +971,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>1</th>
@@ -989,12 +993,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1011,12 +1015,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1033,12 +1037,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1055,12 +1059,12 @@ memory usage: 1.0+ MB
       <td>1</td>
       <td>0</td>
       <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1099,12 +1103,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>9574</th>
@@ -1121,12 +1125,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>9575</th>
@@ -1143,12 +1147,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>9576</th>
@@ -1165,12 +1169,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
     <tr>
       <th>9577</th>
@@ -1187,12 +1191,12 @@ memory usage: 1.0+ MB
       <td>0</td>
       <td>0</td>
       <td>1</td>
-      <td>0</td>
-      <td>1</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
+      <td>False</td>
+      <td>True</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
+      <td>False</td>
     </tr>
   </tbody>
 </table>
@@ -1281,15 +1285,15 @@ Here is a brief summary of the intuition behind Decision Trees:</p>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       0.85      0.83      0.84      2419
-           1       0.21      0.24      0.23       455
+           0       0.85      0.83      0.84      2428
+           1       0.20      0.22      0.21       446
 
     accuracy                           0.74      2874
-   macro avg       0.53      0.54      0.53      2874
+   macro avg       0.53      0.53      0.53      2874
 weighted avg       0.75      0.74      0.75      2874
 
-[[2014  405]
- [ 345  110]]
+[[2026  402]
+ [ 347   99]]
 </pre></div>
 </div>
 </div>
@@ -1309,15 +1313,15 @@ weighted avg       0.75      0.74      0.75      2874
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>              precision    recall  f1-score   support
 
-           0       0.84      0.99      0.91      2419
-           1       0.42      0.02      0.04       455
+           0       0.85      0.99      0.92      2428
+           1       0.48      0.03      0.06       446
 
     accuracy                           0.84      2874
-   macro avg       0.63      0.51      0.48      2874
-weighted avg       0.78      0.84      0.77      2874
+   macro avg       0.67      0.51      0.49      2874
+weighted avg       0.79      0.84      0.78      2874
 
-[[2405   14]
- [ 445   10]]
+[[2413   15]
+ [ 432   14]]
 </pre></div>
 </div>
 </div>
@@ -1409,16 +1413,24 @@ weighted avg       0.78      0.84      0.77      2874
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Support Vector Machine - Classification Report:
                precision    recall  f1-score   support
 
-           0       0.84      1.00      0.91      2419
-           1       0.00      0.00      0.00       455
+           0       0.84      1.00      0.92      2428
+           1       0.00      0.00      0.00       446
 
     accuracy                           0.84      2874
    macro avg       0.42      0.50      0.46      2874
 weighted avg       0.71      0.84      0.77      2874
 
 Support Vector Machine - Confusion Matrix:
- [[2417    2]
- [ 455    0]]
+ [[2428    0]
+ [ 446    0]]
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_classification.py:1344: UndefinedMetricWarning: Precision and F-score are ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, msg_start, len(result))
 </pre></div>
 </div>
 </div>
