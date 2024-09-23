@@ -1093,7 +1093,529 @@ Traceback (most recent call last):
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
 
   warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
+    neigh_dist, neigh_ind = self.kneighbors(X)
+                            ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
 C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
+    neigh_dist, neigh_ind = self.kneighbors(X)
+                            ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
+    neigh_dist, neigh_ind = self.kneighbors(X)
+                            ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
+    neigh_dist, neigh_ind = self.kneighbors(X)
+                            ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
+    neigh_dist, neigh_ind = self.kneighbors(X)
+                            ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
+    neigh_ind = self.kneighbors(X, return_distance=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
+    neigh_ind = self.kneighbors(X, return_distance=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
+    neigh_ind = self.kneighbors(X, return_distance=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
+    neigh_ind = self.kneighbors(X, return_distance=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+Traceback (most recent call last):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
+    scores = scorer(estimator, X_test, y_test)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
+    return self._score(
+           ^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
+    y_pred = method_caller(estimator, &quot;predict&quot;, X)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
+    return getattr(estimator, method)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
+    neigh_ind = self.kneighbors(X, return_distance=False)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
+    results = ArgKmin.compute(
+              ^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
+    return ArgKmin64.compute(
+           ^^^^^^^^^^^^^^^^^^
+  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
+    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
+    self._original_info = self._set_threadpool_limits()
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
+    modules = _ThreadpoolInfo(prefixes=self._prefixes,
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
+    self._load_modules()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
+    self._find_modules_with_enum_process_module_ex()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
+    self._make_module_from_path(filepath)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
+    module = module_class(filepath, prefix, user_api, internal_api)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
+    self.version = self.get_version()
+                   ^^^^^^^^^^^^^^^^^^
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
+    config = get_config().split()
+             ^^^^^^^^^^^^^^^^^^
+AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
+
+  warnings.warn(
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
   File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
     scores = scorer(estimator, X_test, y_test)
@@ -1350,525 +1872,7 @@ Traceback (most recent call last):
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
 
   warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
-    neigh_ind = self.kneighbors(X, return_distance=False)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
-    neigh_ind = self.kneighbors(X, return_distance=False)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
-    neigh_ind = self.kneighbors(X, return_distance=False)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
-    neigh_ind = self.kneighbors(X, return_distance=False)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 234, in predict
-    neigh_ind = self.kneighbors(X, return_distance=False)
-                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
-    neigh_dist, neigh_ind = self.kneighbors(X)
-                            ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
-    neigh_dist, neigh_ind = self.kneighbors(X)
-                            ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
-    neigh_dist, neigh_ind = self.kneighbors(X)
-                            ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
-    neigh_dist, neigh_ind = self.kneighbors(X)
-                            ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
-Traceback (most recent call last):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
-    scores = scorer(estimator, X_test, y_test)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 234, in __call__
-    return self._score(
-           ^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 276, in _score
-    y_pred = method_caller(estimator, &quot;predict&quot;, X)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_scorer.py&quot;, line 73, in _cached_call
-    return getattr(estimator, method)(*args, **kwargs)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_classification.py&quot;, line 237, in predict
-    neigh_dist, neigh_ind = self.kneighbors(X)
-                            ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\neighbors\_base.py&quot;, line 824, in kneighbors
-    results = ArgKmin.compute(
-              ^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\metrics\_pairwise_distances_reduction\_dispatcher.py&quot;, line 277, in compute
-    return ArgKmin64.compute(
-           ^^^^^^^^^^^^^^^^^^
-  File &quot;sklearn\metrics\_pairwise_distances_reduction\_argkmin.pyx&quot;, line 95, in sklearn.metrics._pairwise_distances_reduction._argkmin.ArgKmin64.compute
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 139, in threadpool_limits
-    return threadpoolctl.threadpool_limits(limits=limits, user_api=user_api)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 171, in __init__
-    self._original_info = self._set_threadpool_limits()
-                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 268, in _set_threadpool_limits
-    modules = _ThreadpoolInfo(prefixes=self._prefixes,
-              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 340, in __init__
-    self._load_modules()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 373, in _load_modules
-    self._find_modules_with_enum_process_module_ex()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 485, in _find_modules_with_enum_process_module_ex
-    self._make_module_from_path(filepath)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 515, in _make_module_from_path
-    module = module_class(filepath, prefix, user_api, internal_api)
-             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 606, in __init__
-    self.version = self.get_version()
-                   ^^^^^^^^^^^^^^^^^^
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\threadpoolctl.py&quot;, line 646, in get_version
-    config = get_config().split()
-             ^^^^^^^^^^^^^^^^^^
-AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
-
-  warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_search.py:952: UserWarning: One or more of the test scores are non-finite: [nan nan nan nan]
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_search.py:952: UserWarning: One or more of the test scores are non-finite: [nan nan nan nan]
   warnings.warn(
 </pre></div>
 </div>
@@ -2042,9 +2046,7 @@ Traceback (most recent call last):
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
 
   warnings.warn(
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
   File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
     scores = scorer(estimator, X_test, y_test)
@@ -2095,7 +2097,9 @@ Traceback (most recent call last):
 AttributeError: &#39;NoneType&#39; object has no attribute &#39;split&#39;
 
   warnings.warn(
-C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py:778: UserWarning: Scoring failed. The score on this train-test partition for these parameters will be set to nan. Details: 
 Traceback (most recent call last):
   File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\model_selection\_validation.py&quot;, line 767, in _score
     scores = scorer(estimator, X_test, y_test)
