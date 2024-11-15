@@ -182,6 +182,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Lab6/logistic_classification.html">Logistic Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Lab7/Trees_RF_SVM_.html">Decision Trees, Random Forests &amp; Support Vector Machines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Lab8/ensemble_methods.html">Ensemble Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Lab9/GPR_Recreated.html">Gaussian Process Regression</a></li>
 </ul>
 
     </div>
@@ -492,7 +493,7 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/acf350fccd4a5e3632c6c0a3920416ebd2b54c81b23c41f342bd2f81e3c140f4.png" src="../_images/acf350fccd4a5e3632c6c0a3920416ebd2b54c81b23c41f342bd2f81e3c140f4.png" />
+<img alt="../_images/706b13da60925dfbf0dac933a52ed1ae211ea78b0543dd9a6a4d5a56125d5c86.png" src="../_images/706b13da60925dfbf0dac933a52ed1ae211ea78b0543dd9a6a4d5a56125d5c86.png" />
 </div>
 </div>
 </section>
@@ -516,7 +517,7 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/05e9713f240290540c40a5a7063127d3bfbc88eff63df2278ffb03d57aa09709.png" src="../_images/05e9713f240290540c40a5a7063127d3bfbc88eff63df2278ffb03d57aa09709.png" />
+<img alt="../_images/c40c273de1ad99145d87736f052e9f8c61ec86475e204840bbcec03270c4bfe5.png" src="../_images/c40c273de1ad99145d87736f052e9f8c61ec86475e204840bbcec03270c4bfe5.png" />
 </div>
 </div>
 </section>
@@ -539,7 +540,7 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/597dfa2fecd92f1c9aa54b5fcdebcfb9ead62b4242857cd1b2045e8c5d5395f1.png" src="../_images/597dfa2fecd92f1c9aa54b5fcdebcfb9ead62b4242857cd1b2045e8c5d5395f1.png" />
+<img alt="../_images/afb889897a66accb938064d62eabc9e55a0b12a7b2773a655d013a69b210d67f.png" src="../_images/afb889897a66accb938064d62eabc9e55a0b12a7b2773a655d013a69b210d67f.png" />
 </div>
 </div>
 </section>
@@ -571,7 +572,7 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d7d0bb5e479d767e1b16d401902c813159c1b2b960a35a7519372d17cb93b68e.png" src="../_images/d7d0bb5e479d767e1b16d401902c813159c1b2b960a35a7519372d17cb93b68e.png" />
+<img alt="../_images/3cb5554177717b0751c0bfb89a7de76bf09cdbba4ebe1e7d68ad814b135c5979.png" src="../_images/3cb5554177717b0751c0bfb89a7de76bf09cdbba4ebe1e7d68ad814b135c5979.png" />
 </div>
 </div>
 <p>Here’s a shorter way to write the same thing:</p>
@@ -592,7 +593,7 @@ landing in <span class="math notranslate nohighlight">\(B\)</span>.</p></li>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/6c48d258dd97f20c1b9b96990b18d96ba64cc0f6c5ae722239d6af15a6e77b89.png" src="../_images/6c48d258dd97f20c1b9b96990b18d96ba64cc0f6c5ae722239d6af15a6e77b89.png" />
+<img alt="../_images/668db48bba70e67e0d437def44c7788cdf936bb990137c2f5fadcb216d0bff85.png" src="../_images/668db48bba70e67e0d437def44c7788cdf936bb990137c2f5fadcb216d0bff85.png" />
 </div>
 </div>
 </section>
@@ -626,7 +627,7 @@ fraction that falls into the circle.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>3.2
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2.8
 </pre></div>
 </div>
 </div>
@@ -644,31 +645,22 @@ fraction that falls into the circle.</p>
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>^C
+Collecting package metadata (current_repodata.json): ...working... done
+Solving environment: ...working... 
 </pre></div>
 </div>
 <div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/msys2/notices.json HTTP/1.1&quot; 404 None
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/main/notices.json HTTP/1.1&quot; 404 None
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/r/notices.json HTTP/1.1&quot; 404 None
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
 DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
-DEBUG:urllib3.connectionpool:Starting new HTTPS connection (1): repo.anaconda.com:443
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/main/noarch/current_repodata.json HTTP/1.1&quot; 200 None
 DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/main/win-64/current_repodata.json HTTP/1.1&quot; 200 None
+DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/msys2/win-64/current_repodata.json HTTP/1.1&quot; 304 0
+DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/main/noarch/current_repodata.json HTTP/1.1&quot; 304 0
+DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/r/win-64/current_repodata.json HTTP/1.1&quot; 304 0
 DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/msys2/noarch/current_repodata.json HTTP/1.1&quot; 304 0
 DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/r/noarch/current_repodata.json HTTP/1.1&quot; 304 0
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/r/win-64/current_repodata.json HTTP/1.1&quot; 304 0
-DEBUG:urllib3.connectionpool:https://repo.anaconda.com:443 &quot;GET /pkgs/msys2/win-64/current_repodata.json HTTP/1.1&quot; 304 0
-</pre></div>
-</div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Retrieving notices: ...working... done
-Collecting package metadata (current_repodata.json): ...working... done
-Solving environment: ...working... 
 </pre></div>
 </div>
 </div>

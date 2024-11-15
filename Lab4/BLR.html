@@ -184,6 +184,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../Lab6/logistic_classification.html">Logistic Regression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Lab7/Trees_RF_SVM_.html">Decision Trees, Random Forests &amp; Support Vector Machines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../Lab8/ensemble_methods.html">Ensemble Learning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../Lab9/GPR_Recreated.html">Gaussian Process Regression</a></li>
 </ul>
 
     </div>
@@ -397,12 +398,6 @@ p(w|y,X) = N(w|\mu, \Sigma).
 <span class="o">%</span><span class="k">matplotlib</span> inline
 <span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">train_test_split</span>
 <span class="kn">from</span> <span class="nn">sklearn.datasets</span> <span class="kn">import</span> <span class="n">fetch_california_housing</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:60: UserWarning: Pandas requires version &#39;1.3.6&#39; or newer of &#39;bottleneck&#39; (version &#39;1.3.5&#39; currently installed).
-  from pandas.core import (
 </pre></div>
 </div>
 </div>
@@ -626,18 +621,19 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\AppData\Local\Temp\ipykernel_4784\3254044107.py:12: UserWarning: Geometry is in a geographic CRS. Results from &#39;area&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\AppData\Local\Temp\ipykernel_27064\3254044107.py:12: UserWarning: Geometry is in a geographic CRS. Results from &#39;area&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
 
   cali = cali.assign(area=cali.geometry.area)
 </pre></div>
 </div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\AppData\Local\Temp\ipykernel_4784\3254044107.py:12: UserWarning: Geometry is in a geographic CRS. Results from &#39;area&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\AppData\Local\Temp\ipykernel_27064\3254044107.py:12: UserWarning: Geometry is in a geographic CRS. Results from &#39;area&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
 
   cali = cali.assign(area=cali.geometry.area)
 </pre></div>
 </div>
-<img alt="../_images/48edecbbd4907ea4988d3548283931b28bc01792d236247576083ec6b5e480e0.png" src="../_images/48edecbbd4907ea4988d3548283931b28bc01792d236247576083ec6b5e480e0.png" />
-<img alt="../_images/437c448dce136773b3ead4fe2abbc68122230ba1e9c0736edfba73786fdf532b.png" src="../_images/437c448dce136773b3ead4fe2abbc68122230ba1e9c0736edfba73786fdf532b.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Error in callback &lt;function _draw_all_if_interactive at 0x000001AF53F47880&gt; (for post_execute):
+</pre></div>
+</div>
 </div>
 </div>
 <p>If you are not familiar with the state of California, it is interesting to notice that all datapoints show a graphical representation of this state. The high-valued houses will be located on the coast, where the big cities from California are located: San Diego, Los Angeles, San Jose, or San Francisco.</p>
@@ -671,7 +667,7 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/5a5971defb77d4fe313c4795c39b6d15420f769c2cbf04ed6da0c90696ac46b2.png" src="../_images/5a5971defb77d4fe313c4795c39b6d15420f769c2cbf04ed6da0c90696ac46b2.png" />
+<img alt="../_images/4ddd486751b60f56b6d8369e4bdaca59f4aef0b17645c9173c2c79ff2fe17c3e.png" src="../_images/4ddd486751b60f56b6d8369e4bdaca59f4aef0b17645c9173c2c79ff2fe17c3e.png" />
 </div>
 </div>
 <p>Looking at descriptive statistics helps build some intuition for the data and think about the predictive model we want to setup. We can for instance notice the presence of outliers, and see that the median income is helpful to distinguish high-valued from low-valued houses. It is reasonable to expect the longitude, latitude, and the median income to be useful features in predicting the median house values.</p>
@@ -731,10 +727,6 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\base.py:439: UserWarning: X does not have valid feature names, but BayesianRidge was fitted with feature names
-  warnings.warn(
-</pre></div>
-</div>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([18.68512913])
 </pre></div>
 </div>
@@ -785,11 +777,11 @@ It can be downloaded/loaded using the
 Mean across k-fold: 1.1689190658050883
 std: 0.06231618587595042
 RMSE: [0.69598835 0.78910253 0.80387139 0.73723379 0.70327065]
-Mean across k-fold: 0.7458933435919418
-std: 0.04384216713047166
+Mean across k-fold: 0.7458933435919393
+std: 0.04384216713047099
 RMSE: [0.69631786 0.78898504 0.80387217 0.73702076 0.70333835]
-Mean across k-fold: 0.745906836351812
-std: 0.043739721675925484
+Mean across k-fold: 0.7459068363518117
+std: 0.04373972167592658
 </pre></div>
 </div>
 </div>
@@ -988,7 +980,7 @@ p(w|\lambda) = N(w|0,A^{-1}),
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/2236d875fed6e899fde121c4d710b64131dce118bc302bfad460c59c59546d01.png" src="../_images/2236d875fed6e899fde121c4d710b64131dce118bc302bfad460c59c59546d01.png" />
+<img alt="../_images/fbac31af139350f813da9911d65d94753a715f15a0d06197a6877f4274385f20.png" src="../_images/fbac31af139350f813da9911d65d94753a715f15a0d06197a6877f4274385f20.png" />
 </div>
 </div>
 </section>
