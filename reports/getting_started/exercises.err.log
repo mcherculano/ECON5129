@@ -21,133 +21,68 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-import pandas as pd
+import numpy as np
 import matplotlib.pyplot as plt
-from fredapi import Fred
-fred = Fred(api_key='insert your api key here')
-seriesid = ['FRBATLWGT12MMUMHGO',	'FRBATLWGT12MMUMHWGILH']
-data = pd.DataFrame()
-for j in range(0,len(seriesid)):
-    data_j = fred.get_series(seriesid[j])
-    data[seriesid[j]] = data_j
-
-
-# Create a plot
-fig, ax = plt.subplots()
-
-# Plot the first line (dashed and red)
-ax.plot(data.index, data['FRBATLWGT12MMUMHGO'], linestyle='--', color='red', label='Hourly wage growth')
-
-# Plot the second line (solid and black)
-ax.plot(data.index, data['FRBATLWGT12MMUMHWGILH'], linestyle='-', color='black', label='Hourly wage growth (Leisure & Hospitality)')
-
-# Add labels and a legend
-ax.set_xlabel('time')
-ax.set_ylabel('pp.')
-ax.set_title('Wage growth Leisure vs. Overall')
-ax.legend()
-
-# Show the plot
-plt.show()
 ------------------
 
 [1;31m---------------------------------------------------------------------------[0m
-[1;31mInvalidURL[0m                                Traceback (most recent call last)
-Cell [1;32mIn[11], line 8[0m
-[0;32m      6[0m data [38;5;241m=[39m pd[38;5;241m.[39mDataFrame()
-[0;32m      7[0m [38;5;28;01mfor[39;00m j [38;5;129;01min[39;00m [38;5;28mrange[39m([38;5;241m0[39m,[38;5;28mlen[39m(seriesid)):
-[1;32m----> 8[0m     data_j [38;5;241m=[39m fred[38;5;241m.[39mget_series(seriesid[j])
-[0;32m      9[0m     data[seriesid[j]] [38;5;241m=[39m data_j
-[0;32m     12[0m [38;5;66;03m# Create a plot[39;00m
+[1;31mImportError[0m                               Traceback (most recent call last)
+Cell [1;32mIn[1], line 2[0m
+[0;32m      1[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m----> 2[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
 
-File [1;32m~\anaconda3\Lib\site-packages\fredapi\fred.py:131[0m, in [0;36mFred.get_series[1;34m(self, series_id, observation_start, observation_end, **kwargs)[0m
-[0;32m    129[0m [38;5;28;01mif[39;00m kwargs[38;5;241m.[39mkeys():
-[0;32m    130[0m     url [38;5;241m+[39m[38;5;241m=[39m [38;5;124m'[39m[38;5;124m&[39m[38;5;124m'[39m [38;5;241m+[39m urlencode(kwargs)
-[1;32m--> 131[0m root [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m__fetch_data(url)
-[0;32m    132[0m [38;5;28;01mif[39;00m root [38;5;129;01mis[39;00m [38;5;28;01mNone[39;00m:
-[0;32m    133[0m     [38;5;28;01mraise[39;00m [38;5;167;01mValueError[39;00m([38;5;124m'[39m[38;5;124mNo data exists for series id: [39m[38;5;124m'[39m [38;5;241m+[39m series_id)
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\__init__.py:113[0m
+[0;32m    109[0m [38;5;28;01mfrom[39;00m [38;5;21;01mpackaging[39;00m[38;5;21;01m.[39;00m[38;5;21;01mversion[39;00m [38;5;28;01mimport[39;00m parse [38;5;28;01mas[39;00m parse_version
+[0;32m    111[0m [38;5;66;03m# cbook must import matplotlib only within function[39;00m
+[0;32m    112[0m [38;5;66;03m# definitions, so it is safe to import from it here.[39;00m
+[1;32m--> 113[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m _api, _version, cbook, _docstring, rcsetup
+[0;32m    114[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcbook[39;00m [38;5;28;01mimport[39;00m sanitize_sequence
+[0;32m    115[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_api[39;00m [38;5;28;01mimport[39;00m MatplotlibDeprecationWarning
 
-File [1;32m~\anaconda3\Lib\site-packages\fredapi\fred.py:64[0m, in [0;36mFred.__fetch_data[1;34m(self, url)[0m
-[0;32m     62[0m url [38;5;241m+[39m[38;5;241m=[39m [38;5;124m'[39m[38;5;124m&api_key=[39m[38;5;124m'[39m [38;5;241m+[39m [38;5;28mself[39m[38;5;241m.[39mapi_key
-[0;32m     63[0m [38;5;28;01mtry[39;00m:
-[1;32m---> 64[0m     response [38;5;241m=[39m urlopen(url)
-[0;32m     65[0m     root [38;5;241m=[39m ET[38;5;241m.[39mfromstring(response[38;5;241m.[39mread())
-[0;32m     66[0m [38;5;28;01mexcept[39;00m HTTPError [38;5;28;01mas[39;00m exc:
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\rcsetup.py:27[0m
+[0;32m     25[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m _api, cbook
+[0;32m     26[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcbook[39;00m [38;5;28;01mimport[39;00m ls_mapper
+[1;32m---> 27[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcolors[39;00m [38;5;28;01mimport[39;00m Colormap, is_color_like
+[0;32m     28[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_fontconfig_pattern[39;00m [38;5;28;01mimport[39;00m parse_fontconfig_pattern
+[0;32m     29[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_enums[39;00m [38;5;28;01mimport[39;00m JoinStyle, CapStyle
 
-File [1;32m~\anaconda3\Lib\urllib\request.py:216[0m, in [0;36murlopen[1;34m(url, data, timeout, cafile, capath, cadefault, context)[0m
-[0;32m    214[0m [38;5;28;01melse[39;00m:
-[0;32m    215[0m     opener [38;5;241m=[39m _opener
-[1;32m--> 216[0m [38;5;28;01mreturn[39;00m opener[38;5;241m.[39mopen(url, data, timeout)
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\colors.py:56[0m
+[0;32m     54[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpl[39;00m
+[0;32m     55[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[1;32m---> 56[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m _api, _cm, cbook, scale
+[0;32m     57[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01m_color_data[39;00m [38;5;28;01mimport[39;00m BASE_COLORS, TABLEAU_COLORS, CSS4_COLORS, XKCD_COLORS
+[0;32m     60[0m [38;5;28;01mclass[39;00m [38;5;21;01m_ColorMapping[39;00m([38;5;28mdict[39m):
 
-File [1;32m~\anaconda3\Lib\urllib\request.py:519[0m, in [0;36mOpenerDirector.open[1;34m(self, fullurl, data, timeout)[0m
-[0;32m    516[0m     req [38;5;241m=[39m meth(req)
-[0;32m    518[0m sys[38;5;241m.[39maudit([38;5;124m'[39m[38;5;124murllib.Request[39m[38;5;124m'[39m, req[38;5;241m.[39mfull_url, req[38;5;241m.[39mdata, req[38;5;241m.[39mheaders, req[38;5;241m.[39mget_method())
-[1;32m--> 519[0m response [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_open(req, data)
-[0;32m    521[0m [38;5;66;03m# post-process response[39;00m
-[0;32m    522[0m meth_name [38;5;241m=[39m protocol[38;5;241m+[39m[38;5;124m"[39m[38;5;124m_response[39m[38;5;124m"[39m
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\scale.py:22[0m
+[0;32m     20[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpl[39;00m
+[0;32m     21[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m _api, _docstring
+[1;32m---> 22[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mticker[39;00m [38;5;28;01mimport[39;00m (
+[0;32m     23[0m     NullFormatter, ScalarFormatter, LogFormatterSciNotation, LogitFormatter,
+[0;32m     24[0m     NullLocator, LogLocator, AutoLocator, AutoMinorLocator,
+[0;32m     25[0m     SymmetricalLogLocator, AsinhLocator, LogitLocator)
+[0;32m     26[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtransforms[39;00m [38;5;28;01mimport[39;00m Transform, IdentityTransform
+[0;32m     29[0m [38;5;28;01mclass[39;00m [38;5;21;01mScaleBase[39;00m:
 
-File [1;32m~\anaconda3\Lib\urllib\request.py:536[0m, in [0;36mOpenerDirector._open[1;34m(self, req, data)[0m
-[0;32m    533[0m     [38;5;28;01mreturn[39;00m result
-[0;32m    535[0m protocol [38;5;241m=[39m req[38;5;241m.[39mtype
-[1;32m--> 536[0m result [38;5;241m=[39m [38;5;28mself[39m[38;5;241m.[39m_call_chain([38;5;28mself[39m[38;5;241m.[39mhandle_open, protocol, protocol [38;5;241m+[39m
-[0;32m    537[0m                           [38;5;124m'[39m[38;5;124m_open[39m[38;5;124m'[39m, req)
-[0;32m    538[0m [38;5;28;01mif[39;00m result:
-[0;32m    539[0m     [38;5;28;01mreturn[39;00m result
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\ticker.py:138[0m
+[0;32m    136[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmpl[39;00m
+[0;32m    137[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m _api, cbook
+[1;32m--> 138[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m transforms [38;5;28;01mas[39;00m mtransforms
+[0;32m    140[0m _log [38;5;241m=[39m logging[38;5;241m.[39mgetLogger([38;5;18m__name__[39m)
+[0;32m    142[0m __all__ [38;5;241m=[39m ([38;5;124m'[39m[38;5;124mTickHelper[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mFormatter[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mFixedFormatter[39m[38;5;124m'[39m,
+[0;32m    143[0m            [38;5;124m'[39m[38;5;124mNullFormatter[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mFuncFormatter[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mFormatStrFormatter[39m[38;5;124m'[39m,
+[0;32m    144[0m            [38;5;124m'[39m[38;5;124mStrMethodFormatter[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mScalarFormatter[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mLogFormatter[39m[38;5;124m'[39m,
+[1;32m   (...)[0m
+[0;32m    150[0m            [38;5;124m'[39m[38;5;124mMultipleLocator[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mMaxNLocator[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mAutoMinorLocator[39m[38;5;124m'[39m,
+[0;32m    151[0m            [38;5;124m'[39m[38;5;124mSymmetricalLogLocator[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mAsinhLocator[39m[38;5;124m'[39m, [38;5;124m'[39m[38;5;124mLogitLocator[39m[38;5;124m'[39m)
 
-File [1;32m~\anaconda3\Lib\urllib\request.py:496[0m, in [0;36mOpenerDirector._call_chain[1;34m(self, chain, kind, meth_name, *args)[0m
-[0;32m    494[0m [38;5;28;01mfor[39;00m handler [38;5;129;01min[39;00m handlers:
-[0;32m    495[0m     func [38;5;241m=[39m [38;5;28mgetattr[39m(handler, meth_name)
-[1;32m--> 496[0m     result [38;5;241m=[39m func([38;5;241m*[39margs)
-[0;32m    497[0m     [38;5;28;01mif[39;00m result [38;5;129;01mis[39;00m [38;5;129;01mnot[39;00m [38;5;28;01mNone[39;00m:
-[0;32m    498[0m         [38;5;28;01mreturn[39;00m result
+File [1;32m~\anaconda3\Lib\site-packages\matplotlib\transforms.py:49[0m
+[0;32m     46[0m [38;5;28;01mfrom[39;00m [38;5;21;01mnumpy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinalg[39;00m [38;5;28;01mimport[39;00m inv
+[0;32m     48[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m [38;5;28;01mimport[39;00m _api
+[1;32m---> 49[0m [38;5;28;01mfrom[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01m_path[39;00m [38;5;28;01mimport[39;00m (
+[0;32m     50[0m     affine_transform, count_bboxes_overlapping_bbox, update_path_extents)
+[0;32m     51[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mpath[39;00m [38;5;28;01mimport[39;00m Path
+[0;32m     53[0m DEBUG [38;5;241m=[39m [38;5;28;01mFalse[39;00m
 
-File [1;32m~\anaconda3\Lib\urllib\request.py:1391[0m, in [0;36mHTTPSHandler.https_open[1;34m(self, req)[0m
-[0;32m   1390[0m [38;5;28;01mdef[39;00m [38;5;21mhttps_open[39m([38;5;28mself[39m, req):
-[1;32m-> 1391[0m     [38;5;28;01mreturn[39;00m [38;5;28mself[39m[38;5;241m.[39mdo_open(http[38;5;241m.[39mclient[38;5;241m.[39mHTTPSConnection, req,
-[0;32m   1392[0m         context[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39m_context, check_hostname[38;5;241m=[39m[38;5;28mself[39m[38;5;241m.[39m_check_hostname)
-
-File [1;32m~\anaconda3\Lib\urllib\request.py:1348[0m, in [0;36mAbstractHTTPHandler.do_open[1;34m(self, http_class, req, **http_conn_args)[0m
-[0;32m   1346[0m [38;5;28;01mtry[39;00m:
-[0;32m   1347[0m     [38;5;28;01mtry[39;00m:
-[1;32m-> 1348[0m         h[38;5;241m.[39mrequest(req[38;5;241m.[39mget_method(), req[38;5;241m.[39mselector, req[38;5;241m.[39mdata, headers,
-[0;32m   1349[0m                   encode_chunked[38;5;241m=[39mreq[38;5;241m.[39mhas_header([38;5;124m'[39m[38;5;124mTransfer-encoding[39m[38;5;124m'[39m))
-[0;32m   1350[0m     [38;5;28;01mexcept[39;00m [38;5;167;01mOSError[39;00m [38;5;28;01mas[39;00m err: [38;5;66;03m# timeout error[39;00m
-[0;32m   1351[0m         [38;5;28;01mraise[39;00m URLError(err)
-
-File [1;32m~\anaconda3\Lib\http\client.py:1286[0m, in [0;36mHTTPConnection.request[1;34m(self, method, url, body, headers, encode_chunked)[0m
-[0;32m   1283[0m [38;5;28;01mdef[39;00m [38;5;21mrequest[39m([38;5;28mself[39m, method, url, body[38;5;241m=[39m[38;5;28;01mNone[39;00m, headers[38;5;241m=[39m{}, [38;5;241m*[39m,
-[0;32m   1284[0m             encode_chunked[38;5;241m=[39m[38;5;28;01mFalse[39;00m):
-[0;32m   1285[0m [38;5;250m    [39m[38;5;124;03m"""Send a complete request to the server."""[39;00m
-[1;32m-> 1286[0m     [38;5;28mself[39m[38;5;241m.[39m_send_request(method, url, body, headers, encode_chunked)
-
-File [1;32m~\anaconda3\Lib\http\client.py:1297[0m, in [0;36mHTTPConnection._send_request[1;34m(self, method, url, body, headers, encode_chunked)[0m
-[0;32m   1294[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124maccept-encoding[39m[38;5;124m'[39m [38;5;129;01min[39;00m header_names:
-[0;32m   1295[0m     skips[[38;5;124m'[39m[38;5;124mskip_accept_encoding[39m[38;5;124m'[39m] [38;5;241m=[39m [38;5;241m1[39m
-[1;32m-> 1297[0m [38;5;28mself[39m[38;5;241m.[39mputrequest(method, url, [38;5;241m*[39m[38;5;241m*[39mskips)
-[0;32m   1299[0m [38;5;66;03m# chunked encoding will happen if HTTP/1.1 is used and either[39;00m
-[0;32m   1300[0m [38;5;66;03m# the caller passes encode_chunked=True or the following[39;00m
-[0;32m   1301[0m [38;5;66;03m# conditions hold:[39;00m
-[0;32m   1302[0m [38;5;66;03m# 1. content-length has not been explicitly set[39;00m
-[0;32m   1303[0m [38;5;66;03m# 2. the body is a file or iterable, but not a str or bytes-like[39;00m
-[0;32m   1304[0m [38;5;66;03m# 3. Transfer-Encoding has NOT been explicitly set by the caller[39;00m
-[0;32m   1306[0m [38;5;28;01mif[39;00m [38;5;124m'[39m[38;5;124mcontent-length[39m[38;5;124m'[39m [38;5;129;01mnot[39;00m [38;5;129;01min[39;00m header_names:
-[0;32m   1307[0m     [38;5;66;03m# only chunk body if not explicitly set for backwards[39;00m
-[0;32m   1308[0m     [38;5;66;03m# compatibility, assuming the client code is already handling the[39;00m
-[0;32m   1309[0m     [38;5;66;03m# chunking[39;00m
-
-File [1;32m~\anaconda3\Lib\http\client.py:1131[0m, in [0;36mHTTPConnection.putrequest[1;34m(self, method, url, skip_host, skip_accept_encoding)[0m
-[0;32m   1128[0m [38;5;28mself[39m[38;5;241m.[39m_method [38;5;241m=[39m method
-[0;32m   1130[0m url [38;5;241m=[39m url [38;5;129;01mor[39;00m [38;5;124m'[39m[38;5;124m/[39m[38;5;124m'[39m
-[1;32m-> 1131[0m [38;5;28mself[39m[38;5;241m.[39m_validate_path(url)
-[0;32m   1133[0m request [38;5;241m=[39m [38;5;124m'[39m[38;5;132;01m%s[39;00m[38;5;124m [39m[38;5;132;01m%s[39;00m[38;5;124m [39m[38;5;132;01m%s[39;00m[38;5;124m'[39m [38;5;241m%[39m (method, url, [38;5;28mself[39m[38;5;241m.[39m_http_vsn_str)
-[0;32m   1135[0m [38;5;28mself[39m[38;5;241m.[39m_output([38;5;28mself[39m[38;5;241m.[39m_encode_request(request))
-
-File [1;32m~\anaconda3\Lib\http\client.py:1231[0m, in [0;36mHTTPConnection._validate_path[1;34m(self, url)[0m
-[0;32m   1229[0m match [38;5;241m=[39m _contains_disallowed_url_pchar_re[38;5;241m.[39msearch(url)
-[0;32m   1230[0m [38;5;28;01mif[39;00m match:
-[1;32m-> 1231[0m     [38;5;28;01mraise[39;00m InvalidURL([38;5;124mf[39m[38;5;124m"[39m[38;5;124mURL can[39m[38;5;124m'[39m[38;5;124mt contain control characters. [39m[38;5;132;01m{[39;00murl[38;5;132;01m!r}[39;00m[38;5;124m [39m[38;5;124m"[39m
-[0;32m   1232[0m                      [38;5;124mf[39m[38;5;124m"[39m[38;5;124m(found at least [39m[38;5;132;01m{[39;00mmatch[38;5;241m.[39mgroup()[38;5;132;01m!r}[39;00m[38;5;124m)[39m[38;5;124m"[39m)
-
-[1;31mInvalidURL[0m: URL can't contain control characters. '/fred/series/observations?series_id=FRBATLWGT12MMUMHGO&api_key=insert your api key here' (found at least ' ')
-InvalidURL: URL can't contain control characters. '/fred/series/observations?series_id=FRBATLWGT12MMUMHGO&api_key=insert your api key here' (found at least ' ')
+[1;31mImportError[0m: numpy.core.multiarray failed to import
+ImportError: numpy.core.multiarray failed to import
 

@@ -354,6 +354,440 @@ document.write(`
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
+  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
+    app.launch_new_instance()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
+    app.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
+    self.io_loop.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
+    self.asyncio_loop.run_forever()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
+    self._run_once()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
+    handle._run()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
+    await self.process_one()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
+    await dispatch(*args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
+    await result
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
+    reply_content = await reply_content
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
+    res = shell.run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
+    result = self._run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
+    result = runner(coro)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
+    coro.send(None)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_78936\3830581304.py&quot;, line 2, in &lt;module&gt;
+    from pycaret.classification import *
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pycaret.classification.functional import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\functional.py&quot;, line 5, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 38, in &lt;module&gt;
+    from pandas.compat import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\__init__.py&quot;, line 27, in &lt;module&gt;
+    from pandas.compat.pyarrow import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\pyarrow.py&quot;, line 8, in &lt;module&gt;
+    import pyarrow as pa
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
+    import pyarrow.lib as _lib
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span>: _ARRAY_API not found
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
+  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
+    app.launch_new_instance()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
+    app.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
+    self.io_loop.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
+    self.asyncio_loop.run_forever()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
+    self._run_once()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
+    handle._run()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
+    await self.process_one()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
+    await dispatch(*args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
+    await result
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
+    reply_content = await reply_content
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
+    res = shell.run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
+    result = self._run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
+    result = runner(coro)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
+    coro.send(None)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_78936\3830581304.py&quot;, line 2, in &lt;module&gt;
+    from pycaret.classification import *
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pycaret.classification.functional import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\functional.py&quot;, line 5, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
+    from pandas.core.api import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 9, in &lt;module&gt;
+    from pandas.core.dtypes.dtypes import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\dtypes\dtypes.py&quot;, line 24, in &lt;module&gt;
+    from pandas._libs import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
+    import pyarrow.lib as _lib
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span>: _ARRAY_API not found
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
+  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
+    app.launch_new_instance()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
+    app.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
+    self.io_loop.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
+    self.asyncio_loop.run_forever()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
+    self._run_once()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
+    handle._run()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
+    await self.process_one()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
+    await dispatch(*args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
+    await result
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
+    reply_content = await reply_content
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
+    res = shell.run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
+    result = self._run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
+    result = runner(coro)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
+    coro.send(None)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_78936\3830581304.py&quot;, line 2, in &lt;module&gt;
+    from pycaret.classification import *
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pycaret.classification.functional import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\functional.py&quot;, line 5, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
+    from pandas.core.api import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
+    from pandas.core.arrays import Categorical
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 53, in &lt;module&gt;
+    from pandas.core import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\__init__.py&quot;, line 8, in &lt;module&gt;
+    from pandas.core.ops.array_ops import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\array_ops.py&quot;, line 56, in &lt;module&gt;
+    from pandas.core.computation import expressions
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\expressions.py&quot;, line 21, in &lt;module&gt;
+    from pandas.core.computation.check import NUMEXPR_INSTALLED
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\check.py&quot;, line 5, in &lt;module&gt;
+    ne = import_optional_dependency(&quot;numexpr&quot;, errors=&quot;warn&quot;)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
+    module = importlib.import_module(name)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\numexpr\__init__.py&quot;, line 24, in &lt;module&gt;
+    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span>: _ARRAY_API not found
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
+NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
+versions of NumPy, modules must be compiled with NumPy 2.0.
+Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+
+If you are a user of the module, the easiest solution will be to
+downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
+We expect that some modules will need time to support NumPy 2.
+
+Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
+  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
+    app.launch_new_instance()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
+    app.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
+    self.io_loop.start()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
+    self.asyncio_loop.run_forever()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
+    self._run_once()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
+    handle._run()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
+    self._context.run(self._callback, *self._args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
+    await self.process_one()
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
+    await dispatch(*args)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
+    await result
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
+    reply_content = await reply_content
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
+    res = shell.run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
+    return super().run_cell(*args, **kwargs)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
+    result = self._run_cell(
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
+    result = runner(coro)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
+    coro.send(None)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
+    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
+    if await self.run_code(code, result, async_=asy):
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
+    exec(code_obj, self.user_global_ns, self.user_ns)
+  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_78936\3830581304.py&quot;, line 2, in &lt;module&gt;
+    from pycaret.classification import *
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pycaret.classification.functional import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pycaret\classification\functional.py&quot;, line 5, in &lt;module&gt;
+    import pandas as pd
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
+    from pandas.core.api import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
+    from pandas.core.arrays import Categorical
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
+    from pandas.core.arrays.arrow import ArrowExtensionArray
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
+    from pandas.core.arrays.arrow.array import ArrowExtensionArray
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 67, in &lt;module&gt;
+    from pandas.core.arrays.masked import BaseMaskedArray
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py&quot;, line 61, in &lt;module&gt;
+    from pandas.core import (
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\nanops.py&quot;, line 52, in &lt;module&gt;
+    bn = import_optional_dependency(&quot;bottleneck&quot;, errors=&quot;warn&quot;)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
+    module = importlib.import_module(name)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\bottleneck\__init__.py&quot;, line 7, in &lt;module&gt;
+    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="ne">AttributeError</span>: _ARRAY_API not found
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
+<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#!pip install pycaret</span>
+<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">pycaret.classification</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pycaret</span>\<span class="n">classification</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">pycaret.classification.functional</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span>     <span class="n">add_metric</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span>     <span class="n">automl</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span>     <span class="n">blend_models</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span>     <span class="n">calibrate_model</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span>     <span class="n">check_drift</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span>     <span class="n">check_fairness</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span>     <span class="n">compare_models</span><span class="p">,</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span>     <span class="n">convert_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">create_api</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">create_app</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span>     <span class="n">create_docker</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="n">create_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">14</span>     <span class="n">dashboard</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">15</span>     <span class="n">deploy_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="n">ensemble_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">evaluate_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">finalize_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">get_allowed_engines</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span>     <span class="n">get_config</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span>     <span class="n">get_current_experiment</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span>     <span class="n">get_engine</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">get_leaderboard</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">get_logs</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">get_metrics</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">interpret_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">load_experiment</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span>     <span class="n">load_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span>     <span class="n">models</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">30</span>     <span class="n">optimize_threshold</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">31</span>     <span class="n">plot_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span>     <span class="n">predict_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">33</span>     <span class="n">pull</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">34</span>     <span class="n">remove_metric</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">35</span>     <span class="n">save_experiment</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">36</span>     <span class="n">save_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">37</span>     <span class="n">set_config</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">38</span>     <span class="n">set_current_experiment</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">39</span>     <span class="n">setup</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">40</span>     <span class="n">stack_models</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">41</span>     <span class="n">tune_model</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">42</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="kn">from</span> <span class="nn">pycaret.classification.oop</span> <span class="kn">import</span> <span class="n">ClassificationExperiment</span>
+<span class="g g-Whitespace">     </span><span class="mi">45</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+<span class="g g-Whitespace">     </span><span class="mi">46</span>     <span class="s2">&quot;ClassificationExperiment&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span>     <span class="s2">&quot;setup&quot;</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">86</span>     <span class="s2">&quot;check_drift&quot;</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">87</span> <span class="p">]</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pycaret</span>\<span class="n">classification</span>\<span class="n">functional</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">8</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">from</span> <span class="nn">joblib.memory</span> <span class="kn">import</span> <span class="n">Memory</span>
+<span class="ne">----&gt; </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">pycaret.classification.oop</span> <span class="kn">import</span> <span class="n">ClassificationExperiment</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">pycaret.internal.parallel.parallel_backend</span> <span class="kn">import</span> <span class="n">ParallelBackend</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">pycaret.loggers.base_logger</span> <span class="kn">import</span> <span class="n">BaseLogger</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pycaret</span>\<span class="n">classification</span>\<span class="n">oop</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">11</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>  <span class="c1"># type: ignore</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">import</span> <span class="nn">plotly.express</span> <span class="k">as</span> <span class="nn">px</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="kn">import</span> <span class="nn">sklearn</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="kn">from</span> <span class="nn">joblib.memory</span> <span class="kn">import</span> <span class="n">Memory</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">plotly</span>\<span class="n">express</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">15</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="k">if</span> <span class="n">pd</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="k">raise</span> <span class="ne">ImportError</span><span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span><span class="w">         </span><span class="sd">&quot;&quot;&quot;\</span>
+<span class="g g-Whitespace">     </span><span class="mi">12</span><span class="sd"> Plotly express requires pandas to be installed.&quot;&quot;&quot;</span>
+<span class="g g-Whitespace">     </span><span class="mi">13</span>     <span class="p">)</span>
+<span class="ne">---&gt; </span><span class="mi">15</span> <span class="kn">from</span> <span class="nn">._imshow</span> <span class="kn">import</span> <span class="n">imshow</span>
+<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">._chart_types</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: F401</span>
+<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">scatter</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">scatter_3d</span><span class="p">,</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">51</span>     <span class="n">density_mapbox</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">52</span> <span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="kn">from</span> <span class="nn">._core</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: F401</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span>     <span class="n">set_mapbox_access_token</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span>     <span class="n">defaults</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span>     <span class="n">get_trendline_results</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">59</span>     <span class="n">NO_COLOR</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="p">)</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">plotly</span>\<span class="n">express</span>\<span class="n">_imshow</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">from</span> <span class="nn">_plotly_utils.basevalidators</span> <span class="kn">import</span> <span class="n">ColorscaleValidator</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">._core</span> <span class="kn">import</span> <span class="n">apply_default_cascade</span><span class="p">,</span> <span class="n">init_figure</span><span class="p">,</span> <span class="n">configure_animation_controls</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">from</span> <span class="nn">.imshow_utils</span> <span class="kn">import</span> <span class="n">rescale_intensity</span><span class="p">,</span> <span class="n">_integer_ranges</span><span class="p">,</span> <span class="n">_integer_types</span>
+<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">plotly</span>\<span class="n">express</span>\<span class="n">imshow_utils</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">24</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="n">_integer_types</span> <span class="o">=</span> <span class="p">(</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span>     <span class="n">np</span><span class="o">.</span><span class="n">byte</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">11</span>     <span class="n">np</span><span class="o">.</span><span class="n">ubyte</span><span class="p">,</span>  <span class="c1"># 8 bits</span>
+   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">np</span><span class="o">.</span><span class="n">ulonglong</span><span class="p">,</span>
+<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">)</span>  <span class="c1"># 64 bits</span>
+<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="n">_integer_ranges</span> <span class="o">=</span> <span class="p">{</span><span class="n">t</span><span class="p">:</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">iinfo</span><span class="p">(</span><span class="n">t</span><span class="p">)</span><span class="o">.</span><span class="n">max</span><span class="p">)</span> <span class="k">for</span> <span class="n">t</span> <span class="ow">in</span> <span class="n">_integer_types</span><span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="n">dtype_range</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">np</span><span class="o">.</span><span class="n">bool_</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+<span class="ne">---&gt; </span><span class="mi">24</span>     <span class="n">np</span><span class="o">.</span><span class="n">bool8</span><span class="p">:</span> <span class="p">(</span><span class="kc">False</span><span class="p">,</span> <span class="kc">True</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">np</span><span class="o">.</span><span class="n">float16</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">26</span>     <span class="n">np</span><span class="o">.</span><span class="n">float32</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">27</span>     <span class="n">np</span><span class="o">.</span><span class="n">float64</span><span class="p">:</span> <span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span>
+<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="p">}</span>
+<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="n">dtype_range</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">_integer_ranges</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">32</span> <span class="n">DTYPE_RANGE</span> <span class="o">=</span> <span class="n">dtype_range</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="nn">File ~\anaconda3\Lib\site-packages\numpy\__init__.py:808,</span> in <span class="ni">__getattr__</span><span class="nt">(attr)</span>
+<span class="g g-Whitespace">    </span><span class="mi">805</span>     <span class="kn">import</span> <span class="nn">numpy.char</span> <span class="k">as</span> <span class="nn">char</span>
+<span class="g g-Whitespace">    </span><span class="mi">806</span>     <span class="k">return</span> <span class="n">char</span><span class="o">.</span><span class="n">chararray</span>
+<span class="ne">--&gt; </span><span class="mi">808</span> <span class="k">raise</span> <span class="ne">AttributeError</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;module </span><span class="si">{</span><span class="vm">__name__</span><span class="si">!r}</span><span class="s2"> has no attribute </span><span class="si">{</span><span class="n">attr</span><span class="si">!r}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="ne">AttributeError</span>: module &#39;numpy&#39; has no attribute &#39;bool8&#39;
+</pre></div>
+</div>
+</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -376,335 +810,351 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html"><style type="text/css">
-#T_be829_row9_col1 {
+#T_c6bb6_row9_col1 {
   background-color: lightgreen;
 }
 </style>
-<table id="T_be829">
+<table id="T_c6bb6">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_be829_level0_col0" class="col_heading level0 col0" >Description</th>
-      <th id="T_be829_level0_col1" class="col_heading level0 col1" >Value</th>
+      <th id="T_c6bb6_level0_col0" class="col_heading level0 col0" >Description</th>
+      <th id="T_c6bb6_level0_col1" class="col_heading level0 col1" >Value</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_be829_level0_row0" class="row_heading level0 row0" >0</th>
-      <td id="T_be829_row0_col0" class="data row0 col0" >Session id</td>
-      <td id="T_be829_row0_col1" class="data row0 col1" >42</td>
+      <th id="T_c6bb6_level0_row0" class="row_heading level0 row0" >0</th>
+      <td id="T_c6bb6_row0_col0" class="data row0 col0" >Session id</td>
+      <td id="T_c6bb6_row0_col1" class="data row0 col1" >42</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row1" class="row_heading level0 row1" >1</th>
-      <td id="T_be829_row1_col0" class="data row1 col0" >Target</td>
-      <td id="T_be829_row1_col1" class="data row1 col1" >not.fully.paid</td>
+      <th id="T_c6bb6_level0_row1" class="row_heading level0 row1" >1</th>
+      <td id="T_c6bb6_row1_col0" class="data row1 col0" >Target</td>
+      <td id="T_c6bb6_row1_col1" class="data row1 col1" >not.fully.paid</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row2" class="row_heading level0 row2" >2</th>
-      <td id="T_be829_row2_col0" class="data row2 col0" >Target type</td>
-      <td id="T_be829_row2_col1" class="data row2 col1" >Binary</td>
+      <th id="T_c6bb6_level0_row2" class="row_heading level0 row2" >2</th>
+      <td id="T_c6bb6_row2_col0" class="data row2 col0" >Target type</td>
+      <td id="T_c6bb6_row2_col1" class="data row2 col1" >Binary</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row3" class="row_heading level0 row3" >3</th>
-      <td id="T_be829_row3_col0" class="data row3 col0" >Original data shape</td>
-      <td id="T_be829_row3_col1" class="data row3 col1" >(9578, 14)</td>
+      <th id="T_c6bb6_level0_row3" class="row_heading level0 row3" >3</th>
+      <td id="T_c6bb6_row3_col0" class="data row3 col0" >Original data shape</td>
+      <td id="T_c6bb6_row3_col1" class="data row3 col1" >(9578, 14)</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row4" class="row_heading level0 row4" >4</th>
-      <td id="T_be829_row4_col0" class="data row4 col0" >Transformed data shape</td>
-      <td id="T_be829_row4_col1" class="data row4 col1" >(9578, 20)</td>
+      <th id="T_c6bb6_level0_row4" class="row_heading level0 row4" >4</th>
+      <td id="T_c6bb6_row4_col0" class="data row4 col0" >Transformed data shape</td>
+      <td id="T_c6bb6_row4_col1" class="data row4 col1" >(9578, 20)</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row5" class="row_heading level0 row5" >5</th>
-      <td id="T_be829_row5_col0" class="data row5 col0" >Transformed train set shape</td>
-      <td id="T_be829_row5_col1" class="data row5 col1" >(7662, 20)</td>
+      <th id="T_c6bb6_level0_row5" class="row_heading level0 row5" >5</th>
+      <td id="T_c6bb6_row5_col0" class="data row5 col0" >Transformed train set shape</td>
+      <td id="T_c6bb6_row5_col1" class="data row5 col1" >(7662, 20)</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row6" class="row_heading level0 row6" >6</th>
-      <td id="T_be829_row6_col0" class="data row6 col0" >Transformed test set shape</td>
-      <td id="T_be829_row6_col1" class="data row6 col1" >(1916, 20)</td>
+      <th id="T_c6bb6_level0_row6" class="row_heading level0 row6" >6</th>
+      <td id="T_c6bb6_row6_col0" class="data row6 col0" >Transformed test set shape</td>
+      <td id="T_c6bb6_row6_col1" class="data row6 col1" >(1916, 20)</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row7" class="row_heading level0 row7" >7</th>
-      <td id="T_be829_row7_col0" class="data row7 col0" >Numeric features</td>
-      <td id="T_be829_row7_col1" class="data row7 col1" >12</td>
+      <th id="T_c6bb6_level0_row7" class="row_heading level0 row7" >7</th>
+      <td id="T_c6bb6_row7_col0" class="data row7 col0" >Numeric features</td>
+      <td id="T_c6bb6_row7_col1" class="data row7 col1" >12</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row8" class="row_heading level0 row8" >8</th>
-      <td id="T_be829_row8_col0" class="data row8 col0" >Categorical features</td>
-      <td id="T_be829_row8_col1" class="data row8 col1" >1</td>
+      <th id="T_c6bb6_level0_row8" class="row_heading level0 row8" >8</th>
+      <td id="T_c6bb6_row8_col0" class="data row8 col0" >Categorical features</td>
+      <td id="T_c6bb6_row8_col1" class="data row8 col1" >1</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row9" class="row_heading level0 row9" >9</th>
-      <td id="T_be829_row9_col0" class="data row9 col0" >Preprocess</td>
-      <td id="T_be829_row9_col1" class="data row9 col1" >True</td>
+      <th id="T_c6bb6_level0_row9" class="row_heading level0 row9" >9</th>
+      <td id="T_c6bb6_row9_col0" class="data row9 col0" >Preprocess</td>
+      <td id="T_c6bb6_row9_col1" class="data row9 col1" >True</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row10" class="row_heading level0 row10" >10</th>
-      <td id="T_be829_row10_col0" class="data row10 col0" >Imputation type</td>
-      <td id="T_be829_row10_col1" class="data row10 col1" >simple</td>
+      <th id="T_c6bb6_level0_row10" class="row_heading level0 row10" >10</th>
+      <td id="T_c6bb6_row10_col0" class="data row10 col0" >Imputation type</td>
+      <td id="T_c6bb6_row10_col1" class="data row10 col1" >simple</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row11" class="row_heading level0 row11" >11</th>
-      <td id="T_be829_row11_col0" class="data row11 col0" >Numeric imputation</td>
-      <td id="T_be829_row11_col1" class="data row11 col1" >mean</td>
+      <th id="T_c6bb6_level0_row11" class="row_heading level0 row11" >11</th>
+      <td id="T_c6bb6_row11_col0" class="data row11 col0" >Numeric imputation</td>
+      <td id="T_c6bb6_row11_col1" class="data row11 col1" >mean</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row12" class="row_heading level0 row12" >12</th>
-      <td id="T_be829_row12_col0" class="data row12 col0" >Categorical imputation</td>
-      <td id="T_be829_row12_col1" class="data row12 col1" >mode</td>
+      <th id="T_c6bb6_level0_row12" class="row_heading level0 row12" >12</th>
+      <td id="T_c6bb6_row12_col0" class="data row12 col0" >Categorical imputation</td>
+      <td id="T_c6bb6_row12_col1" class="data row12 col1" >mode</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row13" class="row_heading level0 row13" >13</th>
-      <td id="T_be829_row13_col0" class="data row13 col0" >Maximum one-hot encoding</td>
-      <td id="T_be829_row13_col1" class="data row13 col1" >25</td>
+      <th id="T_c6bb6_level0_row13" class="row_heading level0 row13" >13</th>
+      <td id="T_c6bb6_row13_col0" class="data row13 col0" >Maximum one-hot encoding</td>
+      <td id="T_c6bb6_row13_col1" class="data row13 col1" >25</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row14" class="row_heading level0 row14" >14</th>
-      <td id="T_be829_row14_col0" class="data row14 col0" >Encoding method</td>
-      <td id="T_be829_row14_col1" class="data row14 col1" >None</td>
+      <th id="T_c6bb6_level0_row14" class="row_heading level0 row14" >14</th>
+      <td id="T_c6bb6_row14_col0" class="data row14 col0" >Encoding method</td>
+      <td id="T_c6bb6_row14_col1" class="data row14 col1" >None</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row15" class="row_heading level0 row15" >15</th>
-      <td id="T_be829_row15_col0" class="data row15 col0" >Fold Generator</td>
-      <td id="T_be829_row15_col1" class="data row15 col1" >StratifiedKFold</td>
+      <th id="T_c6bb6_level0_row15" class="row_heading level0 row15" >15</th>
+      <td id="T_c6bb6_row15_col0" class="data row15 col0" >Fold Generator</td>
+      <td id="T_c6bb6_row15_col1" class="data row15 col1" >StratifiedKFold</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row16" class="row_heading level0 row16" >16</th>
-      <td id="T_be829_row16_col0" class="data row16 col0" >Fold Number</td>
-      <td id="T_be829_row16_col1" class="data row16 col1" >10</td>
+      <th id="T_c6bb6_level0_row16" class="row_heading level0 row16" >16</th>
+      <td id="T_c6bb6_row16_col0" class="data row16 col0" >Fold Number</td>
+      <td id="T_c6bb6_row16_col1" class="data row16 col1" >10</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row17" class="row_heading level0 row17" >17</th>
-      <td id="T_be829_row17_col0" class="data row17 col0" >CPU Jobs</td>
-      <td id="T_be829_row17_col1" class="data row17 col1" >-1</td>
+      <th id="T_c6bb6_level0_row17" class="row_heading level0 row17" >17</th>
+      <td id="T_c6bb6_row17_col0" class="data row17 col0" >CPU Jobs</td>
+      <td id="T_c6bb6_row17_col1" class="data row17 col1" >-1</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row18" class="row_heading level0 row18" >18</th>
-      <td id="T_be829_row18_col0" class="data row18 col0" >Use GPU</td>
-      <td id="T_be829_row18_col1" class="data row18 col1" >False</td>
+      <th id="T_c6bb6_level0_row18" class="row_heading level0 row18" >18</th>
+      <td id="T_c6bb6_row18_col0" class="data row18 col0" >Use GPU</td>
+      <td id="T_c6bb6_row18_col1" class="data row18 col1" >False</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row19" class="row_heading level0 row19" >19</th>
-      <td id="T_be829_row19_col0" class="data row19 col0" >Log Experiment</td>
-      <td id="T_be829_row19_col1" class="data row19 col1" >False</td>
+      <th id="T_c6bb6_level0_row19" class="row_heading level0 row19" >19</th>
+      <td id="T_c6bb6_row19_col0" class="data row19 col0" >Log Experiment</td>
+      <td id="T_c6bb6_row19_col1" class="data row19 col1" >False</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row20" class="row_heading level0 row20" >20</th>
-      <td id="T_be829_row20_col0" class="data row20 col0" >Experiment Name</td>
-      <td id="T_be829_row20_col1" class="data row20 col1" >clf-default-name</td>
+      <th id="T_c6bb6_level0_row20" class="row_heading level0 row20" >20</th>
+      <td id="T_c6bb6_row20_col0" class="data row20 col0" >Experiment Name</td>
+      <td id="T_c6bb6_row20_col1" class="data row20 col1" >clf-default-name</td>
     </tr>
     <tr>
-      <th id="T_be829_level0_row21" class="row_heading level0 row21" >21</th>
-      <td id="T_be829_row21_col0" class="data row21 col0" >USI</td>
-      <td id="T_be829_row21_col1" class="data row21 col1" >9742</td>
+      <th id="T_c6bb6_level0_row21" class="row_heading level0 row21" >21</th>
+      <td id="T_c6bb6_row21_col0" class="data row21 col0" >USI</td>
+      <td id="T_c6bb6_row21_col1" class="data row21 col1" >146b</td>
     </tr>
   </tbody>
 </table>
-</div><div class="output text_html"><div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-    <tr>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th>Initiated</th>
-      <td>. . . . . . . . . . . . . . . . . .</td>
-      <td>12:52:00</td>
-    </tr>
-    <tr>
-      <th>Status</th>
-      <td>. . . . . . . . . . . . . . . . . .</td>
-      <td>Fitting 10 Folds</td>
-    </tr>
-    <tr>
-      <th>Estimator</th>
-      <td>. . . . . . . . . . . . . . . . . .</td>
-      <td>Extra Trees Classifier</td>
-    </tr>
-  </tbody>
-</table>
-</div></div><div class="output text_html"><style type="text/css">
-#T_135c8 th {
+</div><div class="output text_html"></div><div class="output text_html"><style type="text/css">
+#T_26d4b th {
   text-align: left;
 }
-#T_135c8_row0_col0, #T_135c8_row0_col1, #T_135c8_row0_col2, #T_135c8_row0_col3, #T_135c8_row0_col4, #T_135c8_row0_col5, #T_135c8_row0_col6, #T_135c8_row0_col7, #T_135c8_row0_col8, #T_135c8_row1_col0, #T_135c8_row1_col1, #T_135c8_row1_col2, #T_135c8_row1_col3, #T_135c8_row1_col4, #T_135c8_row1_col5, #T_135c8_row1_col6, #T_135c8_row1_col7, #T_135c8_row1_col8, #T_135c8_row2_col0, #T_135c8_row2_col1, #T_135c8_row2_col2, #T_135c8_row2_col3, #T_135c8_row2_col4, #T_135c8_row2_col5, #T_135c8_row2_col6, #T_135c8_row2_col7, #T_135c8_row2_col8, #T_135c8_row3_col0, #T_135c8_row3_col1, #T_135c8_row3_col2, #T_135c8_row3_col3, #T_135c8_row3_col4, #T_135c8_row3_col5, #T_135c8_row3_col6, #T_135c8_row3_col7, #T_135c8_row3_col8, #T_135c8_row4_col0, #T_135c8_row4_col1, #T_135c8_row4_col2, #T_135c8_row4_col3, #T_135c8_row4_col4, #T_135c8_row4_col5, #T_135c8_row4_col6, #T_135c8_row4_col7, #T_135c8_row4_col8, #T_135c8_row5_col0, #T_135c8_row5_col1, #T_135c8_row5_col2, #T_135c8_row5_col3, #T_135c8_row5_col4, #T_135c8_row5_col5, #T_135c8_row5_col6, #T_135c8_row5_col7, #T_135c8_row5_col8, #T_135c8_row6_col0, #T_135c8_row6_col1, #T_135c8_row6_col2, #T_135c8_row6_col3, #T_135c8_row6_col4, #T_135c8_row6_col5, #T_135c8_row6_col6, #T_135c8_row6_col7, #T_135c8_row6_col8, #T_135c8_row7_col0, #T_135c8_row7_col1, #T_135c8_row7_col2, #T_135c8_row7_col3, #T_135c8_row7_col4, #T_135c8_row7_col5, #T_135c8_row7_col6, #T_135c8_row7_col7, #T_135c8_row7_col8, #T_135c8_row8_col0, #T_135c8_row8_col1, #T_135c8_row8_col2, #T_135c8_row8_col3, #T_135c8_row8_col4, #T_135c8_row8_col5, #T_135c8_row8_col6, #T_135c8_row8_col7, #T_135c8_row8_col8, #T_135c8_row9_col0, #T_135c8_row9_col1, #T_135c8_row9_col2, #T_135c8_row9_col3, #T_135c8_row9_col4, #T_135c8_row9_col5, #T_135c8_row9_col6, #T_135c8_row9_col7, #T_135c8_row9_col8, #T_135c8_row10_col0, #T_135c8_row10_col1, #T_135c8_row10_col2, #T_135c8_row10_col3, #T_135c8_row10_col4, #T_135c8_row10_col5, #T_135c8_row10_col6, #T_135c8_row10_col7, #T_135c8_row10_col8 {
+#T_26d4b_row0_col0, #T_26d4b_row0_col2, #T_26d4b_row0_col3, #T_26d4b_row0_col5, #T_26d4b_row0_col6, #T_26d4b_row0_col7, #T_26d4b_row1_col0, #T_26d4b_row1_col1, #T_26d4b_row1_col2, #T_26d4b_row1_col3, #T_26d4b_row1_col4, #T_26d4b_row1_col5, #T_26d4b_row1_col6, #T_26d4b_row1_col7, #T_26d4b_row2_col0, #T_26d4b_row2_col1, #T_26d4b_row2_col2, #T_26d4b_row2_col3, #T_26d4b_row2_col4, #T_26d4b_row2_col5, #T_26d4b_row2_col6, #T_26d4b_row2_col7, #T_26d4b_row3_col0, #T_26d4b_row3_col1, #T_26d4b_row3_col2, #T_26d4b_row3_col3, #T_26d4b_row3_col4, #T_26d4b_row3_col5, #T_26d4b_row3_col6, #T_26d4b_row3_col7, #T_26d4b_row4_col0, #T_26d4b_row4_col1, #T_26d4b_row4_col2, #T_26d4b_row4_col3, #T_26d4b_row4_col4, #T_26d4b_row4_col5, #T_26d4b_row4_col6, #T_26d4b_row4_col7, #T_26d4b_row5_col0, #T_26d4b_row5_col1, #T_26d4b_row5_col2, #T_26d4b_row5_col3, #T_26d4b_row5_col4, #T_26d4b_row5_col5, #T_26d4b_row5_col6, #T_26d4b_row6_col0, #T_26d4b_row6_col1, #T_26d4b_row6_col3, #T_26d4b_row6_col4, #T_26d4b_row6_col5, #T_26d4b_row6_col6, #T_26d4b_row6_col7, #T_26d4b_row7_col0, #T_26d4b_row7_col1, #T_26d4b_row7_col2, #T_26d4b_row7_col3, #T_26d4b_row7_col4, #T_26d4b_row7_col5, #T_26d4b_row7_col6, #T_26d4b_row7_col7, #T_26d4b_row8_col0, #T_26d4b_row8_col1, #T_26d4b_row8_col2, #T_26d4b_row8_col3, #T_26d4b_row8_col4, #T_26d4b_row8_col5, #T_26d4b_row8_col6, #T_26d4b_row8_col7, #T_26d4b_row9_col0, #T_26d4b_row9_col1, #T_26d4b_row9_col2, #T_26d4b_row9_col3, #T_26d4b_row9_col4, #T_26d4b_row9_col5, #T_26d4b_row9_col6, #T_26d4b_row9_col7, #T_26d4b_row10_col0, #T_26d4b_row10_col1, #T_26d4b_row10_col2, #T_26d4b_row10_col3, #T_26d4b_row10_col4, #T_26d4b_row10_col5, #T_26d4b_row10_col6, #T_26d4b_row10_col7, #T_26d4b_row11_col0, #T_26d4b_row11_col1, #T_26d4b_row11_col2, #T_26d4b_row11_col3, #T_26d4b_row11_col4, #T_26d4b_row11_col5, #T_26d4b_row11_col6, #T_26d4b_row11_col7, #T_26d4b_row12_col0, #T_26d4b_row12_col1, #T_26d4b_row12_col2, #T_26d4b_row12_col3, #T_26d4b_row12_col4, #T_26d4b_row12_col5, #T_26d4b_row12_col6, #T_26d4b_row12_col7, #T_26d4b_row13_col0, #T_26d4b_row13_col1, #T_26d4b_row13_col2, #T_26d4b_row13_col3, #T_26d4b_row13_col4, #T_26d4b_row13_col5, #T_26d4b_row13_col7, #T_26d4b_row14_col0, #T_26d4b_row14_col1, #T_26d4b_row14_col2, #T_26d4b_row14_col4, #T_26d4b_row14_col6, #T_26d4b_row14_col7 {
   text-align: left;
 }
+#T_26d4b_row0_col1, #T_26d4b_row0_col4, #T_26d4b_row5_col7, #T_26d4b_row6_col2, #T_26d4b_row13_col6, #T_26d4b_row14_col3, #T_26d4b_row14_col5 {
+  text-align: left;
+  background-color: yellow;
+}
+#T_26d4b_row0_col8, #T_26d4b_row1_col8, #T_26d4b_row2_col8, #T_26d4b_row3_col8, #T_26d4b_row4_col8, #T_26d4b_row5_col8, #T_26d4b_row6_col8, #T_26d4b_row7_col8, #T_26d4b_row8_col8, #T_26d4b_row9_col8, #T_26d4b_row10_col8, #T_26d4b_row11_col8, #T_26d4b_row12_col8, #T_26d4b_row13_col8 {
+  text-align: left;
+  background-color: lightgrey;
+}
+#T_26d4b_row14_col8 {
+  text-align: left;
+  background-color: yellow;
+  background-color: lightgrey;
+}
 </style>
-<table id="T_135c8">
+<table id="T_26d4b">
   <thead>
     <tr>
       <th class="blank level0" >&nbsp;</th>
-      <th id="T_135c8_level0_col0" class="col_heading level0 col0" >Model</th>
-      <th id="T_135c8_level0_col1" class="col_heading level0 col1" >Accuracy</th>
-      <th id="T_135c8_level0_col2" class="col_heading level0 col2" >AUC</th>
-      <th id="T_135c8_level0_col3" class="col_heading level0 col3" >Recall</th>
-      <th id="T_135c8_level0_col4" class="col_heading level0 col4" >Prec.</th>
-      <th id="T_135c8_level0_col5" class="col_heading level0 col5" >F1</th>
-      <th id="T_135c8_level0_col6" class="col_heading level0 col6" >Kappa</th>
-      <th id="T_135c8_level0_col7" class="col_heading level0 col7" >MCC</th>
-      <th id="T_135c8_level0_col8" class="col_heading level0 col8" >TT (Sec)</th>
+      <th id="T_26d4b_level0_col0" class="col_heading level0 col0" >Model</th>
+      <th id="T_26d4b_level0_col1" class="col_heading level0 col1" >Accuracy</th>
+      <th id="T_26d4b_level0_col2" class="col_heading level0 col2" >AUC</th>
+      <th id="T_26d4b_level0_col3" class="col_heading level0 col3" >Recall</th>
+      <th id="T_26d4b_level0_col4" class="col_heading level0 col4" >Prec.</th>
+      <th id="T_26d4b_level0_col5" class="col_heading level0 col5" >F1</th>
+      <th id="T_26d4b_level0_col6" class="col_heading level0 col6" >Kappa</th>
+      <th id="T_26d4b_level0_col7" class="col_heading level0 col7" >MCC</th>
+      <th id="T_26d4b_level0_col8" class="col_heading level0 col8" >TT (Sec)</th>
     </tr>
   </thead>
   <tbody>
     <tr>
-      <th id="T_135c8_level0_row0" class="row_heading level0 row0" >gbc</th>
-      <td id="T_135c8_row0_col0" class="data row0 col0" >Gradient Boosting Classifier</td>
-      <td id="T_135c8_row0_col1" class="data row0 col1" >0.8401</td>
-      <td id="T_135c8_row0_col2" class="data row0 col2" >0.6756</td>
-      <td id="T_135c8_row0_col3" class="data row0 col3" >0.0326</td>
-      <td id="T_135c8_row0_col4" class="data row0 col4" >0.5015</td>
-      <td id="T_135c8_row0_col5" class="data row0 col5" >0.0608</td>
-      <td id="T_135c8_row0_col6" class="data row0 col6" >0.0425</td>
-      <td id="T_135c8_row0_col7" class="data row0 col7" >0.0938</td>
-      <td id="T_135c8_row0_col8" class="data row0 col8" >0.5220</td>
+      <th id="T_26d4b_level0_row0" class="row_heading level0 row0" >gbc</th>
+      <td id="T_26d4b_row0_col0" class="data row0 col0" >Gradient Boosting Classifier</td>
+      <td id="T_26d4b_row0_col1" class="data row0 col1" >0.8401</td>
+      <td id="T_26d4b_row0_col2" class="data row0 col2" >0.6756</td>
+      <td id="T_26d4b_row0_col3" class="data row0 col3" >0.0326</td>
+      <td id="T_26d4b_row0_col4" class="data row0 col4" >0.5015</td>
+      <td id="T_26d4b_row0_col5" class="data row0 col5" >0.0608</td>
+      <td id="T_26d4b_row0_col6" class="data row0 col6" >0.0425</td>
+      <td id="T_26d4b_row0_col7" class="data row0 col7" >0.0938</td>
+      <td id="T_26d4b_row0_col8" class="data row0 col8" >0.2640</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row1" class="row_heading level0 row1" >lr</th>
-      <td id="T_135c8_row1_col0" class="data row1 col0" >Logistic Regression</td>
-      <td id="T_135c8_row1_col1" class="data row1 col1" >0.8397</td>
-      <td id="T_135c8_row1_col2" class="data row1 col2" >0.6226</td>
-      <td id="T_135c8_row1_col3" class="data row1 col3" >0.0065</td>
-      <td id="T_135c8_row1_col4" class="data row1 col4" >0.3517</td>
-      <td id="T_135c8_row1_col5" class="data row1 col5" >0.0127</td>
-      <td id="T_135c8_row1_col6" class="data row1 col6" >0.0082</td>
-      <td id="T_135c8_row1_col7" class="data row1 col7" >0.0336</td>
-      <td id="T_135c8_row1_col8" class="data row1 col8" >0.4550</td>
+      <th id="T_26d4b_level0_row1" class="row_heading level0 row1" >dummy</th>
+      <td id="T_26d4b_row1_col0" class="data row1 col0" >Dummy Classifier</td>
+      <td id="T_26d4b_row1_col1" class="data row1 col1" >0.8400</td>
+      <td id="T_26d4b_row1_col2" class="data row1 col2" >0.5000</td>
+      <td id="T_26d4b_row1_col3" class="data row1 col3" >0.0000</td>
+      <td id="T_26d4b_row1_col4" class="data row1 col4" >0.0000</td>
+      <td id="T_26d4b_row1_col5" class="data row1 col5" >0.0000</td>
+      <td id="T_26d4b_row1_col6" class="data row1 col6" >0.0000</td>
+      <td id="T_26d4b_row1_col7" class="data row1 col7" >0.0000</td>
+      <td id="T_26d4b_row1_col8" class="data row1 col8" >0.0190</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row2" class="row_heading level0 row2" >ridge</th>
-      <td id="T_135c8_row2_col0" class="data row2 col0" >Ridge Classifier</td>
-      <td id="T_135c8_row2_col1" class="data row2 col1" >0.8396</td>
-      <td id="T_135c8_row2_col2" class="data row2 col2" >0.0000</td>
-      <td id="T_135c8_row2_col3" class="data row2 col3" >0.0049</td>
-      <td id="T_135c8_row2_col4" class="data row2 col4" >0.4000</td>
-      <td id="T_135c8_row2_col5" class="data row2 col5" >0.0096</td>
-      <td id="T_135c8_row2_col6" class="data row2 col6" >0.0058</td>
-      <td id="T_135c8_row2_col7" class="data row2 col7" >0.0298</td>
-      <td id="T_135c8_row2_col8" class="data row2 col8" >0.0200</td>
+      <th id="T_26d4b_level0_row2" class="row_heading level0 row2" >lr</th>
+      <td id="T_26d4b_row2_col0" class="data row2 col0" >Logistic Regression</td>
+      <td id="T_26d4b_row2_col1" class="data row2 col1" >0.8397</td>
+      <td id="T_26d4b_row2_col2" class="data row2 col2" >0.6226</td>
+      <td id="T_26d4b_row2_col3" class="data row2 col3" >0.0065</td>
+      <td id="T_26d4b_row2_col4" class="data row2 col4" >0.3517</td>
+      <td id="T_26d4b_row2_col5" class="data row2 col5" >0.0127</td>
+      <td id="T_26d4b_row2_col6" class="data row2 col6" >0.0082</td>
+      <td id="T_26d4b_row2_col7" class="data row2 col7" >0.0336</td>
+      <td id="T_26d4b_row2_col8" class="data row2 col8" >0.6060</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row3" class="row_heading level0 row3" >rf</th>
-      <td id="T_135c8_row3_col0" class="data row3 col0" >Random Forest Classifier</td>
-      <td id="T_135c8_row3_col1" class="data row3 col1" >0.8386</td>
-      <td id="T_135c8_row3_col2" class="data row3 col2" >0.6461</td>
-      <td id="T_135c8_row3_col3" class="data row3 col3" >0.0228</td>
-      <td id="T_135c8_row3_col4" class="data row3 col4" >0.4028</td>
-      <td id="T_135c8_row3_col5" class="data row3 col5" >0.0430</td>
-      <td id="T_135c8_row3_col6" class="data row3 col6" >0.0270</td>
-      <td id="T_135c8_row3_col7" class="data row3 col7" >0.0633</td>
-      <td id="T_135c8_row3_col8" class="data row3 col8" >0.5870</td>
+      <th id="T_26d4b_level0_row3" class="row_heading level0 row3" >ridge</th>
+      <td id="T_26d4b_row3_col0" class="data row3 col0" >Ridge Classifier</td>
+      <td id="T_26d4b_row3_col1" class="data row3 col1" >0.8396</td>
+      <td id="T_26d4b_row3_col2" class="data row3 col2" >0.0000</td>
+      <td id="T_26d4b_row3_col3" class="data row3 col3" >0.0049</td>
+      <td id="T_26d4b_row3_col4" class="data row3 col4" >0.4000</td>
+      <td id="T_26d4b_row3_col5" class="data row3 col5" >0.0096</td>
+      <td id="T_26d4b_row3_col6" class="data row3 col6" >0.0058</td>
+      <td id="T_26d4b_row3_col7" class="data row3 col7" >0.0298</td>
+      <td id="T_26d4b_row3_col8" class="data row3 col8" >0.0200</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row4" class="row_heading level0 row4" >lda</th>
-      <td id="T_135c8_row4_col0" class="data row4 col0" >Linear Discriminant Analysis</td>
-      <td id="T_135c8_row4_col1" class="data row4 col1" >0.8382</td>
-      <td id="T_135c8_row4_col2" class="data row4 col2" >0.6780</td>
-      <td id="T_135c8_row4_col3" class="data row4 col3" >0.0416</td>
-      <td id="T_135c8_row4_col4" class="data row4 col4" >0.4386</td>
-      <td id="T_135c8_row4_col5" class="data row4 col5" >0.0756</td>
-      <td id="T_135c8_row4_col6" class="data row4 col6" >0.0496</td>
-      <td id="T_135c8_row4_col7" class="data row4 col7" >0.0937</td>
-      <td id="T_135c8_row4_col8" class="data row4 col8" >0.0410</td>
+      <th id="T_26d4b_level0_row4" class="row_heading level0 row4" >rf</th>
+      <td id="T_26d4b_row4_col0" class="data row4 col0" >Random Forest Classifier</td>
+      <td id="T_26d4b_row4_col1" class="data row4 col1" >0.8386</td>
+      <td id="T_26d4b_row4_col2" class="data row4 col2" >0.6461</td>
+      <td id="T_26d4b_row4_col3" class="data row4 col3" >0.0228</td>
+      <td id="T_26d4b_row4_col4" class="data row4 col4" >0.4028</td>
+      <td id="T_26d4b_row4_col5" class="data row4 col5" >0.0430</td>
+      <td id="T_26d4b_row4_col6" class="data row4 col6" >0.0270</td>
+      <td id="T_26d4b_row4_col7" class="data row4 col7" >0.0633</td>
+      <td id="T_26d4b_row4_col8" class="data row4 col8" >0.1700</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row5" class="row_heading level0 row5" >ada</th>
-      <td id="T_135c8_row5_col0" class="data row5 col0" >Ada Boost Classifier</td>
-      <td id="T_135c8_row5_col1" class="data row5 col1" >0.8371</td>
-      <td id="T_135c8_row5_col2" class="data row5 col2" >0.6617</td>
-      <td id="T_135c8_row5_col3" class="data row5 col3" >0.0310</td>
-      <td id="T_135c8_row5_col4" class="data row5 col4" >0.3838</td>
-      <td id="T_135c8_row5_col5" class="data row5 col5" >0.0571</td>
-      <td id="T_135c8_row5_col6" class="data row5 col6" >0.0344</td>
-      <td id="T_135c8_row5_col7" class="data row5 col7" >0.0695</td>
-      <td id="T_135c8_row5_col8" class="data row5 col8" >0.1340</td>
+      <th id="T_26d4b_level0_row5" class="row_heading level0 row5" >et</th>
+      <td id="T_26d4b_row5_col0" class="data row5 col0" >Extra Trees Classifier</td>
+      <td id="T_26d4b_row5_col1" class="data row5 col1" >0.8384</td>
+      <td id="T_26d4b_row5_col2" class="data row5 col2" >0.6355</td>
+      <td id="T_26d4b_row5_col3" class="data row5 col3" >0.0432</td>
+      <td id="T_26d4b_row5_col4" class="data row5 col4" >0.4628</td>
+      <td id="T_26d4b_row5_col5" class="data row5 col5" >0.0782</td>
+      <td id="T_26d4b_row5_col6" class="data row5 col6" >0.0520</td>
+      <td id="T_26d4b_row5_col7" class="data row5 col7" >0.0993</td>
+      <td id="T_26d4b_row5_col8" class="data row5 col8" >0.1100</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row6" class="row_heading level0 row6" >nb</th>
-      <td id="T_135c8_row6_col0" class="data row6 col0" >Naive Bayes</td>
-      <td id="T_135c8_row6_col1" class="data row6 col1" >0.8198</td>
-      <td id="T_135c8_row6_col2" class="data row6 col2" >0.6479</td>
-      <td id="T_135c8_row6_col3" class="data row6 col3" >0.0897</td>
-      <td id="T_135c8_row6_col4" class="data row6 col4" >0.2979</td>
-      <td id="T_135c8_row6_col5" class="data row6 col5" >0.1369</td>
-      <td id="T_135c8_row6_col6" class="data row6 col6" >0.0675</td>
-      <td id="T_135c8_row6_col7" class="data row6 col7" >0.0834</td>
-      <td id="T_135c8_row6_col8" class="data row6 col8" >0.0410</td>
+      <th id="T_26d4b_level0_row6" class="row_heading level0 row6" >lda</th>
+      <td id="T_26d4b_row6_col0" class="data row6 col0" >Linear Discriminant Analysis</td>
+      <td id="T_26d4b_row6_col1" class="data row6 col1" >0.8382</td>
+      <td id="T_26d4b_row6_col2" class="data row6 col2" >0.6780</td>
+      <td id="T_26d4b_row6_col3" class="data row6 col3" >0.0416</td>
+      <td id="T_26d4b_row6_col4" class="data row6 col4" >0.4386</td>
+      <td id="T_26d4b_row6_col5" class="data row6 col5" >0.0756</td>
+      <td id="T_26d4b_row6_col6" class="data row6 col6" >0.0496</td>
+      <td id="T_26d4b_row6_col7" class="data row6 col7" >0.0937</td>
+      <td id="T_26d4b_row6_col8" class="data row6 col8" >0.0240</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row7" class="row_heading level0 row7" >knn</th>
-      <td id="T_135c8_row7_col0" class="data row7 col0" >K Neighbors Classifier</td>
-      <td id="T_135c8_row7_col1" class="data row7 col1" >0.8155</td>
-      <td id="T_135c8_row7_col2" class="data row7 col2" >0.5315</td>
-      <td id="T_135c8_row7_col3" class="data row7 col3" >0.0432</td>
-      <td id="T_135c8_row7_col4" class="data row7 col4" >0.1814</td>
-      <td id="T_135c8_row7_col5" class="data row7 col5" >0.0696</td>
-      <td id="T_135c8_row7_col6" class="data row7 col6" >0.0084</td>
-      <td id="T_135c8_row7_col7" class="data row7 col7" >0.0113</td>
-      <td id="T_135c8_row7_col8" class="data row7 col8" >0.5870</td>
+      <th id="T_26d4b_level0_row7" class="row_heading level0 row7" >catboost</th>
+      <td id="T_26d4b_row7_col0" class="data row7 col0" >CatBoost Classifier</td>
+      <td id="T_26d4b_row7_col1" class="data row7 col1" >0.8380</td>
+      <td id="T_26d4b_row7_col2" class="data row7 col2" >0.6611</td>
+      <td id="T_26d4b_row7_col3" class="data row7 col3" >0.0416</td>
+      <td id="T_26d4b_row7_col4" class="data row7 col4" >0.4539</td>
+      <td id="T_26d4b_row7_col5" class="data row7 col5" >0.0754</td>
+      <td id="T_26d4b_row7_col6" class="data row7 col6" >0.0493</td>
+      <td id="T_26d4b_row7_col7" class="data row7 col7" >0.0951</td>
+      <td id="T_26d4b_row7_col8" class="data row7 col8" >0.8910</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row8" class="row_heading level0 row8" >svm</th>
-      <td id="T_135c8_row8_col0" class="data row8 col0" >SVM - Linear Kernel</td>
-      <td id="T_135c8_row8_col1" class="data row8 col1" >0.7725</td>
-      <td id="T_135c8_row8_col2" class="data row8 col2" >0.0000</td>
-      <td id="T_135c8_row8_col3" class="data row8 col3" >0.1033</td>
-      <td id="T_135c8_row8_col4" class="data row8 col4" >0.0618</td>
-      <td id="T_135c8_row8_col5" class="data row8 col5" >0.0508</td>
-      <td id="T_135c8_row8_col6" class="data row8 col6" >0.0036</td>
-      <td id="T_135c8_row8_col7" class="data row8 col7" >0.0055</td>
-      <td id="T_135c8_row8_col8" class="data row8 col8" >0.0190</td>
+      <th id="T_26d4b_level0_row8" class="row_heading level0 row8" >ada</th>
+      <td id="T_26d4b_row8_col0" class="data row8 col0" >Ada Boost Classifier</td>
+      <td id="T_26d4b_row8_col1" class="data row8 col1" >0.8371</td>
+      <td id="T_26d4b_row8_col2" class="data row8 col2" >0.6617</td>
+      <td id="T_26d4b_row8_col3" class="data row8 col3" >0.0310</td>
+      <td id="T_26d4b_row8_col4" class="data row8 col4" >0.3838</td>
+      <td id="T_26d4b_row8_col5" class="data row8 col5" >0.0571</td>
+      <td id="T_26d4b_row8_col6" class="data row8 col6" >0.0344</td>
+      <td id="T_26d4b_row8_col7" class="data row8 col7" >0.0695</td>
+      <td id="T_26d4b_row8_col8" class="data row8 col8" >0.0730</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row9" class="row_heading level0 row9" >dt</th>
-      <td id="T_135c8_row9_col0" class="data row9 col0" >Decision Tree Classifier</td>
-      <td id="T_135c8_row9_col1" class="data row9 col1" >0.7468</td>
-      <td id="T_135c8_row9_col2" class="data row9 col2" >0.5406</td>
-      <td id="T_135c8_row9_col3" class="data row9 col3" >0.2373</td>
-      <td id="T_135c8_row9_col4" class="data row9 col4" >0.2250</td>
-      <td id="T_135c8_row9_col5" class="data row9 col5" >0.2309</td>
-      <td id="T_135c8_row9_col6" class="data row9 col6" >0.0796</td>
-      <td id="T_135c8_row9_col7" class="data row9 col7" >0.0796</td>
-      <td id="T_135c8_row9_col8" class="data row9 col8" >0.0500</td>
+      <th id="T_26d4b_level0_row9" class="row_heading level0 row9" >lightgbm</th>
+      <td id="T_26d4b_row9_col0" class="data row9 col0" >Light Gradient Boosting Machine</td>
+      <td id="T_26d4b_row9_col1" class="data row9 col1" >0.8361</td>
+      <td id="T_26d4b_row9_col2" class="data row9 col2" >0.6474</td>
+      <td id="T_26d4b_row9_col3" class="data row9 col3" >0.0506</td>
+      <td id="T_26d4b_row9_col4" class="data row9 col4" >0.4113</td>
+      <td id="T_26d4b_row9_col5" class="data row9 col5" >0.0891</td>
+      <td id="T_26d4b_row9_col6" class="data row9 col6" >0.0559</td>
+      <td id="T_26d4b_row9_col7" class="data row9 col7" >0.0952</td>
+      <td id="T_26d4b_row9_col8" class="data row9 col8" >0.1790</td>
     </tr>
     <tr>
-      <th id="T_135c8_level0_row10" class="row_heading level0 row10" >qda</th>
-      <td id="T_135c8_row10_col0" class="data row10 col0" >Quadratic Discriminant Analysis</td>
-      <td id="T_135c8_row10_col1" class="data row10 col1" >0.3297</td>
-      <td id="T_135c8_row10_col2" class="data row10 col2" >0.5042</td>
-      <td id="T_135c8_row10_col3" class="data row10 col3" >0.7556</td>
-      <td id="T_135c8_row10_col4" class="data row10 col4" >0.1647</td>
-      <td id="T_135c8_row10_col5" class="data row10 col5" >0.2551</td>
-      <td id="T_135c8_row10_col6" class="data row10 col6" >0.0047</td>
-      <td id="T_135c8_row10_col7" class="data row10 col7" >0.0072</td>
-      <td id="T_135c8_row10_col8" class="data row10 col8" >0.0390</td>
+      <th id="T_26d4b_level0_row10" class="row_heading level0 row10" >nb</th>
+      <td id="T_26d4b_row10_col0" class="data row10 col0" >Naive Bayes</td>
+      <td id="T_26d4b_row10_col1" class="data row10 col1" >0.8198</td>
+      <td id="T_26d4b_row10_col2" class="data row10 col2" >0.6479</td>
+      <td id="T_26d4b_row10_col3" class="data row10 col3" >0.0897</td>
+      <td id="T_26d4b_row10_col4" class="data row10 col4" >0.2979</td>
+      <td id="T_26d4b_row10_col5" class="data row10 col5" >0.1369</td>
+      <td id="T_26d4b_row10_col6" class="data row10 col6" >0.0675</td>
+      <td id="T_26d4b_row10_col7" class="data row10 col7" >0.0834</td>
+      <td id="T_26d4b_row10_col8" class="data row10 col8" >0.0200</td>
+    </tr>
+    <tr>
+      <th id="T_26d4b_level0_row11" class="row_heading level0 row11" >knn</th>
+      <td id="T_26d4b_row11_col0" class="data row11 col0" >K Neighbors Classifier</td>
+      <td id="T_26d4b_row11_col1" class="data row11 col1" >0.8155</td>
+      <td id="T_26d4b_row11_col2" class="data row11 col2" >0.5315</td>
+      <td id="T_26d4b_row11_col3" class="data row11 col3" >0.0432</td>
+      <td id="T_26d4b_row11_col4" class="data row11 col4" >0.1814</td>
+      <td id="T_26d4b_row11_col5" class="data row11 col5" >0.0696</td>
+      <td id="T_26d4b_row11_col6" class="data row11 col6" >0.0084</td>
+      <td id="T_26d4b_row11_col7" class="data row11 col7" >0.0113</td>
+      <td id="T_26d4b_row11_col8" class="data row11 col8" >0.5150</td>
+    </tr>
+    <tr>
+      <th id="T_26d4b_level0_row12" class="row_heading level0 row12" >svm</th>
+      <td id="T_26d4b_row12_col0" class="data row12 col0" >SVM - Linear Kernel</td>
+      <td id="T_26d4b_row12_col1" class="data row12 col1" >0.7725</td>
+      <td id="T_26d4b_row12_col2" class="data row12 col2" >0.0000</td>
+      <td id="T_26d4b_row12_col3" class="data row12 col3" >0.1033</td>
+      <td id="T_26d4b_row12_col4" class="data row12 col4" >0.0618</td>
+      <td id="T_26d4b_row12_col5" class="data row12 col5" >0.0508</td>
+      <td id="T_26d4b_row12_col6" class="data row12 col6" >0.0036</td>
+      <td id="T_26d4b_row12_col7" class="data row12 col7" >0.0055</td>
+      <td id="T_26d4b_row12_col8" class="data row12 col8" >0.0200</td>
+    </tr>
+    <tr>
+      <th id="T_26d4b_level0_row13" class="row_heading level0 row13" >dt</th>
+      <td id="T_26d4b_row13_col0" class="data row13 col0" >Decision Tree Classifier</td>
+      <td id="T_26d4b_row13_col1" class="data row13 col1" >0.7468</td>
+      <td id="T_26d4b_row13_col2" class="data row13 col2" >0.5406</td>
+      <td id="T_26d4b_row13_col3" class="data row13 col3" >0.2373</td>
+      <td id="T_26d4b_row13_col4" class="data row13 col4" >0.2250</td>
+      <td id="T_26d4b_row13_col5" class="data row13 col5" >0.2309</td>
+      <td id="T_26d4b_row13_col6" class="data row13 col6" >0.0796</td>
+      <td id="T_26d4b_row13_col7" class="data row13 col7" >0.0796</td>
+      <td id="T_26d4b_row13_col8" class="data row13 col8" >0.0260</td>
+    </tr>
+    <tr>
+      <th id="T_26d4b_level0_row14" class="row_heading level0 row14" >qda</th>
+      <td id="T_26d4b_row14_col0" class="data row14 col0" >Quadratic Discriminant Analysis</td>
+      <td id="T_26d4b_row14_col1" class="data row14 col1" >0.3297</td>
+      <td id="T_26d4b_row14_col2" class="data row14 col2" >0.5042</td>
+      <td id="T_26d4b_row14_col3" class="data row14 col3" >0.7556</td>
+      <td id="T_26d4b_row14_col4" class="data row14 col4" >0.1647</td>
+      <td id="T_26d4b_row14_col5" class="data row14 col5" >0.2551</td>
+      <td id="T_26d4b_row14_col6" class="data row14 col6" >0.0047</td>
+      <td id="T_26d4b_row14_col7" class="data row14 col7" >0.0072</td>
+      <td id="T_26d4b_row14_col8" class="data row14 col8" >0.0180</td>
     </tr>
   </tbody>
 </table>
-</div><script type="application/vnd.jupyter.widget-view+json">{"version_major": 2, "version_minor": 0, "model_id": "e2dfc606775040b286b28b4ca63d8c14"}</script></div>
+</div><div class="output text_html"></div></div>
 </div>
 <p>The <code class="docutils literal notranslate"><span class="pre">compare_models()</span></code> function takes various machine learning models and trains them on the provided dataset. It automatically performs cross-validation and evaluates each model’s performance based on a set of predefined metrics (such as accuracy, precision, recall, F1-score, etc.). The function returns the best-performing model based on the evaluation metrics. The <code class="docutils literal notranslate"><span class="pre">best_model</span></code> variable will hold a reference to this model.</p>
 <p>So what is the best model ? Apparently, the Gradient Boosting classifiers works pretty well with our data. Let’s fine-tune this model for better fit.</p>
@@ -1420,7 +1870,7 @@ By Miguel C. Herculano
     
   <p class="copyright">
     
-      © Copyright 2023.
+      © Copyright 2025.
       <br/>
     
   </p>

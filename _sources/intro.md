@@ -14,8 +14,8 @@
 
 **Class Schedule:** 
 
-`Lectures (James Watt STH 811):` Every Thursday between 10:00-12:00, from the 26th of September and <br>
-`Labs (Adam Smith Building 1113 Lab L):` Every Thursday between 14:00-16:00 from the 26th of September.
+`Lectures (James Watt STH 811):` Every Thursday between 10:00-12:00, from the 25th of September and <br>
+`Labs (Adam Smith Building 1113 Lab L):` Every Thursday between 14:00-16:00 from the 25th of September.
 
 
 

@@ -1,0 +1,147 @@
+Traceback (most recent call last):
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\jupyter_cache\executors\utils.py", line 58, in single_nb_execution
+    executenb(
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\client.py", line 1204, in execute
+    return NotebookClient(nb=nb, resources=resources, km=km, **kwargs).execute()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\util.py", line 84, in wrapped
+    return just_run(coro(*args, **kwargs))
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\util.py", line 62, in just_run
+    return loop.run_until_complete(coro)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py", line 653, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\client.py", line 663, in async_execute
+    await self.async_execute_cell(
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\client.py", line 965, in async_execute_cell
+    await self._check_raise_for_error(cell, cell_index, exec_reply)
+  File "C:\Users\Miguel\anaconda3\Lib\site-packages\nbclient\client.py", line 862, in _check_raise_for_error
+    raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
+nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
+------------------
+# Install necessary libraries (uncomment if needed)
+# !pip install GPy
+import GPy
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+# Generate synthetic data
+np.random.seed(42)
+X_train = np.linspace(-5, 5, 20)[:, None]
+Y_train = np.sin(X_train) + 0.5 * np.random.randn(20, 1)  # Noisy sine wave data
+
+# Define test points for visualization
+X_test = np.linspace(-6, 6, 100)[:, None]
+
+------------------
+
+[1;31m---------------------------------------------------------------------------[0m
+[1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
+Cell [1;32mIn[1], line 3[0m
+[0;32m      1[0m [38;5;66;03m# Install necessary libraries (uncomment if needed)[39;00m
+[0;32m      2[0m [38;5;66;03m# !pip install GPy[39;00m
+[1;32m----> 3[0m [38;5;28;01mimport[39;00m [38;5;21;01mGPy[39;00m
+[0;32m      4[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m [38;5;28;01mas[39;00m [38;5;21;01mnp[39;00m
+[0;32m      5[0m [38;5;28;01mimport[39;00m [38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m [38;5;28;01mas[39;00m [38;5;21;01mplt[39;00m
+
+File [1;32m~\anaconda3\Lib\site-packages\GPy\__init__.py:7[0m
+[0;32m      3[0m [38;5;28;01mimport[39;00m [38;5;21;01mwarnings[39;00m
+[0;32m      5[0m warnings[38;5;241m.[39mfilterwarnings([38;5;124m"[39m[38;5;124mignore[39m[38;5;124m"[39m, category[38;5;241m=[39m[38;5;167;01mDeprecationWarning[39;00m)
+[1;32m----> 7[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m core
+[0;32m      8[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m models
+[0;32m      9[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m mappings
+
+File [1;32m~\anaconda3\Lib\site-packages\GPy\core\__init__.py:45[0m
+[0;32m      1[0m [38;5;66;03m# Copyright (c) 2012-2014, GPy authors (see AUTHORS.txt).[39;00m
+[0;32m      2[0m [38;5;66;03m# Licensed under the BSD 3-clause license (see LICENSE.txt)[39;00m
+[0;32m      4[0m [38;5;124;03m"""[39;00m
+[0;32m      5[0m [38;5;124;03mIntroduction[39;00m
+[0;32m      6[0m [38;5;124;03m^^^^^^^^^^^^[39;00m
+[1;32m   (...)[0m
+[0;32m     42[0m 
+[0;32m     43[0m [38;5;124;03m"""[39;00m
+[1;32m---> 45[0m [38;5;28;01mfrom[39;00m [38;5;21;01mGPy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmodel[39;00m [38;5;28;01mimport[39;00m Model
+[0;32m     46[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparameterization[39;00m [38;5;28;01mimport[39;00m Param, Parameterized
+[0;32m     47[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m parameterization
+
+File [1;32m~\anaconda3\Lib\site-packages\GPy\core\model.py:3[0m
+[0;32m      1[0m [38;5;66;03m# Copyright (c) 2012-2014, GPy authors (see AUTHORS.txt).[39;00m
+[0;32m      2[0m [38;5;66;03m# Licensed under the BSD 3-clause license (see LICENSE.txt)[39;00m
+[1;32m----> 3[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparameterization[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpriorizable[39;00m [38;5;28;01mimport[39;00m Priorizable
+[0;32m      4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mparamz[39;00m [38;5;28;01mimport[39;00m Model [38;5;28;01mas[39;00m ParamzModel
+[0;32m      6[0m [38;5;28;01mclass[39;00m [38;5;21;01mModel[39;00m(ParamzModel, Priorizable):
+
+File [1;32m~\anaconda3\Lib\site-packages\GPy\core\parameterization\__init__.py:15[0m
+[0;32m      1[0m [38;5;124;03m"""[39;00m
+[0;32m      2[0m [38;5;124;03mIntroduction[39;00m
+[0;32m      3[0m [38;5;124;03m^^^^^^^^^^^^[39;00m
+[1;32m   (...)[0m
+[0;32m      8[0m [38;5;124;03m   :top-classes: paramz.core.parameter_core.Parameterizable[39;00m
+[0;32m      9[0m [38;5;124;03m"""[39;00m
+[0;32m     12[0m [38;5;66;03m# Copyright (c) 2012-2014, GPy authors (see AUTHORS.txt).[39;00m
+[0;32m     13[0m [38;5;66;03m# Licensed under the BSD 3-clause license (see LICENSE.txt)[39;00m
+[1;32m---> 15[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparam[39;00m [38;5;28;01mimport[39;00m Param
+[0;32m     16[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparameterized[39;00m [38;5;28;01mimport[39;00m Parameterized
+[0;32m     17[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m transformations
+
+File [1;32m~\anaconda3\Lib\site-packages\GPy\core\parameterization\param.py:4[0m
+[0;32m      1[0m [38;5;66;03m# Copyright (c) 2014, Max Zwiessele[39;00m
+[0;32m      2[0m [38;5;66;03m# Licensed under the BSD 3-clause license (see LICENSE.txt)[39;00m
+[1;32m----> 4[0m [38;5;28;01mfrom[39;00m [38;5;21;01mparamz[39;00m [38;5;28;01mimport[39;00m Param
+[0;32m      5[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mpriorizable[39;00m [38;5;28;01mimport[39;00m Priorizable
+[0;32m      6[0m [38;5;28;01mfrom[39;00m [38;5;21;01mparamz[39;00m[38;5;21;01m.[39;00m[38;5;21;01mtransformations[39;00m [38;5;28;01mimport[39;00m __fixed__
+
+File [1;32m~\anaconda3\Lib\site-packages\paramz\__init__.py:34[0m
+[0;32m      1[0m [38;5;66;03m#===============================================================================[39;00m
+[0;32m      2[0m [38;5;66;03m# Copyright (c) 2012 - 2014, GPy authors (see AUTHORS.txt).[39;00m
+[0;32m      3[0m [38;5;66;03m# Copyright (c) 2015, Max Zwiessele[39;00m
+[1;32m   (...)[0m
+[0;32m     30[0m [38;5;66;03m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[39;00m
+[0;32m     31[0m [38;5;66;03m#===============================================================================[39;00m
+[0;32m     33[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m util
+[1;32m---> 34[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mmodel[39;00m [38;5;28;01mimport[39;00m Model
+[0;32m     35[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparameterized[39;00m [38;5;28;01mimport[39;00m Parameterized
+[0;32m     36[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparam[39;00m [38;5;28;01mimport[39;00m Param
+
+File [1;32m~\anaconda3\Lib\site-packages\paramz\model.py:39[0m
+[0;32m     36[0m [38;5;28;01mfrom[39;00m [38;5;21;01mnumpy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinalg[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlinalg[39;00m [38;5;28;01mimport[39;00m LinAlgError
+[0;32m     38[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m optimization
+[1;32m---> 39[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mparameterized[39;00m [38;5;28;01mimport[39;00m Parameterized
+[0;32m     40[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01moptimization[39;00m[38;5;21;01m.[39;00m[38;5;21;01mverbose_optimization[39;00m [38;5;28;01mimport[39;00m VerboseOptimization
+[0;32m     41[0m [38;5;28;01mimport[39;00m [38;5;21;01mmultiprocessing[39;00m [38;5;28;01mas[39;00m [38;5;21;01mmp[39;00m
+
+File [1;32m~\anaconda3\Lib\site-packages\paramz\parameterized.py:39[0m
+[0;32m     35[0m [38;5;28;01mexcept[39;00m [38;5;167;01mImportError[39;00m:
+[0;32m     36[0m     [38;5;66;03m# 3.7 and later[39;00m
+[0;32m     37[0m     [38;5;28;01mfrom[39;00m [38;5;21;01mre[39;00m [38;5;28;01mimport[39;00m Pattern [38;5;28;01mas[39;00m _pattern_type
+[1;32m---> 39[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m[38;5;21;01m.[39;00m[38;5;21;01mparameter_core[39;00m [38;5;28;01mimport[39;00m Parameterizable, adjust_name_for_printing
+[0;32m     40[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mcore[39;00m [38;5;28;01mimport[39;00m HierarchyError
+[0;32m     42[0m [38;5;28;01mimport[39;00m [38;5;21;01mlogging[39;00m
+
+File [1;32m~\anaconda3\Lib\site-packages\paramz\core\__init__.py:46[0m
+[0;32m     41[0m [38;5;250m    [39m[38;5;124;03m"""[39;00m
+[0;32m     42[0m [38;5;124;03m    Gets thrown when something is wrong with the parameter hierarchy.[39;00m
+[0;32m     43[0m [38;5;124;03m    """[39;00m
+[0;32m     44[0m     [38;5;28;01mpass[39;00m
+[1;32m---> 46[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m [38;5;28;01mimport[39;00m index_operations, lists_and_dicts, observable, observable_array, parameter_core, updateable
+[0;32m     47[0m [38;5;28;01mfrom[39;00m [38;5;21;01mparamz[39;00m [38;5;28;01mimport[39;00m domains
+[0;32m     48[0m [38;5;28;01mfrom[39;00m [38;5;21;01mparamz[39;00m [38;5;28;01mimport[39;00m transformations
+
+File [1;32m~\anaconda3\Lib\site-packages\paramz\core\index_operations.py:32[0m
+[0;32m      1[0m [38;5;66;03m#===============================================================================[39;00m
+[0;32m      2[0m [38;5;66;03m# Copyright (c) 2015, Max Zwiessele[39;00m
+[0;32m      3[0m [38;5;66;03m# All rights reserved.[39;00m
+[1;32m   (...)[0m
+[0;32m     28[0m [38;5;66;03m# OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.[39;00m
+[0;32m     29[0m [38;5;66;03m#===============================================================================[39;00m
+[0;32m     31[0m [38;5;28;01mimport[39;00m [38;5;21;01mnumpy[39;00m
+[1;32m---> 32[0m [38;5;28;01mfrom[39;00m [38;5;21;01mnumpy[39;00m[38;5;21;01m.[39;00m[38;5;21;01mlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mfunction_base[39;00m [38;5;28;01mimport[39;00m vectorize
+[0;32m     33[0m [38;5;28;01mfrom[39;00m [38;5;21;01m.[39;00m[38;5;21;01mlists_and_dicts[39;00m [38;5;28;01mimport[39;00m IntArrayDict
+[0;32m     34[0m [38;5;28;01mfrom[39;00m [38;5;21;01mfunctools[39;00m [38;5;28;01mimport[39;00m reduce
+
+[1;31mModuleNotFoundError[0m: No module named 'numpy.lib.function_base'
+ModuleNotFoundError: No module named 'numpy.lib.function_base'
+
