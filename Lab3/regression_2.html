@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -463,20 +463,6 @@ is a form of regularization.</p>
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
-<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#165aa7&#39;</span><span class="p">,</span> <span class="s1">&#39;#cb495c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fec630&#39;</span><span class="p">,</span> <span class="s1">&#39;#bb60d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#f47915&#39;</span><span class="p">,</span> <span class="s1">&#39;#06ab54&#39;</span><span class="p">,</span> <span class="s1">&#39;#002070&#39;</span><span class="p">,</span> <span class="s1">&#39;#b27d12&#39;</span><span class="p">,</span> <span class="s1">&#39;#007030&#39;</span><span class="p">]</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
-</pre></div>
-</div>
-</div>
 </div>
 </section>
 </section>
@@ -544,7 +530,7 @@ additional ones to be thrown out).</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/a58b98a1959b99a646a5180dc76247ffe618c7249141385afa6f7bd134256048.png" src="../_images/a58b98a1959b99a646a5180dc76247ffe618c7249141385afa6f7bd134256048.png" />
+<img alt="../_images/c43ef1a2c5be002a611e8ea433cf0da19af7c99232fdec89d3d80a5b5ba73c7e.png" src="../_images/c43ef1a2c5be002a611e8ea433cf0da19af7c99232fdec89d3d80a5b5ba73c7e.png" />
 </div>
 </div>
 <p>Let’s demonstrate the overfitting and regularization phenomenon on our housing
@@ -574,7 +560,7 @@ price data as follows:</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;mse_train&#39;: 0.055456271715772824, &#39;mse_test&#39;: 0.6705205330638009}
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;mse_train&#39;: 0.05545627171577279, &#39;mse_test&#39;: 0.6705205330638017}
 </pre></div>
 </div>
 </div>
@@ -645,7 +631,7 @@ data.</p></li>
 <div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(-1.7108570499219011, 0.2972948777056123, &#39;5 fold cross-validation&#39;)
 </pre></div>
 </div>
-<img alt="../_images/565f99dfa0976600c8b73178f30c748f8fc15613f7f22cb2a4bc3f779a2026d3.png" src="../_images/565f99dfa0976600c8b73178f30c748f8fc15613f7f22cb2a4bc3f779a2026d3.png" />
+<img alt="../_images/8065454541aaae4ac419e49181f78aea1735a0f9265a64f060a07ddbe4e8eabd.png" src="../_images/8065454541aaae4ac419e49181f78aea1735a0f9265a64f060a07ddbe4e8eabd.png" />
 </div>
 </div>
 <p>scikit learn also includes methods to automate the above and select

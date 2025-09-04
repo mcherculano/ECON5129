@@ -18,25 +18,18 @@ Traceback (most recent call last):
     raise CellExecutionError.from_cell_and_msg(cell, exec_reply_content)
 nbclient.exceptions.CellExecutionError: An error occurred while executing the following cell:
 ------------------
-# Import generic libraries
-import numpy as np
-import pandas as pd
-from sklearn.model_selection import train_test_split, GridSearchCV, cross_validate
-from sklearn.preprocessing import StandardScaler
-from sklearn.neighbors import KNeighborsClassifier
-from sklearn.metrics import classification_report, accuracy_score, confusion_matrix
-import seaborn as sns
-import matplotlib.pyplot as plt
+#! pip install skimpy # < -- uncomment to install from PyPI 
+from skimpy import skim
+skim(df)
 ------------------
 
 
 [1;31m---------------------------------------------------------------------------[0m
 [1;31mModuleNotFoundError[0m                       Traceback (most recent call last)
-Cell [1;32mIn[1], line 8[0m
-[0;32m      6[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mneighbors[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m KNeighborsClassifier
-[0;32m      7[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01msklearn[39;00m[38;5;21;01m.[39;00m[38;5;21;01mmetrics[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m classification_report, accuracy_score, confusion_matrix
-[1;32m----> 8[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mseaborn[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01msns[39;00m
-[0;32m      9[0m [38;5;28;01mimport[39;00m[38;5;250m [39m[38;5;21;01mmatplotlib[39;00m[38;5;21;01m.[39;00m[38;5;21;01mpyplot[39;00m[38;5;250m [39m[38;5;28;01mas[39;00m[38;5;250m [39m[38;5;21;01mplt[39;00m
+Cell [1;32mIn[4], line 2[0m
+[0;32m      1[0m [38;5;66;03m#! pip install skimpy # < -- uncomment to install from PyPI [39;00m
+[1;32m----> 2[0m [38;5;28;01mfrom[39;00m[38;5;250m [39m[38;5;21;01mskimpy[39;00m[38;5;250m [39m[38;5;28;01mimport[39;00m skim
+[0;32m      3[0m skim(df)
 
-[1;31mModuleNotFoundError[0m: No module named 'seaborn'
+[1;31mModuleNotFoundError[0m: No module named 'skimpy'
 

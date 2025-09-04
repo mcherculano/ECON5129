@@ -32,7 +32,7 @@
     <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
     <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
@@ -445,21 +445,21 @@ California Housing dataset
 
 **Data Set Characteristics:**
 
-:Number of Instances: 20640
+    :Number of Instances: 20640
 
-:Number of Attributes: 8 numeric, predictive attributes and the target
+    :Number of Attributes: 8 numeric, predictive attributes and the target
 
-:Attribute Information:
-    - MedInc        median income in block group
-    - HouseAge      median house age in block group
-    - AveRooms      average number of rooms per household
-    - AveBedrms     average number of bedrooms per household
-    - Population    block group population
-    - AveOccup      average number of household members
-    - Latitude      block group latitude
-    - Longitude     block group longitude
+    :Attribute Information:
+        - MedInc        median income in block group
+        - HouseAge      median house age in block group
+        - AveRooms      average number of rooms per household
+        - AveBedrms     average number of bedrooms per household
+        - Population    block group population
+        - AveOccup      average number of household members
+        - Latitude      block group latitude
+        - Longitude     block group longitude
 
-:Missing Attribute Values: None
+    :Missing Attribute Values: None
 
 This dataset was obtained from the StatLib repository.
 https://www.dcc.fc.up.pt/~ltorgo/Regression/cal_housing.html
@@ -498,7 +498,7 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/827da03fbc832398c3e26cc7c5fd61f37e3e7410994bf185a285d8f9cd40b58d.png" src="../_images/827da03fbc832398c3e26cc7c5fd61f37e3e7410994bf185a285d8f9cd40b58d.png" />
+<img alt="../_images/70d3272d4c40538411ff8626d35f8065c89d55dc9c57587fa86f10c99fde2433.png" src="../_images/70d3272d4c40538411ff8626d35f8065c89d55dc9c57587fa86f10c99fde2433.png" />
 </div>
 </div>
 <p>We can first focus on features for which their distributions would be more or less expected.</p>
@@ -635,19 +635,6 @@ It can be downloaded/loaded using the
 </pre></div>
 </div>
 </div>
-<div class="cell_output docutils container">
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">5</span><span class="p">],</span> <span class="n">line</span> <span class="mi">2</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="c1">#! pip install geopandas geoplot</span>
-<span class="ne">----&gt; </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">geopandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gpd</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">geoplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gplt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">geoplot.crs</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">gcrs</span>
-
-<span class="ne">ModuleNotFoundError</span>: No module named &#39;geopandas&#39;
-</pre></div>
-</div>
-</div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -659,8 +646,11 @@ It can be downloaded/loaded using the
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/416ca70be9593670d39627cd2a8efc614e79186dfbdfd0b1e1e45f49bd9bc7db.png" src="../_images/416ca70be9593670d39627cd2a8efc614e79186dfbdfd0b1e1e45f49bd9bc7db.png" />
-<img alt="../_images/9aedb2b29b22eac8196d0c97241af5114120a9d5ad9b92be21ea25b251747806.png" src="../_images/9aedb2b29b22eac8196d0c97241af5114120a9d5ad9b92be21ea25b251747806.png" />
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>C:\Users\Miguel\AppData\Local\Temp\ipykernel_22032\3254044107.py:12: UserWarning: Geometry is in a geographic CRS. Results from &#39;area&#39; are likely incorrect. Use &#39;GeoSeries.to_crs()&#39; to re-project geometries to a projected CRS before this operation.
+
+  cali = cali.assign(area=cali.geometry.area)
+</pre></div>
+</div>
 </div>
 </div>
 <p>If you are not familiar with the state of California, it is interesting to notice that all datapoints show a graphical representation of this state. The high-valued houses will be located on the coast, where the big cities from California are located: San Diego, Los Angeles, San Jose, or San Francisco.</p>
