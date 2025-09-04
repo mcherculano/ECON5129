@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Maximum Likelihood Estimation &#8212; ECON 5129</title>
   
@@ -15,52 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lab2/mle_sol';</script>
@@ -77,19 +73,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,12 +111,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +139,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -143,12 +155,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="ECON 5129 - Home"/>
+    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="ECON 5129 - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -160,14 +183,14 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">PRELIMINARY</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/about_py.html">About Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/setting_up_your_python_environment.html">Setting up Your Python Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/python_by_example.html">An Introductory Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/learn_more.html">Learn More</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/exercises.html">Exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">LAB MATERIALS</span></p>
 <ul class="current nav bd-sidenav">
@@ -200,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -209,14 +232,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -291,26 +314,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -362,12 +387,12 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="maximum-likelihood-estimation">
-<h1>Maximum Likelihood Estimation<a class="headerlink" href="#maximum-likelihood-estimation" title="Permalink to this heading">#</a></h1>
+<h1>Maximum Likelihood Estimation<a class="headerlink" href="#maximum-likelihood-estimation" title="Link to this heading">#</a></h1>
 <section id="overview">
-<h2>Overview<a class="headerlink" href="#overview" title="Permalink to this heading">#</a></h2>
+<h2>Overview<a class="headerlink" href="#overview" title="Link to this heading">#</a></h2>
 <p>We have previously estimated the relationship between
 dependent and explanatory variables using linear regression.</p>
 <p>But what if a linear relationship is not an appropriate assumption for our model?</p>
@@ -381,210 +406,27 @@ economic factors such as market size and tax rate predict.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1">#set default figure size</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">numpy</span> <span class="kn">import</span> <span class="n">exp</span>
-<span class="kn">from</span> <span class="nn">scipy.special</span> <span class="kn">import</span> <span class="n">factorial</span>
-<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">from</span> <span class="nn">mpl_toolkits.mplot3d</span> <span class="kn">import</span> <span class="n">Axes3D</span>
-<span class="kn">import</span> <span class="nn">statsmodels.api</span> <span class="k">as</span> <span class="nn">sm</span>
-<span class="kn">from</span> <span class="nn">statsmodels.api</span> <span class="kn">import</span> <span class="n">Poisson</span>
-<span class="kn">from</span> <span class="nn">scipy.stats</span> <span class="kn">import</span> <span class="n">norm</span>
-<span class="kn">from</span> <span class="nn">statsmodels.iolib.summary2</span> <span class="kn">import</span> <span class="n">summary_col</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_73768\469734454.py&quot;, line 1, in &lt;module&gt;
-    get_ipython().run_line_magic(&#39;matplotlib&#39;, &#39;inline&#39;)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 2414, in run_line_magic
-    result = fn(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\magics\pylab.py&quot;, line 99, in matplotlib
-    gui, backend = self.shell.enable_matplotlib(args.gui.lower() if isinstance(args.gui, str) else args.gui)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3585, in enable_matplotlib
-    from matplotlib_inline.backend_inline import configure_inline_support
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib_inline\__init__.py&quot;, line 1, in &lt;module&gt;
-    from . import backend_inline, config  # noqa
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib_inline\backend_inline.py&quot;, line 6, in &lt;module&gt;
-    import matplotlib
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\__init__.py&quot;, line 113, in &lt;module&gt;
-    from . import _api, _version, cbook, _docstring, rcsetup
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\rcsetup.py&quot;, line 27, in &lt;module&gt;
-    from matplotlib.colors import Colormap, is_color_like
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\colors.py&quot;, line 56, in &lt;module&gt;
-    from matplotlib import _api, _cm, cbook, scale
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\scale.py&quot;, line 22, in &lt;module&gt;
-    from matplotlib.ticker import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\ticker.py&quot;, line 138, in &lt;module&gt;
-    from matplotlib import transforms as mtransforms
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\transforms.py&quot;, line 49, in &lt;module&gt;
-    from matplotlib._path import (
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">get_ipython</span><span class="p">()</span><span class="o">.</span><span class="n">run_line_magic</span><span class="p">(</span><span class="s1">&#39;matplotlib&#39;</span><span class="p">,</span> <span class="s1">&#39;inline&#39;</span><span class="p">)</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s2">&quot;figure.figsize&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="mi">5</span><span class="p">)</span>  <span class="c1">#set default figure size</span>
-
-<span class="nn">File ~\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:2414,</span> in <span class="ni">InteractiveShell.run_line_magic</span><span class="nt">(self, magic_name, line, _stack_depth)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2412</span>     <span class="n">kwargs</span><span class="p">[</span><span class="s1">&#39;local_ns&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_local_scope</span><span class="p">(</span><span class="n">stack_depth</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2413</span> <span class="k">with</span> <span class="bp">self</span><span class="o">.</span><span class="n">builtin_trap</span><span class="p">:</span>
-<span class="ne">-&gt; </span><span class="mi">2414</span>     <span class="n">result</span> <span class="o">=</span> <span class="n">fn</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-<span class="g g-Whitespace">   </span><span class="mi">2416</span> <span class="c1"># The code below prevents the output from being displayed</span>
-<span class="g g-Whitespace">   </span><span class="mi">2417</span> <span class="c1"># when using magics with decodator @output_can_be_silenced</span>
-<span class="g g-Whitespace">   </span><span class="mi">2418</span> <span class="c1"># when the last Python token in the expression is a &#39;;&#39;.</span>
-<span class="g g-Whitespace">   </span><span class="mi">2419</span> <span class="k">if</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">fn</span><span class="p">,</span> <span class="n">magic</span><span class="o">.</span><span class="n">MAGIC_OUTPUT_CAN_BE_SILENCED</span><span class="p">,</span> <span class="kc">False</span><span class="p">):</span>
-
-<span class="nn">File ~\anaconda3\Lib\site-packages\IPython\core\magics\pylab.py:99,</span> in <span class="ni">PylabMagics.matplotlib</span><span class="nt">(self, line)</span>
-<span class="g g-Whitespace">     </span><span class="mi">97</span>     <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Available matplotlib backends: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="n">backends_list</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">98</span> <span class="k">else</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">99</span>     <span class="n">gui</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">shell</span><span class="o">.</span><span class="n">enable_matplotlib</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">100</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_show_matplotlib_backend</span><span class="p">(</span><span class="n">args</span><span class="o">.</span><span class="n">gui</span><span class="p">,</span> <span class="n">backend</span><span class="p">)</span>
-
-<span class="nn">File ~\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py:3585,</span> in <span class="ni">InteractiveShell.enable_matplotlib</span><span class="nt">(self, gui)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3564</span> <span class="k">def</span> <span class="nf">enable_matplotlib</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">gui</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
-<span class="g g-Whitespace">   </span><span class="mi">3565</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Enable interactive matplotlib and inline figure support.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3566</span><span class="sd"> </span>
-<span class="g g-Whitespace">   </span><span class="mi">3567</span><span class="sd">     This takes the following steps:</span>
-<span class="sd">   (...)</span>
-<span class="g g-Whitespace">   </span><span class="mi">3583</span><span class="sd">         display figures inline.</span>
-<span class="g g-Whitespace">   </span><span class="mi">3584</span><span class="sd">     &quot;&quot;&quot;</span>
-<span class="ne">-&gt; </span><span class="mi">3585</span>     <span class="kn">from</span> <span class="nn">matplotlib_inline.backend_inline</span> <span class="kn">import</span> <span class="n">configure_inline_support</span>
-<span class="g g-Whitespace">   </span><span class="mi">3587</span>     <span class="kn">from</span> <span class="nn">IPython.core</span> <span class="kn">import</span> <span class="n">pylabtools</span> <span class="k">as</span> <span class="n">pt</span>
-<span class="g g-Whitespace">   </span><span class="mi">3588</span>     <span class="n">gui</span><span class="p">,</span> <span class="n">backend</span> <span class="o">=</span> <span class="n">pt</span><span class="o">.</span><span class="n">find_gui_and_backend</span><span class="p">(</span><span class="n">gui</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">pylab_gui_select</span><span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib_inline</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">1</span>
-<span class="ne">----&gt; </span><span class="mi">1</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">backend_inline</span><span class="p">,</span> <span class="n">config</span>  <span class="c1"># noqa</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="n">__version__</span> <span class="o">=</span> <span class="s2">&quot;0.1.6&quot;</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib_inline</span>\<span class="n">backend_inline</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span><span class="w"> </span><span class="sd">&quot;&quot;&quot;A matplotlib backend for publishing figures via display_data&quot;&quot;&quot;</span>
-<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="c1"># Copyright (c) IPython Development Team.</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="c1"># Distributed under the terms of the BSD 3-Clause License.</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">colors</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">matplotlib.backends</span> <span class="kn">import</span> <span class="n">backend_agg</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">113</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="kn">from</span> <span class="nn">packaging.version</span> <span class="kn">import</span> <span class="n">parse</span> <span class="k">as</span> <span class="n">parse_version</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="c1"># cbook must import matplotlib only within function</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="c1"># definitions, so it is safe to import from it here.</span>
-<span class="ne">--&gt; </span><span class="mi">113</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_version</span><span class="p">,</span> <span class="n">cbook</span><span class="p">,</span> <span class="n">_docstring</span><span class="p">,</span> <span class="n">rcsetup</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">sanitize_sequence</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="kn">from</span> <span class="nn">matplotlib._api</span> <span class="kn">import</span> <span class="n">MatplotlibDeprecationWarning</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">rcsetup</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">27</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">cbook</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">ls_mapper</span>
-<span class="ne">---&gt; </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">Colormap</span><span class="p">,</span> <span class="n">is_color_like</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="kn">from</span> <span class="nn">matplotlib._fontconfig_pattern</span> <span class="kn">import</span> <span class="n">parse_fontconfig_pattern</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">matplotlib._enums</span> <span class="kn">import</span> <span class="n">JoinStyle</span><span class="p">,</span> <span class="n">CapStyle</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">colors</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">56</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">---&gt; </span><span class="mi">56</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_cm</span><span class="p">,</span> <span class="n">cbook</span><span class="p">,</span> <span class="n">scale</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="kn">from</span> <span class="nn">._color_data</span> <span class="kn">import</span> <span class="n">BASE_COLORS</span><span class="p">,</span> <span class="n">TABLEAU_COLORS</span><span class="p">,</span> <span class="n">CSS4_COLORS</span><span class="p">,</span> <span class="n">XKCD_COLORS</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="k">class</span> <span class="nc">_ColorMapping</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">scale</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">22</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_docstring</span>
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">NullFormatter</span><span class="p">,</span> <span class="n">ScalarFormatter</span><span class="p">,</span> <span class="n">LogFormatterSciNotation</span><span class="p">,</span> <span class="n">LogitFormatter</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">NullLocator</span><span class="p">,</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">AutoLocator</span><span class="p">,</span> <span class="n">AutoMinorLocator</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">SymmetricalLogLocator</span><span class="p">,</span> <span class="n">AsinhLocator</span><span class="p">,</span> <span class="n">LogitLocator</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">matplotlib.transforms</span> <span class="kn">import</span> <span class="n">Transform</span><span class="p">,</span> <span class="n">IdentityTransform</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="k">class</span> <span class="nc">ScaleBase</span><span class="p">:</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">ticker</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">138</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">cbook</span>
-<span class="ne">--&gt; </span><span class="mi">138</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">transforms</span> <span class="k">as</span> <span class="n">mtransforms</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;TickHelper&#39;</span><span class="p">,</span> <span class="s1">&#39;Formatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FixedFormatter&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>            <span class="s1">&#39;NullFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FuncFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FormatStrFormatter&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>            <span class="s1">&#39;StrMethodFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;ScalarFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;LogFormatter&#39;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>            <span class="s1">&#39;MultipleLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;MaxNLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;AutoMinorLocator&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>            <span class="s1">&#39;SymmetricalLogLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;AsinhLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;LogitLocator&#39;</span><span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">transforms</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">49</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span>
-<span class="ne">---&gt; </span><span class="mi">49</span> <span class="kn">from</span> <span class="nn">matplotlib._path</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">affine_transform</span><span class="p">,</span> <span class="n">count_bboxes_overlapping_bbox</span><span class="p">,</span> <span class="n">update_path_extents</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="kn">from</span> <span class="nn">.path</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="ne">ImportError</span>: numpy.core.multiarray failed to import
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="kn">import</span> <span class="n">exp</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.special</span><span class="w"> </span><span class="kn">import</span> <span class="n">factorial</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">mpl_toolkits.mplot3d</span><span class="w"> </span><span class="kn">import</span> <span class="n">Axes3D</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.api</span><span class="w"> </span><span class="kn">import</span> <span class="n">Poisson</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">scipy.stats</span><span class="w"> </span><span class="kn">import</span> <span class="n">norm</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.iolib.summary2</span><span class="w"> </span><span class="kn">import</span> <span class="n">summary_col</span>
 </pre></div>
 </div>
 </div>
 </div>
 </section>
 <section id="set-up-and-assumptions">
-<h2>Set Up and Assumptions<a class="headerlink" href="#set-up-and-assumptions" title="Permalink to this heading">#</a></h2>
+<h2>Set Up and Assumptions<a class="headerlink" href="#set-up-and-assumptions" title="Link to this heading">#</a></h2>
 <p>Let’s consider the steps we need to go through in maximum likelihood estimation and how they pertain to this study.</p>
 <section id="flow-of-ideas">
-<h3>Flow of Ideas<a class="headerlink" href="#flow-of-ideas" title="Permalink to this heading">#</a></h3>
+<h3>Flow of Ideas<a class="headerlink" href="#flow-of-ideas" title="Link to this heading">#</a></h3>
 <p>The first step with maximum likelihood estimation is to choose the probability distribution believed to be generating the data.</p>
 <p>More precisely, we need to make an assumption as to which <em>parametric class</em> of distributions is generating the data.</p>
 <ul class="simple">
@@ -599,7 +441,7 @@ indexed by its mean <span class="math notranslate nohighlight">\( \mu \in (-\inf
 <p>The parameter estimates so produced will be called <strong>maximum likelihood estimates</strong>.</p>
 </section>
 <section id="counting-billionaires">
-<h3>Counting Billionaires<a class="headerlink" href="#counting-billionaires" title="Permalink to this heading">#</a></h3>
+<h3>Counting Billionaires<a class="headerlink" href="#counting-billionaires" title="Link to this heading">#</a></h3>
 <p>Treisman is interested in estimating the number of billionaires in different countries.</p>
 <p>The number of billionaires is integer-valued.</p>
 <p>Hence we consider distributions that take values only in the nonnegative integers.</p>
@@ -641,7 +483,7 @@ f(y) = \frac{\mu^{y}}{y!} e^{-\mu},
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/cb18b0415eabe67581f3589dc322b6bf8399308944ea0873732face19166e2b2.png" src="../_images/cb18b0415eabe67581f3589dc322b6bf8399308944ea0873732face19166e2b2.png" />
+<img alt="../_images/0bf25a202b4e31bed29a270d054ab31c118d41132846a6ad0a5093ba59ff1bd9.png" src="../_images/0bf25a202b4e31bed29a270d054ab31c118d41132846a6ad0a5093ba59ff1bd9.png" />
 </div>
 </div>
 <div class="cell docutils container">
@@ -782,7 +624,7 @@ dropped for plotting purposes)</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/3ddbc0315a54011378ec5cd7be20093b3e1d043cdd880de61dd4b5839190adf1.png" src="../_images/3ddbc0315a54011378ec5cd7be20093b3e1d043cdd880de61dd4b5839190adf1.png" />
+<img alt="../_images/e2f21086753e2f50cf1414255cba7b311c1f3741934a0472bf6c930689851ad9.png" src="../_images/e2f21086753e2f50cf1414255cba7b311c1f3741934a0472bf6c930689851ad9.png" />
 </div>
 </div>
 <p>From the histogram, it appears that the Poisson assumption is not unreasonable (albeit with a very low <span class="math notranslate nohighlight">\( \mu \)</span> and some outliers).</p>
@@ -790,7 +632,7 @@ dropped for plotting purposes)</p>
 </section>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="conditional-distributions">
-<h1>Conditional Distributions<a class="headerlink" href="#conditional-distributions" title="Permalink to this heading">#</a></h1>
+<h1>Conditional Distributions<a class="headerlink" href="#conditional-distributions" title="Link to this heading">#</a></h1>
 <p>In Treisman’s paper, the dependent variable — the number of billionaires <span class="math notranslate nohighlight">\( y_i \)</span> in country <span class="math notranslate nohighlight">\( i \)</span> — is modeled as a function of GDP per capita, population size, and years membership in GATT and WTO.</p>
 <p>Hence, the distribution of <span class="math notranslate nohighlight">\( y_i \)</span> needs to be conditioned on the vector of explanatory variables <span class="math notranslate nohighlight">\( \mathbf{x}_i \)</span>.</p>
 <p>The standard formulation — the so-called <em>poisson regression</em> model — is as follows:</p>
@@ -846,14 +688,14 @@ f(y_i \mid \mathbf{x}_i) = \frac{\mu_i^{y_i}}{y_i!} e^{-\mu_i}; \qquad y_i = 0, 
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/730d2d9bdb25987e6160c9575720a4041a29b92c33f0a0ad8f5aae1838e144e8.png" src="../_images/730d2d9bdb25987e6160c9575720a4041a29b92c33f0a0ad8f5aae1838e144e8.png" />
+<img alt="../_images/67ea09c7069bc047521105097e66b831a1180162ad869cb4524321bcd8cf7578.png" src="../_images/67ea09c7069bc047521105097e66b831a1180162ad869cb4524321bcd8cf7578.png" />
 </div>
 </div>
 <p>We can see that the distribution of <span class="math notranslate nohighlight">\( y_i \)</span> is conditional on
 <span class="math notranslate nohighlight">\( \mathbf{x}_i \)</span> (<span class="math notranslate nohighlight">\( \mu_i \)</span> is no longer constant).</p>
 </section>
 <section class="tex2jax_ignore mathjax_ignore" id="id1">
-<h1>Maximum Likelihood Estimation<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h1>
+<h1>Maximum Likelihood Estimation<a class="headerlink" href="#id1" title="Link to this heading">#</a></h1>
 <p>In our model for number of billionaires, the conditional distribution
 contains 4 (<span class="math notranslate nohighlight">\( k = 4 \)</span>) parameters that we need to estimate.</p>
 <p>We will label our entire parameter vector as <span class="math notranslate nohighlight">\( \boldsymbol{\beta} \)</span> where</p>
@@ -878,7 +720,7 @@ data is <span class="math notranslate nohighlight">\( f(y_1, y_2) = f(y_1) \cdot
 we can visualize the joint pdf like so</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">plot_joint_poisson</span><span class="p">(</span><span class="n">μ</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">y_n</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">plot_joint_poisson</span><span class="p">(</span><span class="n">μ</span><span class="o">=</span><span class="mi">7</span><span class="p">,</span> <span class="n">y_n</span><span class="o">=</span><span class="mi">20</span><span class="p">):</span>
     <span class="n">yi_values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">y_n</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
     <span class="c1"># Create coordinate points of X and Y</span>
@@ -900,7 +742,7 @@ we can visualize the joint pdf like so</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/d4afcfc614e9fb2ba2ca568430805f2d2b400cfc3342b74a6dc3afc9414c3777.png" src="../_images/d4afcfc614e9fb2ba2ca568430805f2d2b400cfc3342b74a6dc3afc9414c3777.png" />
+<img alt="../_images/cb82fc79fbdd3fb71a4a3873e43f78d631e538295668b5fdcf25f771cfa4a8ea.png" src="../_images/cb82fc79fbdd3fb71a4a3873e43f78d631e538295668b5fdcf25f771cfa4a8ea.png" />
 </div>
 </div>
 <p>Similarly, the joint pdf of our data (which is distributed as a
@@ -965,7 +807,7 @@ differentiating <span class="math notranslate nohighlight">\( f(x) = x \exp(x) \
 <p>However, no analytical solution exists to the above problem – to find the MLE
 we need to use numerical methods.</p>
 <section id="mle-with-numerical-methods">
-<h2>MLE with Numerical Methods<a class="headerlink" href="#mle-with-numerical-methods" title="Permalink to this heading">#</a></h2>
+<h2>MLE with Numerical Methods<a class="headerlink" href="#mle-with-numerical-methods" title="Link to this heading">#</a></h2>
 <p>Many distributions do not have nice, analytical solutions and therefore require
 numerical methods to solve for parameter estimates.</p>
 <p>One such numerical method is the Newton-Raphson algorithm.</p>
@@ -1004,7 +846,7 @@ function will be equal to 0.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/1e7620d2dd1ef384c15301425dd45e90fe9e8d3159e43a98956cb38f68cd2cb2.png" src="../_images/1e7620d2dd1ef384c15301425dd45e90fe9e8d3159e43a98956cb38f68cd2cb2.png" />
+<img alt="../_images/3ff1e7dac976a8cc78627ffd58721902eaf9c07c327f8c1cbe38f10de31dea15.png" src="../_images/3ff1e7dac976a8cc78627ffd58721902eaf9c07c327f8c1cbe38f10de31dea15.png" />
 </div>
 </div>
 <p>The plot shows that the maximum likelihood value (the top plot) occurs
@@ -1052,9 +894,9 @@ easily recompute the values of the log likelihood, gradient and Hessian
 for every iteration</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">PoissonRegression</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">PoissonRegression</span><span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">β</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">β</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">=</span> <span class="n">X</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
         <span class="c1"># Reshape y as a n_by_1 column vector</span>
@@ -1062,20 +904,20 @@ for every iteration</p>
         <span class="c1"># Reshape β as a k_by_1 column vector</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">β</span> <span class="o">=</span> <span class="n">β</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">k</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">μ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">μ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">logL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">logL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">μ</span><span class="p">)</span> <span class="o">-</span> <span class="n">μ</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">factorial</span><span class="p">(</span><span class="n">y</span><span class="p">)))</span>
 
-    <span class="k">def</span> <span class="nf">G</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">G</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">y</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="p">(</span><span class="n">y</span> <span class="o">-</span> <span class="n">μ</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
         <span class="k">return</span> <span class="o">-</span><span class="p">(</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">@</span> <span class="p">(</span><span class="n">μ</span> <span class="o">*</span> <span class="n">X</span><span class="p">))</span>
@@ -1098,7 +940,7 @@ an option <code class="docutils literal notranslate"><span class="pre">display=T
 iteration.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">newton_raphson</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">newton_raphson</span><span class="p">(</span><span class="n">model</span><span class="p">,</span> <span class="n">tol</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">1000</span><span class="p">,</span> <span class="n">display</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
 
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="n">error</span> <span class="o">=</span> <span class="mi">100</span>  <span class="c1"># Initial error value</span>
@@ -1190,9 +1032,9 @@ and therefore the numerator in our updating equation is becoming smaller.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.54574140e-13],
-       [-6.44040377e-13],
-       [-4.99100761e-13]])
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>array([[-2.55073740e-13],
+       [-6.47037979e-13],
+       [-5.00155473e-13]])
 </pre></div>
 </div>
 </div>
@@ -1203,7 +1045,7 @@ the maximum is found at <span class="math notranslate nohighlight">\( \beta = 10
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">logL</span> <span class="o">=</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="o">-</span><span class="p">(</span><span class="n">x</span> <span class="o">-</span> <span class="mi">10</span><span class="p">)</span> <span class="o">**</span> <span class="mi">2</span> <span class="o">-</span> <span class="mi">10</span>
 
-<span class="k">def</span> <span class="nf">find_tangent</span><span class="p">(</span><span class="n">β</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">find_tangent</span><span class="p">(</span><span class="n">β</span><span class="p">,</span> <span class="n">a</span><span class="o">=</span><span class="mf">0.01</span><span class="p">):</span>
     <span class="n">y1</span> <span class="o">=</span> <span class="n">logL</span><span class="p">(</span><span class="n">β</span><span class="p">)</span>
     <span class="n">y2</span> <span class="o">=</span> <span class="n">logL</span><span class="p">(</span><span class="n">β</span><span class="o">+</span><span class="n">a</span><span class="p">)</span>
     <span class="n">x</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="n">β</span><span class="p">,</span> <span class="mi">1</span><span class="p">],</span> <span class="p">[</span><span class="n">β</span><span class="o">+</span><span class="n">a</span><span class="p">,</span> <span class="mi">1</span><span class="p">]])</span>
@@ -1235,7 +1077,7 @@ the maximum is found at <span class="math notranslate nohighlight">\( \beta = 10
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/ac3a5c85462fadf9ebb7b0504f0ab662b09668b9468b10dff88c9f990950da8a.png" src="../_images/ac3a5c85462fadf9ebb7b0504f0ab662b09668b9468b10dff88c9f990950da8a.png" />
+<img alt="../_images/7098e48bc2d25344c2b7c598c72ee8f3ded5d29e8ab8389cb540b8f39f5191ef.png" src="../_images/7098e48bc2d25344c2b7c598c72ee8f3ded5d29e8ab8389cb540b8f39f5191ef.png" />
 </div>
 </div>
 <p>Note that our implementation of the Newton-Raphson algorithm is rather
@@ -1243,7 +1085,7 @@ basic — for more robust implementations see,
 for example, <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/optimize.html">scipy.optimize</a>.</p>
 </section>
 <section id="maximum-likelihood-estimation-with-statsmodels">
-<h2>Maximum Likelihood Estimation with <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code><a class="headerlink" href="#maximum-likelihood-estimation-with-statsmodels" title="Permalink to this heading">#</a></h2>
+<h2>Maximum Likelihood Estimation with <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code><a class="headerlink" href="#maximum-likelihood-estimation-with-statsmodels" title="Link to this heading">#</a></h2>
 <p>Now that we know what’s going on under the hood, we can apply MLE to an interesting application.</p>
 <p>We’ll use the Poisson regression model in <code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> to obtain
 a richer output with standard errors, test values, and more.</p>
@@ -1275,8 +1117,8 @@ to confirm we obtain the same coefficients and log-likelihood value.</p>
 Dep. Variable:                      y   No. Observations:                    5
 Model:                        Poisson   Df Residuals:                        2
 Method:                           MLE   Df Model:                            2
-Date:                Wed, 06 Sep 2023   Pseudo R-squ.:                  0.2546
-Time:                        16:36:52   Log-Likelihood:                -3.3784
+Date:                Thu, 04 Sep 2025   Pseudo R-squ.:                  0.2546
+Time:                        13:36:11   Log-Likelihood:                -3.3784
 converged:                       True   LL-Null:                       -4.5325
 Covariance Type:            nonrobust   LLR p-value:                    0.3153
 ==============================================================================
@@ -1293,7 +1135,7 @@ x2             0.8433      0.798      1.057      0.291      -0.720       2.407
 <p>Now let’s replicate results from Daniel Treisman’s paper, <a class="reference external" href="https://www.aeaweb.org/articles?id=10.1257/aer.p20161068">Russia’s
 Billionaires</a>,
 mentioned earlier in the lecture.</p>
-<p>Treisman starts by estimating equation <span class="xref myst">(1)</span>, where:</p>
+<p>Treisman starts by estimating equation <a class="reference internal" href="#equation-poissonreg"><span class="xref myst">(1)</span></a>, where:</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\( y_i \)</span> is <span class="math notranslate nohighlight">\( {number\ of\ billionaires}_i \)</span></p></li>
 <li><p><span class="math notranslate nohighlight">\( x_{i1} \)</span> is <span class="math notranslate nohighlight">\( \log{GDP\ per\ capita}_i \)</span></p></li>
@@ -1342,8 +1184,8 @@ model.</p>
 Dep. Variable:                numbil0   No. Observations:                  197
 Model:                        Poisson   Df Residuals:                      193
 Method:                           MLE   Df Model:                            3
-Date:                Wed, 06 Sep 2023   Pseudo R-squ.:                  0.8574
-Time:                        16:36:52   Log-Likelihood:                -438.54
+Date:                Thu, 04 Sep 2025   Pseudo R-squ.:                  0.8574
+Time:                        13:36:11   Log-Likelihood:                -438.54
 converged:                       True   LL-Null:                       -3074.7
 Covariance Type:                  HC0   LLR p-value:                     0.000
 ==============================================================================
@@ -1464,12 +1306,7 @@ plot the first 15</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<img alt="../_images/b35e82d806413c6c79137ce3fa93d1952f692840de88436b9a15fa0bd377dc09.png" src="../_images/b35e82d806413c6c79137ce3fa93d1952f692840de88436b9a15fa0bd377dc09.png" />
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&lt;statsmodels.discrete.discrete_model.PoissonResultsWrapper at 0x1592eb56850&gt;,
- &lt;statsmodels.discrete.discrete_model.PoissonResultsWrapper at 0x1592eb92790&gt;,
- &lt;statsmodels.discrete.discrete_model.PoissonResultsWrapper at 0x1592ebc7a10&gt;]
-</pre></div>
-</div>
+<img alt="../_images/15a9e20662c0b2eb84b8eef1c352db610edb041ec35510a071dcc6bcf84b58f1.png" src="../_images/15a9e20662c0b2eb84b8eef1c352db610edb041ec35510a071dcc6bcf84b58f1.png" />
 </div>
 </div>
 <p>As we can see, Russia has by far the highest number of billionaires in
@@ -1480,7 +1317,7 @@ Russia, the political climate, and the history of privatization in the
 years after the USSR.</p>
 </section>
 <section id="summary">
-<h2>Summary<a class="headerlink" href="#summary" title="Permalink to this heading">#</a></h2>
+<h2>Summary<a class="headerlink" href="#summary" title="Link to this heading">#</a></h2>
 <p>In this lab, we used Maximum Likelihood Estimation to estimate the
 parameters of a Poisson model.</p>
 <p><code class="docutils literal notranslate"><span class="pre">statsmodels</span></code> contains other built-in likelihood models such as
@@ -1493,7 +1330,7 @@ example notebook can be found
 <a class="reference external" href="https://www.statsmodels.org/dev/examples/notebooks/generated/generic_mle.html">here</a>.</p>
 </section>
 <section id="exercise-1">
-<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
 <p>Suppose we wanted to estimate the probability of an event <span class="math notranslate nohighlight">\( y_i \)</span>
 occurring, given some observations.</p>
 <p>We could use a probit regression model, where the pdf of <span class="math notranslate nohighlight">\( y_i \)</span> is</p>
@@ -1516,7 +1353,7 @@ Hessian.</p>
 compute the cmf and pmf of the normal distribution.</p>
 </section>
 <section id="solutions">
-<h2>Solutions<a class="headerlink" href="#solutions" title="Permalink to this heading">#</a></h2>
+<h2>Solutions<a class="headerlink" href="#solutions" title="Link to this heading">#</a></h2>
 <p>The log-likelihood can be written as</p>
 <div class="math notranslate nohighlight">
 \[
@@ -1556,29 +1393,29 @@ y_i \frac{ \phi (\mathbf{x}_i' \boldsymbol{\beta}) + \mathbf{x}_i' \boldsymbol{\
 follows</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">ProbitRegression</span><span class="p">:</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">class</span><span class="w"> </span><span class="nc">ProbitRegression</span><span class="p">:</span>
 
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">β</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">β</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">X</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">y</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span> <span class="o">=</span> <span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">β</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">k</span> <span class="o">=</span> <span class="n">X</span><span class="o">.</span><span class="n">shape</span>
 
-    <span class="k">def</span> <span class="nf">μ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">μ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">norm</span><span class="o">.</span><span class="n">cdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">ϕ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">ϕ</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="n">norm</span><span class="o">.</span><span class="n">pdf</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">X</span> <span class="o">@</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span><span class="o">.</span><span class="n">T</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">logL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">logL</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">y</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="n">μ</span><span class="p">)</span> <span class="o">+</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">log</span><span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">μ</span><span class="p">))</span>
 
-    <span class="k">def</span> <span class="nf">G</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">G</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
         <span class="n">ϕ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ϕ</span><span class="p">()</span>
         <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="n">y</span> <span class="o">*</span> <span class="n">ϕ</span> <span class="o">/</span> <span class="n">μ</span> <span class="o">-</span> <span class="n">X</span><span class="o">.</span><span class="n">T</span> <span class="o">*</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">y</span><span class="p">)</span> <span class="o">*</span> <span class="n">ϕ</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1</span> <span class="o">-</span> <span class="n">μ</span><span class="p">)),</span>
                      <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
-    <span class="k">def</span> <span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">X</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">X</span>
         <span class="n">β</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">β</span>
         <span class="n">μ</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">μ</span><span class="p">()</span>
@@ -1592,7 +1429,7 @@ follows</p>
 </div>
 </section>
 <section id="exercise-2">
-<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
 <p>Use the following dataset and initial values of <span class="math notranslate nohighlight">\( \boldsymbol{\beta} \)</span> to
 estimate the MLE with the Newton-Raphson algorithm developed earlier in
 the lecture</p>
@@ -1627,7 +1464,7 @@ y =
 function with the following import statement</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">statsmodels.discrete.discrete_model</span> <span class="kn">import</span> <span class="n">Probit</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">statsmodels.discrete.discrete_model</span><span class="w"> </span><span class="kn">import</span> <span class="n">Probit</span>
 </pre></div>
 </div>
 </div>
@@ -1637,7 +1474,7 @@ is very sensitive to initial values, and therefore you may fail to
 achieve convergence with different starting values.</p>
 </section>
 <section id="id2">
-<h2>Solutions<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
+<h2>Solutions<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
 <p>Here is one solution</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1693,8 +1530,8 @@ Number of iterations: 4
 Dep. Variable:                      y   No. Observations:                    5
 Model:                         Probit   Df Residuals:                        2
 Method:                           MLE   Df Model:                            2
-Date:                Fri, 22 Sep 2023   Pseudo R-squ.:                  0.2961
-Time:                        15:59:39   Log-Likelihood:                -2.3687
+Date:                Thu, 04 Sep 2025   Pseudo R-squ.:                  0.2961
+Time:                        13:36:12   Log-Likelihood:                -2.3687
 converged:                       True   LL-Null:                       -3.3651
 Covariance Type:            nonrobust   LLR p-value:                    0.3692
 ==============================================================================
@@ -1710,7 +1547,7 @@ x2            -0.0971      0.590     -0.165      0.869      -1.254       1.060
 </div>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <p>Some good resources for further study:</p>
 <p><a id='id27'></a>
 <a class="reference external" href="https://www.microsoft.com/en-us/research/uploads/prod/2006/01/Bishop-Pattern-Recognition-and-Machine-Learning-2006.pdf">Christopher M. Bishop. <em>Pattern Recognition and Machine Learning</em>. Springer, 2006.</a></p>
@@ -1745,11 +1582,10 @@ x2            -0.0971      0.590     -0.165      0.869      -1.254       1.060
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Lab1/regression_sol.html"
@@ -1769,10 +1605,7 @@ x2            -0.0971      0.590     -0.165      0.869      -1.254       1.060
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1780,6 +1613,7 @@ x2            -0.0971      0.590     -0.165      0.869      -1.254       1.060
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1830,6 +1664,7 @@ By Miguel C. Herculano
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2025.
@@ -1856,8 +1691,8 @@ By Miguel C. Herculano
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

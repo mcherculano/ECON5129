@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Penalized Regression &#8212; ECON 5129</title>
   
@@ -15,52 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lab3/regression_2';</script>
@@ -77,19 +73,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -111,12 +111,20 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -131,9 +139,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -143,12 +155,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="ECON 5129 - Home"/>
+    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="ECON 5129 - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -160,14 +183,14 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">PRELIMINARY</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/about_py.html">About Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/setting_up_your_python_environment.html">Setting up Your Python Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/python_by_example.html">An Introductory Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/learn_more.html">Learn More</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/exercises.html">Exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">LAB MATERIALS</span></p>
 <ul class="current nav bd-sidenav">
@@ -200,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -209,14 +232,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -291,26 +314,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -352,10 +377,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="penalized-regression">
-<h1>Penalized Regression<a class="headerlink" href="#penalized-regression" title="Permalink to this heading">#</a></h1>
+<h1>Penalized Regression<a class="headerlink" href="#penalized-regression" title="Link to this heading">#</a></h1>
 <p>When running a regression with many predictors the results have a tendency to overfit the data, reducing out-of-sample predictive properties.</p>
 <p>Penalized regression eases this problem by forcing the regression estimator to shrink the coefficients towards 0 in order to avoid the “penalty” term imposed on the coefficients. This process is closely related to the idea of Bayesian shrinkage, and indeed standard penalized regression results are equivalent to regression performed using <a class="reference external" href="https://amstat.tandfonline.com/doi/abs/10.1198/016214508000000337?casa_token=DE6O93Bz7uUAAAAA:Ff_MiPXvPH32NA2hnGtZtqb8grXEiEqF0fdO3B0p_a6wOaqRciCZ4ASwxn69gdOb93Lbt-HSyK1o4As">certain Bayesian priors</a> (more about this in the next lab).</p>
 <p>Regular OLS selects coefficients <span class="math notranslate nohighlight">\(\hat{\beta}\)</span> to minimize the sum of squared errors:</p>
@@ -370,7 +395,7 @@ document.write(`
 \]</div>
 <p>Typically <span class="math notranslate nohighlight">\(p\)</span> is set to 1 for LASSO regression (least absolute shrinkage and selection operator), which has the effect of tending to set coefficients to 0, i.e. model selection, or to 2 for Ridge Regression. Elastic net regression provides a weighted mix of LASSO and Ridge penalties, commonly referring to the weight as <span class="math notranslate nohighlight">\(\alpha\)</span>.</p>
 <section id="remarks">
-<h2>Remarks<a class="headerlink" href="#remarks" title="Permalink to this heading">#</a></h2>
+<h2>Remarks<a class="headerlink" href="#remarks" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>To avoid being penalized for a constant term, or by differences in scale between variables, it is a very good idea to standardize each variable (subtract the mean and divide by the standard deviation) before running a penalized regression.</p></li>
 <li><p>Penalized regression can be run for logit and other kinds of regression, not just linear regression. Using penalties with general linear models like logit is common.</p></li>
@@ -379,7 +404,7 @@ document.write(`
 <li><p>LASSO models commonly include variables along with polynomial transformation of those variables and interactions, allowing LASSO to determine which transformations are worth keeping.</p></li>
 </ul>
 <section id="overfitting-and-regularization">
-<h3>Overfitting and Regularization<a class="headerlink" href="#overfitting-and-regularization" title="Permalink to this heading">#</a></h3>
+<h3>Overfitting and Regularization<a class="headerlink" href="#overfitting-and-regularization" title="Link to this heading">#</a></h3>
 <p>You might be wondering, “Why would we ever want to throw variables out,
 can’t that only hurt our model?”</p>
 <p>The primary answer: it helps us avoid a common issue called <strong>overfitting</strong>.</p>
@@ -397,15 +422,15 @@ model’s parameters.</p>
 is a form of regularization.</p>
 </section>
 <section id="dataset">
-<h3>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">#</a></h3>
+<h3>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h3>
 <p>Let’s load the dataset and take a quick look at our task.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#165aa7&#39;</span><span class="p">,</span> <span class="s1">&#39;#cb495c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fec630&#39;</span><span class="p">,</span> <span class="s1">&#39;#bb60d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#f47915&#39;</span><span class="p">,</span> <span class="s1">&#39;#06ab54&#39;</span><span class="p">,</span> <span class="s1">&#39;#002070&#39;</span><span class="p">,</span> <span class="s1">&#39;#b27d12&#39;</span><span class="p">,</span> <span class="s1">&#39;#007030&#39;</span><span class="p">]</span>
 <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
@@ -413,7 +438,7 @@ is a form of regularization.</p>
 <span class="c1"># We will import all these here to ensure that they are loaded, but</span>
 <span class="c1"># will usually re-import close to where they are used to make clear</span>
 <span class="c1"># where the functions come from</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">linear_model</span><span class="p">,</span> <span class="n">metrics</span><span class="p">,</span> <span class="n">neural_network</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">model_selection</span>
 <span class="p">)</span>
 
@@ -439,473 +464,16 @@ is a form of regularization.</p>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_71252\1731148435.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 38, in &lt;module&gt;
-    from pandas.compat import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\__init__.py&quot;, line 27, in &lt;module&gt;
-    from pandas.compat.pyarrow import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\pyarrow.py&quot;, line 8, in &lt;module&gt;
-    import pyarrow as pa
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">5</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.preprocessing</span><span class="w"> </span><span class="kn">import</span> <span class="n">StandardScaler</span>
+<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">5</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
+<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#165aa7&#39;</span><span class="p">,</span> <span class="s1">&#39;#cb495c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fec630&#39;</span><span class="p">,</span> <span class="s1">&#39;#bb60d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#f47915&#39;</span><span class="p">,</span> <span class="s1">&#39;#06ab54&#39;</span><span class="p">,</span> <span class="s1">&#39;#002070&#39;</span><span class="p">,</span> <span class="s1">&#39;#b27d12&#39;</span><span class="p">,</span> <span class="s1">&#39;#007030&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="n">scaler</span> <span class="o">=</span> <span class="n">StandardScaler</span><span class="p">()</span>
 
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_71252\1731148435.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 9, in &lt;module&gt;
-    from pandas.core.dtypes.dtypes import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\dtypes\dtypes.py&quot;, line 24, in &lt;module&gt;
-    from pandas._libs import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_71252\1731148435.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 53, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\__init__.py&quot;, line 8, in &lt;module&gt;
-    from pandas.core.ops.array_ops import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\array_ops.py&quot;, line 56, in &lt;module&gt;
-    from pandas.core.computation import expressions
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\expressions.py&quot;, line 21, in &lt;module&gt;
-    from pandas.core.computation.check import NUMEXPR_INSTALLED
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\check.py&quot;, line 5, in &lt;module&gt;
-    ne = import_optional_dependency(&quot;numexpr&quot;, errors=&quot;warn&quot;)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\numexpr\__init__.py&quot;, line 24, in &lt;module&gt;
-    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_71252\1731148435.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 67, in &lt;module&gt;
-    from pandas.core.arrays.masked import BaseMaskedArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\nanops.py&quot;, line 52, in &lt;module&gt;
-    bn = import_optional_dependency(&quot;bottleneck&quot;, errors=&quot;warn&quot;)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\bottleneck\__init__.py&quot;, line 7, in &lt;module&gt;
-    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_71252\1731148435.py&quot;, line 3, in &lt;module&gt;
-    from sklearn.preprocessing import StandardScaler
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\__init__.py&quot;, line 73, in &lt;module&gt;
-    from .base import clone  # noqa: E402
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\base.py&quot;, line 19, in &lt;module&gt;
-    from .utils._metadata_requests import _MetadataRequester, _routing_enabled
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\__init__.py&quot;, line 9, in &lt;module&gt;
-    from ._chunking import gen_batches, gen_even_slices
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\_chunking.py&quot;, line 11, in &lt;module&gt;
-    from ._param_validation import Interval, validate_params
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\_param_validation.py&quot;, line 17, in &lt;module&gt;
-    from .validation import _is_arraylike_not_scalar
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\validation.py&quot;, line 21, in &lt;module&gt;
-    from ..utils._array_api import _asarray_with_order, _is_numpy_namespace, get_namespace
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\_array_api.py&quot;, line 20, in &lt;module&gt;
-    from .fixes import parse_version
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\sklearn\utils\fixes.py&quot;, line 421, in &lt;module&gt;
-    import pyarrow
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="kn">import</span> <span class="n">StandardScaler</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">73</span>
-<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="c1"># `_distributor_init` allows distributors to run custom init code.</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="c1"># For instance, for the Windows wheel, this is used to pre-load the</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="c1"># vcomp shared library runtime for OpenMP embedded in the sklearn/.libs</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span> <span class="c1"># later is linked to the OpenMP runtime to make it possible to introspect</span>
-<span class="g g-Whitespace">     </span><span class="mi">68</span> <span class="c1"># it and importing it first would fail if the OpenMP dll cannot be found.</span>
-<span class="g g-Whitespace">     </span><span class="mi">69</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="p">(</span>  <span class="c1"># noqa: F401 E402</span>
-<span class="g g-Whitespace">     </span><span class="mi">70</span>     <span class="n">__check_build</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">71</span>     <span class="n">_distributor_init</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">72</span> <span class="p">)</span>
-<span class="ne">---&gt; </span><span class="mi">73</span> <span class="kn">from</span> <span class="nn">.base</span> <span class="kn">import</span> <span class="n">clone</span>  <span class="c1"># noqa: E402</span>
-<span class="g g-Whitespace">     </span><span class="mi">74</span> <span class="kn">from</span> <span class="nn">.utils._show_versions</span> <span class="kn">import</span> <span class="n">show_versions</span>  <span class="c1"># noqa: E402</span>
-<span class="g g-Whitespace">     </span><span class="mi">76</span> <span class="n">_submodules</span> <span class="o">=</span> <span class="p">[</span>
-<span class="g g-Whitespace">     </span><span class="mi">77</span>     <span class="s2">&quot;calibration&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">78</span>     <span class="s2">&quot;cluster&quot;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span>     <span class="s2">&quot;compose&quot;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="p">]</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">base</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">19</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">._config</span> <span class="kn">import</span> <span class="n">config_context</span><span class="p">,</span> <span class="n">get_config</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">.exceptions</span> <span class="kn">import</span> <span class="n">InconsistentVersionWarning</span>
-<span class="ne">---&gt; </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">.utils._metadata_requests</span> <span class="kn">import</span> <span class="n">_MetadataRequester</span><span class="p">,</span> <span class="n">_routing_enabled</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">.utils._missing</span> <span class="kn">import</span> <span class="n">is_scalar_nan</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">.utils._param_validation</span> <span class="kn">import</span> <span class="n">validate_parameter_constraints</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">9</span>
-<span class="g g-Whitespace">      </span><span class="mi">7</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">metadata_routing</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">from</span> <span class="nn">._bunch</span> <span class="kn">import</span> <span class="n">Bunch</span>
-<span class="ne">----&gt; </span><span class="mi">9</span> <span class="kn">from</span> <span class="nn">._chunking</span> <span class="kn">import</span> <span class="n">gen_batches</span><span class="p">,</span> <span class="n">gen_even_slices</span>
-<span class="g g-Whitespace">     </span><span class="mi">11</span> <span class="c1"># Make _safe_indexing importable from here for backward compat as this particular</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="c1"># helper is considered semi-private and typically very useful for third-party</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="c1"># libraries that want to comply with scikit-learn&#39;s estimator API. In particular,</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="c1"># _safe_indexing was included in our public API documentation despite the leading</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span> <span class="c1"># `_` in its name.</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">._indexing</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">17</span>     <span class="n">_safe_indexing</span><span class="p">,</span>  <span class="c1"># noqa: F401</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span>     <span class="n">resample</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span>     <span class="n">shuffle</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="n">_chunking</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">11</span>
-<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="kn">from</span> <span class="nn">.._config</span> <span class="kn">import</span> <span class="n">get_config</span>
-<span class="ne">---&gt; </span><span class="mi">11</span> <span class="kn">from</span> <span class="nn">._param_validation</span> <span class="kn">import</span> <span class="n">Interval</span><span class="p">,</span> <span class="n">validate_params</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="k">def</span> <span class="nf">chunk_generator</span><span class="p">(</span><span class="n">gen</span><span class="p">,</span> <span class="n">chunksize</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Chunk generator, ``gen`` into lists of length ``chunksize``. The last</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span><span class="sd">     chunk may have a length less than ``chunksize``.&quot;&quot;&quot;</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="n">_param_validation</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">17</span>
-<span class="g g-Whitespace">     </span><span class="mi">14</span> <span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">csr_matrix</span><span class="p">,</span> <span class="n">issparse</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span> <span class="kn">from</span> <span class="nn">.._config</span> <span class="kn">import</span> <span class="n">config_context</span><span class="p">,</span> <span class="n">get_config</span>
-<span class="ne">---&gt; </span><span class="mi">17</span> <span class="kn">from</span> <span class="nn">.validation</span> <span class="kn">import</span> <span class="n">_is_arraylike_not_scalar</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="k">class</span> <span class="nc">InvalidParameterError</span><span class="p">(</span><span class="ne">ValueError</span><span class="p">,</span> <span class="ne">TypeError</span><span class="p">):</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span><span class="w">     </span><span class="sd">&quot;&quot;&quot;Custom exception to be raised when the parameter of a class/method/function</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span><span class="sd">     does not have a valid type or value.</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span><span class="sd">     &quot;&quot;&quot;</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="n">validation</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">21</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">..</span> <span class="kn">import</span> <span class="n">get_config</span> <span class="k">as</span> <span class="n">_get_config</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">..exceptions</span> <span class="kn">import</span> <span class="n">DataConversionWarning</span><span class="p">,</span> <span class="n">NotFittedError</span><span class="p">,</span> <span class="n">PositiveSpectrumWarning</span>
-<span class="ne">---&gt; </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">..utils._array_api</span> <span class="kn">import</span> <span class="n">_asarray_with_order</span><span class="p">,</span> <span class="n">_is_numpy_namespace</span><span class="p">,</span> <span class="n">get_namespace</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">..utils.deprecation</span> <span class="kn">import</span> <span class="n">_deprecate_force_all_finite</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="kn">from</span> <span class="nn">..utils.fixes</span> <span class="kn">import</span> <span class="n">ComplexWarning</span><span class="p">,</span> <span class="n">_preserve_dia_indices_dtype</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="n">_array_api</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">20</span>
-<span class="g g-Whitespace">     </span><span class="mi">18</span> <span class="kn">from</span> <span class="nn">..externals</span> <span class="kn">import</span> <span class="n">array_api_extra</span> <span class="k">as</span> <span class="n">xpx</span>
-<span class="g g-Whitespace">     </span><span class="mi">19</span> <span class="kn">from</span> <span class="nn">..externals.array_api_compat</span> <span class="kn">import</span> <span class="n">numpy</span> <span class="k">as</span> <span class="n">np_compat</span>
-<span class="ne">---&gt; </span><span class="mi">20</span> <span class="kn">from</span> <span class="nn">.fixes</span> <span class="kn">import</span> <span class="n">parse_version</span>
-<span class="g g-Whitespace">     </span><span class="mi">22</span> <span class="c1"># TODO: complete __all__</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;xpx&quot;</span><span class="p">]</span>  <span class="c1"># we import xpx here just to re-export it, need this to appease ruff</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">sklearn</span>\<span class="n">utils</span>\<span class="n">fixes</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">421</span>
-<span class="g g-Whitespace">    </span><span class="mi">419</span> <span class="n">PYARROW_VERSION_BELOW_17</span> <span class="o">=</span> <span class="kc">False</span>
-<span class="g g-Whitespace">    </span><span class="mi">420</span> <span class="k">try</span><span class="p">:</span>
-<span class="ne">--&gt; </span><span class="mi">421</span>     <span class="kn">import</span> <span class="nn">pyarrow</span>
-<span class="g g-Whitespace">    </span><span class="mi">423</span>     <span class="n">pyarrow_version</span> <span class="o">=</span> <span class="n">parse_version</span><span class="p">(</span><span class="n">pyarrow</span><span class="o">.</span><span class="n">__version__</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">424</span>     <span class="k">if</span> <span class="n">pyarrow_version</span> <span class="o">&lt;</span> <span class="n">parse_version</span><span class="p">(</span><span class="s2">&quot;17.0.0&quot;</span><span class="p">):</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">pyarrow</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">65</span>
-<span class="g g-Whitespace">     </span><span class="mi">63</span> <span class="n">_gc_enabled</span> <span class="o">=</span> <span class="n">_gc</span><span class="o">.</span><span class="n">isenabled</span><span class="p">()</span>
-<span class="g g-Whitespace">     </span><span class="mi">64</span> <span class="n">_gc</span><span class="o">.</span><span class="n">disable</span><span class="p">()</span>
-<span class="ne">---&gt; </span><span class="mi">65</span> <span class="kn">import</span> <span class="nn">pyarrow.lib</span> <span class="k">as</span> <span class="nn">_lib</span>
-<span class="g g-Whitespace">     </span><span class="mi">66</span> <span class="k">if</span> <span class="n">_gc_enabled</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">67</span>     <span class="n">_gc</span><span class="o">.</span><span class="n">enable</span><span class="p">()</span>
-
-<span class="nn">File ~\anaconda3\Lib\site-packages\pyarrow\lib.pyx:36,</span> in <span class="ni">init pyarrow.lib</span><span class="nt">()</span>
-
-<span class="ne">ImportError</span>: numpy.core.multiarray failed to import
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
 </pre></div>
 </div>
 </div>
@@ -913,7 +481,7 @@ Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 
 </section>
 </section>
 <section id="lasso-regression">
-<h2>Lasso Regression<a class="headerlink" href="#lasso-regression" title="Permalink to this heading">#</a></h2>
+<h2>Lasso Regression<a class="headerlink" href="#lasso-regression" title="Link to this heading">#</a></h2>
 <p>Lasso regression is very closely related to linear regression.</p>
 <p>The lasso model also generates predictions using <span class="math notranslate nohighlight">\( y = X \beta \)</span> but
 optimizes over a slightly different loss function.</p>
@@ -953,7 +521,7 @@ additional ones to be thrown out).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute lasso for many alphas (the lasso path)</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">cycle</span>
 <span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
 <span class="n">alphas</span><span class="p">,</span> <span class="n">coefs_lasso</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">lasso_path</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 
@@ -988,7 +556,7 @@ price data as follows:</p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fit_and_report_mses</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fit_and_report_mses</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
     <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
         <span class="n">mse_train</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">mod</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)),</span>
@@ -1029,7 +597,7 @@ higher.</p>
 <p>This strongly suggests that the linear regression model was
 overfitting.</p>
 <section id="cross-validation-of-regularization-parameter">
-<h3>Cross-validation of Regularization Parameter<a class="headerlink" href="#cross-validation-of-regularization-parameter" title="Permalink to this heading">#</a></h3>
+<h3>Cross-validation of Regularization Parameter<a class="headerlink" href="#cross-validation-of-regularization-parameter" title="Link to this heading">#</a></h3>
 <p>The regularization parameter has a large impact on overfitting. Moreover, the relationship between the test data MSE and <span class="math notranslate nohighlight">\( \alpha \)</span> is
 complicated and non-monotonic.</p>
 <p>One popular method for choosing the regularization parameter is cross-validation.</p>
@@ -1049,7 +617,7 @@ data.</p></li>
 <span class="math notranslate nohighlight">\( \alpha \)</span>, using the same training data as above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">cross_val_score</span>
 
 <span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">5</span><span class="p">,</span> <span class="mi">100</span><span class="p">))</span>
 <span class="n">mse</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">([</span><span class="n">fit_and_report_mses</span><span class="p">(</span><span class="n">linear_model</span><span class="o">.</span><span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">50000</span><span class="p">),</span>
@@ -1098,7 +666,7 @@ data.</p></li>
 </div>
 </section>
 <section id="holdout">
-<h3>Holdout<a class="headerlink" href="#holdout" title="Permalink to this heading">#</a></h3>
+<h3>Holdout<a class="headerlink" href="#holdout" title="Link to this heading">#</a></h3>
 <p>Practitioners often use another technique to avoid overfitting, called
 <em>holdout</em>.</p>
 <p>We demonstrated an extreme example of applying holdout above when we used only
@@ -1125,12 +693,12 @@ while selecting regularization parameters with cross-validation.</p>
 </div>
 </section>
 <section id="exercise">
-<h3>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h3>
+<h3>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h3>
 <p>Run the same experiment using Ridge and Elastic Net Regression as your prefered regularization choice. How does it compare to LASSO and OLS ?</p>
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h2>
+<h2>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Chapter 5 of Jerome Friedman, Trevor Hastie, and Robert Tibshirani. <em>The elements of statistical learning</em>. Springer series in statistics, 2009. URL: <a class="reference external" href="https://web.stanford.edu/~hastie/ElemStatLearn/">https://web.stanford.edu/~hastie/ElemStatLearn/</a></p></li>
 <li><p>The Library of Statistical Techniques (LOST)! URL: <a class="reference external" href="https://lost-stats.github.io/">https://lost-stats.github.io/</a></p></li>
@@ -1163,11 +731,10 @@ while selecting regularization parameters with cross-validation.</p>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
        href="../Lab2/mle_sol.html"
@@ -1187,10 +754,7 @@ while selecting regularization parameters with cross-validation.</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -1198,6 +762,7 @@ while selecting regularization parameters with cross-validation.</p>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -1238,6 +803,7 @@ By Miguel C. Herculano
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2025.
@@ -1264,8 +830,8 @@ By Miguel C. Herculano
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

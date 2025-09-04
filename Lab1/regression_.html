@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Introduction to Regression &#8212; ECON 5129</title>
   
@@ -15,52 +14,49 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=e353d410970836974a52" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=e353d410970836974a52" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=e353d410970836974a52" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=e353d410970836974a52" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52" />
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
     <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'Lab1/regression_';</script>
@@ -75,19 +71,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -109,12 +109,22 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -129,9 +139,13 @@ const thebe_selector_output = ".output, .cell_output"
   
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
+
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
+  
   
   
   
@@ -141,12 +155,23 @@ const thebe_selector_output = ".output, .cell_output"
       
     
     
-    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="Logo image"/>
-    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="Logo image"/>`);</script>
+    <img src="../_static/ASBS_small_.PNG" class="logo__image only-light" alt="ECON 5129 - Home"/>
+    <script>document.write(`<img src="../_static/ASBS_small_.PNG" class="logo__image only-dark" alt="ECON 5129 - Home"/>`);</script>
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -158,14 +183,14 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">PRELIMINARY</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../getting_started/getting_started.html">Getting Started</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/about_py.html">About Python</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/setting_up_your_python_environment.html">Setting up Your Python Environment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/python_by_example.html">An Introductory Example</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/learn_more.html">Learn More</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../getting_started/exercises.html">Exercises</a></li>
 </ul>
-</li>
+</details></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">LAB MATERIALS</span></p>
 <ul class="nav bd-sidenav">
@@ -198,7 +223,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -207,14 +232,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -289,26 +314,28 @@ const thebe_selector_output = ".output, .cell_output"
 </button>
 
 
+
 <script>
 document.write(`
-  <button class="theme-switch-button btn btn-sm btn-outline-primary navbar-btn rounded-circle" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch" data-mode="light"><i class="fa-solid fa-sun"></i></span>
-    <span class="theme-switch" data-mode="dark"><i class="fa-solid fa-moon"></i></span>
-    <span class="theme-switch" data-mode="auto"><i class="fa-solid fa-circle-half-stroke"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
 
+
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <i class="fa-solid fa-magnifying-glass"></i>
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -396,10 +423,10 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section id="introduction-to-regression">
-<h1>Introduction to Regression<a class="headerlink" href="#introduction-to-regression" title="Permalink to this heading">#</a></h1>
+<h1>Introduction to Regression<a class="headerlink" href="#introduction-to-regression" title="Link to this heading">#</a></h1>
 <p>The goal of regression analysis is to provide accurate mapping from one or
 more input variables (called features in machine learning or exogenous
 variables in econometrics) to a continuous output variable (called the label or
@@ -414,21 +441,21 @@ regression algorithms.</p>
 apply the algorithm to a real world dataset on house prices in Washington state</p></li>
 </ul>
 <section id="dataset">
-<h2>Dataset<a class="headerlink" href="#dataset" title="Permalink to this heading">#</a></h2>
+<h2>Dataset<a class="headerlink" href="#dataset" title="Link to this heading">#</a></h2>
 <p>Let’s load the dataset and take a quick look at our task.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 
 <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#165aa7&#39;</span><span class="p">,</span> <span class="s1">&#39;#cb495c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fec630&#39;</span><span class="p">,</span> <span class="s1">&#39;#bb60d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#f47915&#39;</span><span class="p">,</span> <span class="s1">&#39;#06ab54&#39;</span><span class="p">,</span> <span class="s1">&#39;#002070&#39;</span><span class="p">,</span> <span class="s1">&#39;#b27d12&#39;</span><span class="p">,</span> <span class="s1">&#39;#007030&#39;</span><span class="p">]</span>
 
 <span class="c1"># We will import all these here to ensure that they are loaded, but</span>
 <span class="c1"># will usually re-import close to where they are used to make clear</span>
 <span class="c1"># where the functions come from</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="p">(</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="p">(</span>
     <span class="n">linear_model</span><span class="p">,</span> <span class="n">metrics</span><span class="p">,</span> <span class="n">neural_network</span><span class="p">,</span> <span class="n">pipeline</span><span class="p">,</span> <span class="n">model_selection</span>
 <span class="p">)</span>
 
@@ -439,430 +466,18 @@ apply the algorithm to a real world dataset on house prices in Washington state<
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_76896\1689590421.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 38, in &lt;module&gt;
-    from pandas.compat import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\__init__.py&quot;, line 27, in &lt;module&gt;
-    from pandas.compat.pyarrow import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\pyarrow.py&quot;, line 8, in &lt;module&gt;
-    import pyarrow as pa
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-</pre></div>
-</div>
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_76896\1689590421.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 9, in &lt;module&gt;
-    from pandas.core.dtypes.dtypes import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\dtypes\dtypes.py&quot;, line 24, in &lt;module&gt;
-    from pandas._libs import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pyarrow\__init__.py&quot;, line 65, in &lt;module&gt;
-    import pyarrow.lib as _lib
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_76896\1689590421.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 53, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\__init__.py&quot;, line 8, in &lt;module&gt;
-    from pandas.core.ops.array_ops import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\ops\array_ops.py&quot;, line 56, in &lt;module&gt;
-    from pandas.core.computation import expressions
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\expressions.py&quot;, line 21, in &lt;module&gt;
-    from pandas.core.computation.check import NUMEXPR_INSTALLED
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\computation\check.py&quot;, line 5, in &lt;module&gt;
-    ne = import_optional_dependency(&quot;numexpr&quot;, errors=&quot;warn&quot;)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\numexpr\__init__.py&quot;, line 24, in &lt;module&gt;
-    from numexpr.interpreter import MAX_THREADS, use_vml, __BLOCK_SIZE1__
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_76896\1689590421.py&quot;, line 1, in &lt;module&gt;
-    import pandas as pd
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\__init__.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core.api import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\api.py&quot;, line 28, in &lt;module&gt;
-    from pandas.core.arrays import Categorical
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\__init__.py&quot;, line 1, in &lt;module&gt;
-    from pandas.core.arrays.arrow import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\__init__.py&quot;, line 5, in &lt;module&gt;
-    from pandas.core.arrays.arrow.array import ArrowExtensionArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\arrow\array.py&quot;, line 67, in &lt;module&gt;
-    from pandas.core.arrays.masked import BaseMaskedArray
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py&quot;, line 61, in &lt;module&gt;
-    from pandas.core import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\core\nanops.py&quot;, line 52, in &lt;module&gt;
-    bn = import_optional_dependency(&quot;bottleneck&quot;, errors=&quot;warn&quot;)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\pandas\compat\_optional.py&quot;, line 135, in import_optional_dependency
-    module = importlib.import_module(name)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\importlib\__init__.py&quot;, line 126, in import_module
-    return _bootstrap._gcd_import(name[level:], package, level)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\bottleneck\__init__.py&quot;, line 7, in &lt;module&gt;
-    from .move import (move_argmax, move_argmin, move_max, move_mean, move_median,
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>A module that was compiled using NumPy 1.x cannot be run in
-NumPy 2.3.2 as it may crash. To support both 1.x and 2.x
-versions of NumPy, modules must be compiled with NumPy 2.0.
-Some module may need to rebuild instead e.g. with &#39;pybind11&gt;=2.12&#39;.
-
-If you are a user of the module, the easiest solution will be to
-downgrade to &#39;numpy&lt;2&#39; or try to upgrade the affected module.
-We expect that some modules will need time to support NumPy 2.
-
-Traceback (most recent call last):  File &quot;&lt;frozen runpy&gt;&quot;, line 198, in _run_module_as_main
-  File &quot;&lt;frozen runpy&gt;&quot;, line 88, in _run_code
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel_launcher.py&quot;, line 17, in &lt;module&gt;
-    app.launch_new_instance()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\traitlets\config\application.py&quot;, line 992, in launch_instance
-    app.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelapp.py&quot;, line 711, in start
-    self.io_loop.start()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\tornado\platform\asyncio.py&quot;, line 195, in start
-    self.asyncio_loop.run_forever()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 607, in run_forever
-    self._run_once()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\base_events.py&quot;, line 1922, in _run_once
-    handle._run()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\asyncio\events.py&quot;, line 80, in _run
-    self._context.run(self._callback, *self._args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 510, in dispatch_queue
-    await self.process_one()
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 499, in process_one
-    await dispatch(*args)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 406, in dispatch_shell
-    await result
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\kernelbase.py&quot;, line 729, in execute_request
-    reply_content = await reply_content
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\ipkernel.py&quot;, line 411, in do_execute
-    res = shell.run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\ipykernel\zmqshell.py&quot;, line 531, in run_cell
-    return super().run_cell(*args, **kwargs)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3006, in run_cell
-    result = self._run_cell(
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3061, in _run_cell
-    result = runner(coro)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\async_helpers.py&quot;, line 129, in _pseudo_sync_runner
-    coro.send(None)
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3266, in run_cell_async
-    has_raised = await self.run_ast_nodes(code_ast.body, cell_name,
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3445, in run_ast_nodes
-    if await self.run_code(code, result, async_=asy):
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\IPython\core\interactiveshell.py&quot;, line 3505, in run_code
-    exec(code_obj, self.user_global_ns, self.user_ns)
-  File &quot;C:\Users\Miguel\AppData\Local\Temp\ipykernel_76896\1689590421.py&quot;, line 3, in &lt;module&gt;
-    import matplotlib.pyplot as plt
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\__init__.py&quot;, line 113, in &lt;module&gt;
-    from . import _api, _version, cbook, _docstring, rcsetup
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\rcsetup.py&quot;, line 27, in &lt;module&gt;
-    from matplotlib.colors import Colormap, is_color_like
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\colors.py&quot;, line 56, in &lt;module&gt;
-    from matplotlib import _api, _cm, cbook, scale
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\scale.py&quot;, line 22, in &lt;module&gt;
-    from matplotlib.ticker import (
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\ticker.py&quot;, line 138, in &lt;module&gt;
-    from matplotlib import transforms as mtransforms
-  File &quot;C:\Users\Miguel\anaconda3\Lib\site-packages\matplotlib\transforms.py&quot;, line 49, in &lt;module&gt;
-    from matplotlib._path import (
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">AttributeError</span><span class="g g-Whitespace">                            </span>Traceback (most recent call last)
-<span class="ne">AttributeError</span>: _ARRAY_API not found
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">ImportError</span><span class="g g-Whitespace">                               </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">3</span>
-<span class="g g-Whitespace">      </span><span class="mi">1</span> <span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
-<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">----&gt; </span><span class="mi">3</span> <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="ne">ModuleNotFoundError</span><span class="g g-Whitespace">                       </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">line</span> <span class="mi">4</span>
+<span class="g g-Whitespace">      </span><span class="mi">2</span> <span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="g g-Whitespace">      </span><span class="mi">3</span> <span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="ne">----&gt; </span><span class="mi">4</span> <span class="kn">import</span><span class="w"> </span><span class="nn">seaborn</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">sns</span>
 <span class="g g-Whitespace">      </span><span class="mi">6</span> <span class="n">colors</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;#165aa7&#39;</span><span class="p">,</span> <span class="s1">&#39;#cb495c&#39;</span><span class="p">,</span> <span class="s1">&#39;#fec630&#39;</span><span class="p">,</span> <span class="s1">&#39;#bb60d5&#39;</span><span class="p">,</span> <span class="s1">&#39;#f47915&#39;</span><span class="p">,</span> <span class="s1">&#39;#06ab54&#39;</span><span class="p">,</span> <span class="s1">&#39;#002070&#39;</span><span class="p">,</span> <span class="s1">&#39;#b27d12&#39;</span><span class="p">,</span> <span class="s1">&#39;#007030&#39;</span><span class="p">]</span>
+<span class="g g-Whitespace">      </span><span class="mi">8</span> <span class="c1"># We will import all these here to ensure that they are loaded, but</span>
+<span class="g g-Whitespace">      </span><span class="mi">9</span> <span class="c1"># will usually re-import close to where they are used to make clear</span>
+<span class="g g-Whitespace">     </span><span class="mi">10</span> <span class="c1"># where the functions come from</span>
 
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="fm">__init__</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">113</span>
-<span class="g g-Whitespace">    </span><span class="mi">109</span> <span class="kn">from</span> <span class="nn">packaging.version</span> <span class="kn">import</span> <span class="n">parse</span> <span class="k">as</span> <span class="n">parse_version</span>
-<span class="g g-Whitespace">    </span><span class="mi">111</span> <span class="c1"># cbook must import matplotlib only within function</span>
-<span class="g g-Whitespace">    </span><span class="mi">112</span> <span class="c1"># definitions, so it is safe to import from it here.</span>
-<span class="ne">--&gt; </span><span class="mi">113</span> <span class="kn">from</span> <span class="nn">.</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_version</span><span class="p">,</span> <span class="n">cbook</span><span class="p">,</span> <span class="n">_docstring</span><span class="p">,</span> <span class="n">rcsetup</span>
-<span class="g g-Whitespace">    </span><span class="mi">114</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">sanitize_sequence</span>
-<span class="g g-Whitespace">    </span><span class="mi">115</span> <span class="kn">from</span> <span class="nn">matplotlib._api</span> <span class="kn">import</span> <span class="n">MatplotlibDeprecationWarning</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">rcsetup</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">27</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">cbook</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">matplotlib.cbook</span> <span class="kn">import</span> <span class="n">ls_mapper</span>
-<span class="ne">---&gt; </span><span class="mi">27</span> <span class="kn">from</span> <span class="nn">matplotlib.colors</span> <span class="kn">import</span> <span class="n">Colormap</span><span class="p">,</span> <span class="n">is_color_like</span>
-<span class="g g-Whitespace">     </span><span class="mi">28</span> <span class="kn">from</span> <span class="nn">matplotlib._fontconfig_pattern</span> <span class="kn">import</span> <span class="n">parse_fontconfig_pattern</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="kn">from</span> <span class="nn">matplotlib._enums</span> <span class="kn">import</span> <span class="n">JoinStyle</span><span class="p">,</span> <span class="n">CapStyle</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">colors</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">56</span>
-<span class="g g-Whitespace">     </span><span class="mi">54</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="ne">---&gt; </span><span class="mi">56</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_cm</span><span class="p">,</span> <span class="n">cbook</span><span class="p">,</span> <span class="n">scale</span>
-<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="kn">from</span> <span class="nn">._color_data</span> <span class="kn">import</span> <span class="n">BASE_COLORS</span><span class="p">,</span> <span class="n">TABLEAU_COLORS</span><span class="p">,</span> <span class="n">CSS4_COLORS</span><span class="p">,</span> <span class="n">XKCD_COLORS</span>
-<span class="g g-Whitespace">     </span><span class="mi">60</span> <span class="k">class</span> <span class="nc">_ColorMapping</span><span class="p">(</span><span class="nb">dict</span><span class="p">):</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">scale</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">22</span>
-<span class="g g-Whitespace">     </span><span class="mi">20</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">     </span><span class="mi">21</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">_docstring</span>
-<span class="ne">---&gt; </span><span class="mi">22</span> <span class="kn">from</span> <span class="nn">matplotlib.ticker</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">23</span>     <span class="n">NullFormatter</span><span class="p">,</span> <span class="n">ScalarFormatter</span><span class="p">,</span> <span class="n">LogFormatterSciNotation</span><span class="p">,</span> <span class="n">LogitFormatter</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">24</span>     <span class="n">NullLocator</span><span class="p">,</span> <span class="n">LogLocator</span><span class="p">,</span> <span class="n">AutoLocator</span><span class="p">,</span> <span class="n">AutoMinorLocator</span><span class="p">,</span>
-<span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="n">SymmetricalLogLocator</span><span class="p">,</span> <span class="n">AsinhLocator</span><span class="p">,</span> <span class="n">LogitLocator</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">26</span> <span class="kn">from</span> <span class="nn">matplotlib.transforms</span> <span class="kn">import</span> <span class="n">Transform</span><span class="p">,</span> <span class="n">IdentityTransform</span>
-<span class="g g-Whitespace">     </span><span class="mi">29</span> <span class="k">class</span> <span class="nc">ScaleBase</span><span class="p">:</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">ticker</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">138</span>
-<span class="g g-Whitespace">    </span><span class="mi">136</span> <span class="kn">import</span> <span class="nn">matplotlib</span> <span class="k">as</span> <span class="nn">mpl</span>
-<span class="g g-Whitespace">    </span><span class="mi">137</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span><span class="p">,</span> <span class="n">cbook</span>
-<span class="ne">--&gt; </span><span class="mi">138</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">transforms</span> <span class="k">as</span> <span class="n">mtransforms</span>
-<span class="g g-Whitespace">    </span><span class="mi">140</span> <span class="n">_log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">142</span> <span class="n">__all__</span> <span class="o">=</span> <span class="p">(</span><span class="s1">&#39;TickHelper&#39;</span><span class="p">,</span> <span class="s1">&#39;Formatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FixedFormatter&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">143</span>            <span class="s1">&#39;NullFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FuncFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;FormatStrFormatter&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">144</span>            <span class="s1">&#39;StrMethodFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;ScalarFormatter&#39;</span><span class="p">,</span> <span class="s1">&#39;LogFormatter&#39;</span><span class="p">,</span>
-   <span class="p">(</span><span class="o">...</span><span class="p">)</span>
-<span class="g g-Whitespace">    </span><span class="mi">150</span>            <span class="s1">&#39;MultipleLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;MaxNLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;AutoMinorLocator&#39;</span><span class="p">,</span>
-<span class="g g-Whitespace">    </span><span class="mi">151</span>            <span class="s1">&#39;SymmetricalLogLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;AsinhLocator&#39;</span><span class="p">,</span> <span class="s1">&#39;LogitLocator&#39;</span><span class="p">)</span>
-
-<span class="n">File</span> <span class="o">~</span>\<span class="n">anaconda3</span>\<span class="n">Lib</span>\<span class="n">site</span><span class="o">-</span><span class="n">packages</span>\<span class="n">matplotlib</span>\<span class="n">transforms</span><span class="o">.</span><span class="n">py</span><span class="p">:</span><span class="mi">49</span>
-<span class="g g-Whitespace">     </span><span class="mi">46</span> <span class="kn">from</span> <span class="nn">numpy.linalg</span> <span class="kn">import</span> <span class="n">inv</span>
-<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="kn">import</span> <span class="n">_api</span>
-<span class="ne">---&gt; </span><span class="mi">49</span> <span class="kn">from</span> <span class="nn">matplotlib._path</span> <span class="kn">import</span> <span class="p">(</span>
-<span class="g g-Whitespace">     </span><span class="mi">50</span>     <span class="n">affine_transform</span><span class="p">,</span> <span class="n">count_bboxes_overlapping_bbox</span><span class="p">,</span> <span class="n">update_path_extents</span><span class="p">)</span>
-<span class="g g-Whitespace">     </span><span class="mi">51</span> <span class="kn">from</span> <span class="nn">.path</span> <span class="kn">import</span> <span class="n">Path</span>
-<span class="g g-Whitespace">     </span><span class="mi">53</span> <span class="n">DEBUG</span> <span class="o">=</span> <span class="kc">False</span>
-
-<span class="ne">ImportError</span>: numpy.core.multiarray failed to import
+<span class="ne">ModuleNotFoundError</span>: No module named &#39;seaborn&#39;
 </pre></div>
 </div>
 </div>
@@ -898,7 +513,7 @@ we will explain some algorithms that use only the <code class="docutils literal 
 <p>Here’s what the log house price looks like against <code class="docutils literal notranslate"><span class="pre">sqft_living</span></code>:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">var_scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="s2">&quot;sqft_living&quot;</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">var_scatter</span><span class="p">(</span><span class="n">df</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">var</span><span class="o">=</span><span class="s2">&quot;sqft_living&quot;</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
     <span class="n">df</span><span class="o">.</span><span class="n">plot</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">var</span> <span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="s2">&quot;log_price&quot;</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.35</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mf">1.5</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">)</span>
@@ -913,7 +528,7 @@ we will explain some algorithms that use only the <code class="docutils literal 
 </section>
 </section>
 <section id="linear-regression">
-<h1>Linear Regression<a class="headerlink" href="#linear-regression" title="Permalink to this heading">#</a></h1>
+<h1>Linear Regression<a class="headerlink" href="#linear-regression" title="Link to this heading">#</a></h1>
 <p>Let’s dive in by studying the <a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">“Hello World”</a> of regression
 algorithms: linear regression.</p>
 <p>Suppose we would like to predict the log of the sale price of a home, given
@@ -955,7 +570,7 @@ optimal linear regression line through the data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># import</span>
-<span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">linear_model</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">linear_model</span>
 
 <span class="c1"># construct the model instance</span>
 <span class="n">sqft_lr_model</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">LinearRegression</span><span class="p">()</span>
@@ -997,7 +612,7 @@ arbitrary points.</p>
 </div>
 </div>
 <section id="exercise-1">
-<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1<a class="headerlink" href="#exercise-1" title="Link to this heading">#</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">sqft_lr_model</span></code> that we fit to generate predictions for all data points
 in our sample.</p>
 <p>Note that you need to pass a DataFrame (not Series)
@@ -1011,10 +626,10 @@ predictions.</p>
 </section>
 </section>
 <section id="exercise">
-<h1>Exercise<a class="headerlink" href="#exercise" title="Permalink to this heading">#</a></h1>
-<p>See exercise 2 in the <span class="xref myst">exercise list</span>.</p>
+<h1>Exercise<a class="headerlink" href="#exercise" title="Link to this heading">#</a></h1>
+<p>See exercise 2 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 <section id="multivariate-linear-regression">
-<h2>Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Permalink to this heading">#</a></h2>
+<h2>Multivariate Linear Regression<a class="headerlink" href="#multivariate-linear-regression" title="Link to this heading">#</a></h2>
 <p>Our example regression above is called a univariate linear
 regression since it uses a single feature.</p>
 <p>In practice, more features would be used.</p>
@@ -1057,7 +672,7 @@ one more time – this time including the prediction from both of our linear mod
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ax</span> <span class="o">=</span> <span class="n">var_scatter</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
 
-<span class="k">def</span> <span class="nf">scatter_model</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sqft_living&quot;</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">scatter_model</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">colors</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">x</span><span class="o">=</span><span class="s2">&quot;sqft_living&quot;</span><span class="p">):</span>
     <span class="k">if</span> <span class="n">ax</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
         <span class="n">_</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">()</span>
 
@@ -1073,11 +688,11 @@ one more time – this time including the prediction from both of our linear mod
 </div>
 </section>
 <section id="id1">
-<h2>Exercise<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<p>See exercise 3 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id1" title="Link to this heading">#</a></h2>
+<p>See exercise 3 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 </section>
 <section id="nonlinear-relationships-in-linear-regression">
-<h2>Nonlinear Relationships in Linear Regression<a class="headerlink" href="#nonlinear-relationships-in-linear-regression" title="Permalink to this heading">#</a></h2>
+<h2>Nonlinear Relationships in Linear Regression<a class="headerlink" href="#nonlinear-relationships-in-linear-regression" title="Link to this heading">#</a></h2>
 <p>While it sounds like an oxymoron, a linear regression model can actually include non-linear features.</p>
 <p>The distinguishing feature of the linear regression model is that each
 prediction is generated by taking the dot product (a linear operator) between a
@@ -1108,8 +723,8 @@ should also include the <em>fraction of square feet above ground</em>.</p>
 </div>
 </section>
 <section id="id2">
-<h2>Exercise<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h2>
-<p>See exercise 4 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id2" title="Link to this heading">#</a></h2>
+<p>See exercise 4 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 <p>Determining which columns belong in <span class="math notranslate nohighlight">\( X \)</span> is called <em>feature
 engineering</em> and is a large part of a machine learning practitioner’s job.</p>
 <p>You may recall from (or will see in) your econometrics course(s) that
@@ -1117,7 +732,7 @@ choosing which control variables to include in a regression model
 is an important part of applied research.</p>
 </section>
 <section id="interpretability">
-<h2>Interpretability<a class="headerlink" href="#interpretability" title="Permalink to this heading">#</a></h2>
+<h2>Interpretability<a class="headerlink" href="#interpretability" title="Link to this heading">#</a></h2>
 <p>Before moving to our next regression model, we want to broach the idea of
 the <strong>interpretability</strong> of models.</p>
 <p>An interpretable model is one for which we can analyze the
@@ -1144,7 +759,7 @@ should be aware of as you continue to learn about these techniques.</p>
 </section>
 </section>
 <section id="lasso-regression">
-<h1>Lasso Regression<a class="headerlink" href="#lasso-regression" title="Permalink to this heading">#</a></h1>
+<h1>Lasso Regression<a class="headerlink" href="#lasso-regression" title="Link to this heading">#</a></h1>
 <p>Lasso regression is very closely related to linear regression.</p>
 <p>The lasso model also generates predictions using <span class="math notranslate nohighlight">\( y = X \beta \)</span> but
 optimizes over a slightly different loss function.</p>
@@ -1182,7 +797,7 @@ additional ones to be thrown out).</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Compute lasso for many alphas (the lasso path)</span>
-<span class="kn">from</span> <span class="nn">itertools</span> <span class="kn">import</span> <span class="n">cycle</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">itertools</span><span class="w"> </span><span class="kn">import</span> <span class="n">cycle</span>
 <span class="n">alphas</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">50</span><span class="p">))</span>
 <span class="n">alphas</span><span class="p">,</span> <span class="n">coefs_lasso</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="n">linear_model</span><span class="o">.</span><span class="n">lasso_path</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">alphas</span><span class="o">=</span><span class="n">alphas</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">10000</span><span class="p">)</span>
 
@@ -1206,7 +821,7 @@ additional ones to be thrown out).</p>
 </div>
 </div>
 <section id="overfitting-and-regularization">
-<h2>Overfitting and Regularization<a class="headerlink" href="#overfitting-and-regularization" title="Permalink to this heading">#</a></h2>
+<h2>Overfitting and Regularization<a class="headerlink" href="#overfitting-and-regularization" title="Link to this heading">#</a></h2>
 <p>You might be wondering, “Why would we ever want to throw variables out,
 can’t that only hurt our model?”</p>
 <p>The primary answer: it helps us avoid a common issue called <strong>overfitting</strong>.</p>
@@ -1231,7 +846,7 @@ price data as follows:</p>
 </ol>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">fit_and_report_mses</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">fit_and_report_mses</span><span class="p">(</span><span class="n">mod</span><span class="p">,</span> <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span><span class="p">):</span>
     <span class="n">mod</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
     <span class="k">return</span> <span class="nb">dict</span><span class="p">(</span>
         <span class="n">mse_train</span><span class="o">=</span><span class="n">metrics</span><span class="o">.</span><span class="n">mean_squared_error</span><span class="p">(</span><span class="n">y_train</span><span class="p">,</span> <span class="n">mod</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_train</span><span class="p">)),</span>
@@ -1283,7 +898,7 @@ overfitting.</p>
 </div>
 </section>
 <section id="cross-validation-of-regularization-parameter">
-<h2>Cross-validation of Regularization Parameter<a class="headerlink" href="#cross-validation-of-regularization-parameter" title="Permalink to this heading">#</a></h2>
+<h2>Cross-validation of Regularization Parameter<a class="headerlink" href="#cross-validation-of-regularization-parameter" title="Link to this heading">#</a></h2>
 <p>As you can see in the figure above, the regularization parameter has a
 large impact on MSE in the test data.</p>
 <p>Moreover, the relationship between the test data MSE and <span class="math notranslate nohighlight">\( \alpha \)</span> is
@@ -1305,7 +920,7 @@ data.</p></li>
 <span class="math notranslate nohighlight">\( \alpha \)</span>, using the same training data as above.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.model_selection</span> <span class="kn">import</span> <span class="n">cross_val_score</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.model_selection</span><span class="w"> </span><span class="kn">import</span> <span class="n">cross_val_score</span>
 <span class="n">mse</span><span class="p">[</span><span class="s2">&quot;cv&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">-</span><span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">cross_val_score</span><span class="p">(</span><span class="n">linear_model</span><span class="o">.</span><span class="n">Lasso</span><span class="p">(</span><span class="n">alpha</span><span class="o">=</span><span class="n">alpha</span><span class="p">,</span> <span class="n">max_iter</span><span class="o">=</span><span class="mi">50000</span><span class="p">),</span>
                                   <span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">cv</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">scoring</span><span class="o">=</span><span class="s1">&#39;neg_mean_squared_error&#39;</span><span class="p">))</span>
           <span class="k">for</span> <span class="n">alpha</span> <span class="ow">in</span> <span class="n">alphas</span><span class="p">]</span>
@@ -1332,7 +947,7 @@ data.</p></li>
 </div>
 </section>
 <section id="holdout">
-<h2>Holdout<a class="headerlink" href="#holdout" title="Permalink to this heading">#</a></h2>
+<h2>Holdout<a class="headerlink" href="#holdout" title="Link to this heading">#</a></h2>
 <p>Practitioners often use another technique to avoid overfitting, called
 <em>holdout</em>.</p>
 <p>We demonstrated an extreme example of applying holdout above when we used only
@@ -1359,41 +974,41 @@ while selecting regularization parameters with cross-validation.</p>
 </div>
 </section>
 <section id="id3">
-<h2>Exercise<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h2>
-<p>See exercise 5 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id3" title="Link to this heading">#</a></h2>
+<p>See exercise 5 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 </section>
 <section id="lasso-in-econometrics">
-<h2>Lasso in Econometrics<a class="headerlink" href="#lasso-in-econometrics" title="Permalink to this heading">#</a></h2>
+<h2>Lasso in Econometrics<a class="headerlink" href="#lasso-in-econometrics" title="Link to this heading">#</a></h2>
 <p>Lasso is becoming increasingly popular in economics, partially due to
 the work of Victor Chernozhukov and his coauthors.</p>
 <p>In econometrics, the goal is typically to estimate some coefficient of interest or causal
 effect, rather than obtaining the most precise prediction.</p>
 <p>Among other things, this different goal affects how the regularization parameter
 must be chosen.</p>
-<p>[<span class="xref myst">regBC11</span>] and [<span class="xref myst">regCHS16</span>] are somewhat approachable introductions
+<p>[<a class="reference internal" href="#id23"><span class="xref myst">regBC11</span></a>] and [<a class="reference internal" href="#id21"><span class="xref myst">regCHS16</span></a>] are somewhat approachable introductions
 to this area.</p>
 <p>The latter of these two references includes an R package.</p>
-<p>[<span class="xref myst">regCCD+18</span>] reflects close to the state-of-art in this rapidly
+<p>[<a class="reference internal" href="#id14"><span class="xref myst">regCCD+18</span></a>] reflects close to the state-of-art in this rapidly
 advancing area.</p>
 </section>
 </section>
 <section id="random-forests">
-<h1>Random Forests<a class="headerlink" href="#random-forests" title="Permalink to this heading">#</a></h1>
+<h1>Random Forests<a class="headerlink" href="#random-forests" title="Link to this heading">#</a></h1>
 <p>Random forests are also becoming increasingly popular in economics, thanks to the work of Susan Athey and her coauthors.</p>
-<p>[<span class="xref myst">regAI17</span>] gives a very brief overview of this work,
-and [<span class="xref myst">regAI18</span>] are video lectures and associated code aimed
+<p>[<a class="reference internal" href="#id25"><span class="xref myst">regAI17</span></a>] gives a very brief overview of this work,
+and [<a class="reference internal" href="#id24"><span class="xref myst">regAI18</span></a>] are video lectures and associated code aimed
 at a broader audience.</p>
 <section id="regression-trees">
-<h2>Regression Trees<a class="headerlink" href="#regression-trees" title="Permalink to this heading">#</a></h2>
+<h2>Regression Trees<a class="headerlink" href="#regression-trees" title="Link to this heading">#</a></h2>
 <p>To understand a forest, we must first understand trees.</p>
 <p>We will begin by fitting a tree to this simulated data.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 <span class="c1"># Simulate some data and plot it</span>
 <span class="n">n</span> <span class="o">=</span> <span class="mi">1000</span>
 <span class="n">Xsim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">rand</span><span class="p">(</span><span class="n">n</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span>
-<span class="k">def</span> <span class="nf">Ey_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">Ey_x</span><span class="p">(</span><span class="n">x</span><span class="p">):</span>
     <span class="k">return</span> <span class="mi">1</span><span class="o">/</span><span class="mi">3</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">5</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sqrt</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">exp</span><span class="p">(</span><span class="o">-</span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">-</span><span class="mf">0.5</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span>
 
 <span class="n">ysim</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">apply_along_axis</span><span class="p">(</span><span class="n">Ey_x</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">Xsim</span><span class="p">)</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">random</span><span class="o">.</span><span class="n">randn</span><span class="p">(</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="mf">0.1</span>
@@ -1403,14 +1018,14 @@ at a broader audience.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">plotly.graph_objects</span> <span class="k">as</span> <span class="nn">go</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">plotly.graph_objects</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">go</span>
 </pre></div>
 </div>
 </div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">surface_scatter_plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">f</span><span class="p">,</span> <span class="n">xlo</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">xhi</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">surface_scatter_plot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">y</span><span class="p">,</span><span class="n">f</span><span class="p">,</span> <span class="n">xlo</span><span class="o">=</span><span class="mf">0.</span><span class="p">,</span> <span class="n">xhi</span><span class="o">=</span><span class="mf">1.</span><span class="p">,</span> <span class="n">ngrid</span><span class="o">=</span><span class="mi">50</span><span class="p">,</span>
                          <span class="n">width</span><span class="o">=</span><span class="mi">860</span><span class="p">,</span> <span class="n">height</span><span class="o">=</span><span class="mi">700</span><span class="p">,</span> <span class="n">f0</span><span class="o">=</span><span class="n">Ey_x</span><span class="p">,</span> <span class="n">show_f0</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="n">scatter</span> <span class="o">=</span> <span class="n">go</span><span class="o">.</span><span class="n">Scatter3d</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">X</span><span class="p">[:,</span><span class="mi">0</span><span class="p">],</span><span class="n">y</span><span class="o">=</span><span class="n">X</span><span class="p">[:,</span><span class="mi">1</span><span class="p">],</span><span class="n">z</span><span class="o">=</span><span class="n">y</span><span class="p">,</span>
                            <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;markers&#39;</span><span class="p">,</span>
@@ -1455,7 +1070,7 @@ at a broader audience.</p>
 regression surface.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">tree</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">tree</span>
 <span class="n">fitted_tree</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">DecisionTreeRegressor</span><span class="p">(</span><span class="n">max_depth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xsim</span><span class="p">,</span><span class="n">ysim</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">=</span><span class="n">surface_scatter_plot</span><span class="p">(</span>
     <span class="n">Xsim</span><span class="p">,</span> <span class="n">ysim</span><span class="p">,</span> <span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">fitted_tree</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">x</span><span class="p">]),</span> <span class="n">show_f0</span><span class="o">=</span><span class="kc">True</span>
@@ -1470,7 +1085,7 @@ determined by a decision tree. The following code displays the
 decision graph.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">graphviz</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">graphviz</span>
 <span class="n">tree_graph</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">export_graphviz</span><span class="p">(</span><span class="n">fitted_tree</span><span class="p">,</span> <span class="n">out_file</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                                   <span class="n">feature_names</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;X1&quot;</span><span class="p">,</span> <span class="s2">&quot;X2&quot;</span><span class="p">],</span>
                                   <span class="n">filled</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">rounded</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span>
@@ -1514,12 +1129,12 @@ in MSE becomes small.</p>
 parameters.</p>
 </section>
 <section id="id4">
-<h2>Exercise<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h2>
-<p>See exercise 6 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id4" title="Link to this heading">#</a></h2>
+<p>See exercise 6 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 </section>
 <section id="id5">
-<h2>Exercise<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h2>
-<p>See exercise 7 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id5" title="Link to this heading">#</a></h2>
+<p>See exercise 7 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 <p>An advantage of regression trees (and random forests) is that they adapt
 automatically to feature scales and units.</p>
 <p>For example, including zip code in linear regression or lasso was a little
@@ -1539,7 +1154,7 @@ less harmful than it could have been.</p>
 </div>
 </section>
 <section id="id6">
-<h2>Random Forests<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h2>
+<h2>Random Forests<a class="headerlink" href="#id6" title="Link to this heading">#</a></h2>
 <p>A random forest is the average of many randomized regression trees.</p>
 <p>Trees are randomized by:</p>
 <ul class="simple">
@@ -1560,7 +1175,7 @@ trees.</p>
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># example of forest for simulated data</span>
 
-<span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="kn">import</span> <span class="n">RandomForestRegressor</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.ensemble</span><span class="w"> </span><span class="kn">import</span> <span class="n">RandomForestRegressor</span>
 <span class="n">forest</span> <span class="o">=</span> <span class="n">RandomForestRegressor</span><span class="p">(</span><span class="n">n_estimators</span> <span class="o">=</span> <span class="mi">10</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xsim</span><span class="p">,</span><span class="n">ysim</span><span class="p">)</span>
 <span class="n">fig</span><span class="o">=</span><span class="n">surface_scatter_plot</span><span class="p">(</span><span class="n">Xsim</span><span class="p">,</span><span class="n">ysim</span><span class="p">,</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">forest</span><span class="o">.</span><span class="n">predict</span><span class="p">([</span><span class="n">x</span><span class="p">]),</span>
                          <span class="n">show_f0</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
@@ -1587,12 +1202,12 @@ feature resulted in larger MSE decreases.</p>
 </div>
 </section>
 <section id="id7">
-<h2>Exercise<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h2>
-<p>See exercise 8 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id7" title="Link to this heading">#</a></h2>
+<p>See exercise 8 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 </section>
 </section>
 <section id="neural-networks">
-<h1>Neural Networks<a class="headerlink" href="#neural-networks" title="Permalink to this heading">#</a></h1>
+<h1>Neural Networks<a class="headerlink" href="#neural-networks" title="Link to this heading">#</a></h1>
 <p>The final regression algorithm we will discuss in this lecture is a type of
 neural network.</p>
 <p>If you’re interested in this course, you have
@@ -1601,7 +1216,7 @@ probably heard about neural networks in the news or social media.</p>
 but instead, to introduce you to a particular neural network model and present
 it from a different perspective that hopefully complements materials you may later encounter.</p>
 <section id="mathematical-background">
-<h2>Mathematical Background<a class="headerlink" href="#mathematical-background" title="Permalink to this heading">#</a></h2>
+<h2>Mathematical Background<a class="headerlink" href="#mathematical-background" title="Link to this heading">#</a></h2>
 <p>If linear regression is the <a class="reference external" href="https://en.wikipedia.org/wiki/%22Hello,_World!%22_program">“Hello World”</a> of regression
 algorithms, then the multi-layer perceptron (MLP) is the “Hello World” of neural
 networks.</p>
@@ -1642,8 +1257,8 @@ y = f_{\cdots} \left(f_2(f_1(X w_1 + b_1) w_2 + b_2) w_{\cdots} + b_{\cdots} \ri
 followed by applying an activation function (<span class="math notranslate nohighlight">\( f \)</span>) at each step.</p>
 </section>
 <section id="id8">
-<h2>Exercise<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h2>
-<p>See exercise 9 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id8" title="Link to this heading">#</a></h2>
+<p>See exercise 9 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 <p>The loss or error function typically used when using an MLP for regression is
 our now familiar mean squared error loss function:</p>
 <div class="math notranslate nohighlight">
@@ -1655,7 +1270,7 @@ our now familiar mean squared error loss function:</p>
 in the random forests section.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neural_network</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">neural_network</span>
 <span class="n">nn</span> <span class="o">=</span> <span class="n">neural_network</span><span class="o">.</span><span class="n">MLPRegressor</span><span class="p">((</span><span class="mi">6</span><span class="p">,),</span> <span class="n">activation</span><span class="o">=</span><span class="s2">&quot;logistic&quot;</span><span class="p">,</span>
                                  <span class="n">verbose</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">solver</span><span class="o">=</span><span class="s2">&quot;lbfgs&quot;</span><span class="p">,</span>
                                  <span class="n">alpha</span><span class="o">=</span><span class="mf">0.0</span><span class="p">)</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">Xsim</span><span class="p">,</span><span class="n">ysim</span><span class="p">)</span>
@@ -1668,7 +1283,7 @@ in the random forests section.</p>
 <p>We are nearly ready to test out a MLP on our housing data, but there are a few
 more talking points to cover:</p>
 <ul class="simple">
-<li><p>[<span class="xref myst">regHSW89</span>] show that MLPs are universal approximators,
+<li><p>[<a class="reference internal" href="#id28"><span class="xref myst">regHSW89</span></a>] show that MLPs are universal approximators,
 meaning they are theoretically capable of approximating any
 function. This fact is sometimes stated as though it helps explain
 the exceptionally good predictive ability of neural networks. Do not
@@ -1685,11 +1300,11 @@ the square feet above ground feature.</p></li>
 </ul>
 </section>
 <section id="application">
-<h2>Application<a class="headerlink" href="#application" title="Permalink to this heading">#</a></h2>
+<h2>Application<a class="headerlink" href="#application" title="Link to this heading">#</a></h2>
 <p>Ok, now let’s try out our first neural network!</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">neural_network</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">neural_network</span>
 
 <span class="n">X</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">drop</span><span class="p">([</span><span class="s2">&quot;price&quot;</span><span class="p">,</span> <span class="s2">&quot;date&quot;</span><span class="p">,</span> <span class="s2">&quot;id&quot;</span><span class="p">,</span> <span class="s2">&quot;log_price&quot;</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
 <span class="k">for</span> <span class="n">col</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="n">X</span><span class="p">):</span>
@@ -1720,7 +1335,7 @@ produced a mean squared error which was tens of thousands of times larger than t
 MSE from a linear regression!</p>
 </section>
 <section id="input-scaling">
-<h2>Input Scaling<a class="headerlink" href="#input-scaling" title="Permalink to this heading">#</a></h2>
+<h2>Input Scaling<a class="headerlink" href="#input-scaling" title="Link to this heading">#</a></h2>
 <p>The issue here is that neural networks are extremely sensitive to the scale
 (both relative and absolute) of the input features.</p>
 <p>The reasons for why are a bit beyond the scope of this lecture, but the main
@@ -1732,8 +1347,8 @@ observations have a mean of 0 and a standard deviation of 1.</p>
 <p>This is known as scaling or normalizing the inputs.</p>
 </section>
 <section id="id9">
-<h2>Exercise<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h2>
-<p>See exercise 10 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id9" title="Link to this heading">#</a></h2>
+<p>See exercise 10 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 <p>If we decide to scale our variables, we must remember to apply the same
 transformation at prediction time as we did when we fit the model.</p>
 <p>In practice, we must do three things:</p>
@@ -1749,7 +1364,7 @@ always applied.</p>
 <p>Let’s see an example:</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">preprocessing</span><span class="p">,</span> <span class="n">pipeline</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">preprocessing</span><span class="p">,</span> <span class="n">pipeline</span>
 
 <span class="c1"># the pipeline defines any number of steps that will be applied</span>
 <span class="c1"># to transform the `X` data and then a final step that is a model</span>
@@ -1784,7 +1399,7 @@ always applied.</p>
 </div>
 </section>
 <section id="tradeoffs">
-<h2>Tradeoffs<a class="headerlink" href="#tradeoffs" title="Permalink to this heading">#</a></h2>
+<h2>Tradeoffs<a class="headerlink" href="#tradeoffs" title="Link to this heading">#</a></h2>
 <p>So we’ve seen that neural networks are very flexible and can approximate highly
 nonlinear functions – but they have a few cons.</p>
 <p>We’ll discuss a few of them here.</p>
@@ -1819,14 +1434,14 @@ especially when building networks used for decision-making.</p></li>
 </ul>
 </section>
 <section id="id10">
-<h2>Exercise<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h2>
-<p>See exercise 11 in the <span class="xref myst">exercise list</span>.</p>
+<h2>Exercise<a class="headerlink" href="#id10" title="Link to this heading">#</a></h2>
+<p>See exercise 11 in the <a class="reference internal" href="#app-reg-ex"><span class="xref myst">exercise list</span></a>.</p>
 </section>
 </section>
 <section id="references">
-<h1>References<a class="headerlink" href="#references" title="Permalink to this heading">#</a></h1>
+<h1>References<a class="headerlink" href="#references" title="Link to this heading">#</a></h1>
 <p>Two good text books covering the above regression methods are
-[<span class="xref myst">regFHT09</span>] and [<span class="xref myst">regEH16</span>]</p>
+[<a class="reference internal" href="#id26"><span class="xref myst">regFHT09</span></a>] and [<a class="reference internal" href="#id27"><span class="xref myst">regEH16</span></a>]</p>
 <p><a id='id24'></a>
 [regAI18] Susan Athey and Guido Imbens. Machine learning and econometrics. 2018. URL: <a class="reference external" href="https://www.aeaweb.org/conference/cont-ed/2018-webcasts">https://www.aeaweb.org/conference/cont-ed/2018-webcasts</a>.</p>
 <p><a id='id25'></a>
@@ -1846,9 +1461,9 @@ especially when building networks used for decision-making.</p></li>
 <p><a id='app-reg-ex'></a></p>
 </section>
 <section id="exercises">
-<h1>Exercises<a class="headerlink" href="#exercises" title="Permalink to this heading">#</a></h1>
+<h1>Exercises<a class="headerlink" href="#exercises" title="Link to this heading">#</a></h1>
 <section id="id11">
-<h2>Exercise 1<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 1<a class="headerlink" href="#id11" title="Link to this heading">#</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">sqft_lr_model</span></code> that we fit to generate predictions for all data points
 in our sample.</p>
 <p>Note that you need to pass a DataFrame (not Series)
@@ -1873,32 +1488,32 @@ predictions.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir1"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-2">
-<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 2<a class="headerlink" href="#exercise-2" title="Link to this heading">#</a></h2>
 <p>Use the <code class="docutils literal notranslate"><span class="pre">metrics.mean_squared_error</span></code> function to evaluate the loss
 function used by <code class="docutils literal notranslate"><span class="pre">sklearn</span></code> when it fits the model for us.</p>
 <p>Read the docstring to learn which the arguments that function takes.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn</span> <span class="kn">import</span> <span class="n">metrics</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">sklearn</span><span class="w"> </span><span class="kn">import</span> <span class="n">metrics</span>
 
 <span class="c1"># your code here</span>
 </pre></div>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir2"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-3">
-<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 3<a class="headerlink" href="#exercise-3" title="Link to this heading">#</a></h2>
 <p>Compare the mean squared error for the <code class="docutils literal notranslate"><span class="pre">lr_model</span></code> and the <code class="docutils literal notranslate"><span class="pre">sqft_lr_model</span></code>.</p>
 <p>Which model has a better fit? Defend your choice.</p>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir3"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-4">
-<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 4<a class="headerlink" href="#exercise-4" title="Link to this heading">#</a></h2>
 <p>Explore how you can improve the fit of the full model by adding additional
 features created from the existing ones.</p>
 <div class="cell docutils container">
@@ -1908,19 +1523,19 @@ features created from the existing ones.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir4"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-5">
-<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 5<a class="headerlink" href="#exercise-5" title="Link to this heading">#</a></h2>
 <p>Experiment with how the size of the holdout dataset can impact a diagnosis
 of overfitting.</p>
 <p>Evaluate only the <code class="docutils literal notranslate"><span class="pre">LinearRegression</span></code> model on the full feature set and use
 the <code class="docutils literal notranslate"><span class="pre">model_selection.train_test_split</span></code> function with various values for
 <code class="docutils literal notranslate"><span class="pre">test_size</span></code>.</p>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir5"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-6">
-<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 6<a class="headerlink" href="#exercise-6" title="Link to this heading">#</a></h2>
 <p>Read the documentation for <code class="docutils literal notranslate"><span class="pre">sklearn.tree.DecisionTreeRegressor</span></code> and
 then experiment with adjusting some regularization parameters to see how they
 affect the fitted tree.</p>
@@ -1931,10 +1546,10 @@ affect the fitted tree.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir6"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-7">
-<h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 7<a class="headerlink" href="#exercise-7" title="Link to this heading">#</a></h2>
 <p>Fit a regression tree to the housing price data and use graphviz
 to visualize the decision graph.</p>
 <div class="cell docutils container">
@@ -1944,10 +1559,10 @@ to visualize the decision graph.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir7"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-8">
-<h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 8<a class="headerlink" href="#exercise-8" title="Link to this heading">#</a></h2>
 <p>Fit a random forest to the housing price data.</p>
 <p>Compare the MSE on a testing set to that of lasso.</p>
 <div class="cell docutils container">
@@ -1959,10 +1574,10 @@ to visualize the decision graph.</p>
 </div>
 <p>Produce a bar chart of feature importances for predicting house
 prices.</p>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir8"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-9">
-<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 9<a class="headerlink" href="#exercise-9" title="Link to this heading">#</a></h2>
 <p>In the pseudocode below, fill in the blanks for the generic MLP.</p>
 <p>Note that this is inside a markdown cell because the code is not valid
 Python.</p>
@@ -1971,7 +1586,7 @@ Python.</p>
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">ws</span> <span class="o">=</span> <span class="p">[</span><span class="n">w1</span><span class="p">,</span> <span class="n">w2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">wend</span><span class="p">]</span>
 <span class="n">bs</span> <span class="o">=</span> <span class="p">[</span><span class="n">b1</span><span class="p">,</span> <span class="n">b2</span><span class="p">,</span> <span class="o">...</span><span class="p">,</span> <span class="n">bend</span><span class="p">]</span>
 
-<span class="k">def</span> <span class="nf">eval_mlp</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ws</span><span class="p">,</span> <span class="n">bs</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">eval_mlp</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">ws</span><span class="p">,</span> <span class="n">bs</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Evaluate MLP-given weights (ws), bias (bs) and an activation (f)</span>
 
@@ -1989,10 +1604,10 @@ Python.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir9"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-10">
-<h2>Exercise 10<a class="headerlink" href="#exercise-10" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 10<a class="headerlink" href="#exercise-10" title="Link to this heading">#</a></h2>
 <p>Scale all variables in <code class="docutils literal notranslate"><span class="pre">X</span></code> by subtracting their mean and dividing by the
 standard deviation.</p>
 <p>Verify that the transformed data has mean 0 and standard deviation 1.</p>
@@ -2003,10 +1618,10 @@ standard deviation.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir10"><span class="xref myst">back to text</span></a>)</p>
 </section>
 <section id="exercise-11">
-<h2>Exercise 11<a class="headerlink" href="#exercise-11" title="Permalink to this heading">#</a></h2>
+<h2>Exercise 11<a class="headerlink" href="#exercise-11" title="Link to this heading">#</a></h2>
 <p>Read the documentation for sklearn.neural_network.MLPRegressor and
 use the full housing data to experiment with how adjusting layer depth, width, and other
 regularization parameters affects prediction.</p>
@@ -2017,7 +1632,7 @@ regularization parameters affects prediction.</p>
 </div>
 </div>
 </div>
-<p>(<span class="xref myst">back to text</span>)</p>
+<p>(<a class="reference internal" href="#app-reg-dir11"><span class="xref myst">back to text</span></a>)</p>
 <p><a id=rate href=#rate-link><strong>[1]</strong></a> Two facts about neural networks are relevant to their
 predictive success: automatic feature engineering, as
 mentioned above, and the ability of neural networks to
@@ -2061,16 +1676,12 @@ for more information about convergence rates.</section>
 
               
               
-                <footer class="bd-footer-article">
+              
+              
+                <footer class="prev-next-footer d-print-none">
                   
-<div class="footer-article-items footer-article__inner">
-  
-    <div class="footer-article-item"><!-- Previous / next buttons -->
 <div class="prev-next-area">
-</div></div>
-  
 </div>
-
                 </footer>
               
             </div>
@@ -2078,6 +1689,7 @@ for more information about convergence rates.</section>
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -2164,6 +1776,7 @@ By Miguel C. Herculano
   
   <div class="footer-item">
     
+
   <p class="copyright">
     
       © Copyright 2025.
@@ -2190,8 +1803,8 @@ By Miguel C. Herculano
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=e353d410970836974a52"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=e353d410970836974a52"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>
